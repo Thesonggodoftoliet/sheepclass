@@ -6,21 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/arquillianContainers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sheepclass/dao/implement/UserDaoIm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-codec-1.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson-annotations-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson-core-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson-databind-2.9.8.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sheepclass_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sheepclass_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sheepclass.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sheepclass.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sheepclass/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sheepclass/entity/Users.java" afterDir="false" />
-    </list>
+    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-300">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -245,7 +228,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554881118804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554881163654" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -512,12 +495,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.sheepclass" />
+      <item itemvalue="Application.JwtUtils" />
       <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest" />
       <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest.createToken" />
       <item itemvalue="JUnit.JwtUtilsTest" />
       <item itemvalue="JUnit.JwtUtilsTest.createToken" />
-      <item itemvalue="Application.JwtUtils" />
+      <item itemvalue="Tomcat Server.sheepclass" />
     </list>
     <recent_temporary>
       <list>
@@ -541,7 +524,7 @@
       <updated>1554798730136</updated>
       <workItem from="1554798772673" duration="3080000" />
       <workItem from="1554861169720" duration="3286000" />
-      <workItem from="1554874296830" duration="6630000" />
+      <workItem from="1554874296830" duration="6786000" />
     </task>
     <task id="LOCAL-00001" summary="从数据库初始化">
       <created>1554801359948</created>
@@ -593,7 +576,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12996000" />
+    <option name="totallyTimeSpent" value="13152000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,7 +601,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49626866" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49626866" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -853,11 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-300">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
