@@ -13,46 +13,46 @@ public class Schedule{
 	private float serialnum;
 	private int courseid;
 	private int userid;
-	private Date breaktime;
+	private long breaktime;
 	private int finish;
-
-	public void setserialnum(float serialnum) {
-		this.serialnum = serialnum;
-	}
 
 	public float getSerialnum() {
 		return serialnum;
 	}
 
-	public void setcourseid(int courseid) {
-		this.courseid = courseid;
+	public void setSerialnum(float serialnum) {
+		this.serialnum = serialnum;
 	}
 
 	public int getCourseid() {
 		return courseid;
 	}
 
-	public void setuserid(int userid) {
-		this.userid = userid;
+	public void setCourseid(int courseid) {
+		this.courseid = courseid;
 	}
 
 	public int getUserid() {
 		return userid;
 	}
 
-	public void setbreaktime(Date breaktime) {
-		this.breaktime = breaktime;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
-	public Date getBreaktime() {
+	public long getBreaktime() {
 		return breaktime;
 	}
 
-	public void setfinish(int finish) {
-		this.finish = finish;
+	public void setBreaktime(long breaktime) {
+		this.breaktime = breaktime;
 	}
 
 	public int getFinish() {
 		return finish;
+	}
+
+	public void setFinish(int finish) {
+		this.finish = finish;
 	}
 }
