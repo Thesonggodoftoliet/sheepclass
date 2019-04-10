@@ -7,7 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="sheepclass" />
         </element>
-        <element id="directory" name="lib" />
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="sheepclass" />
+          <element id="library" level="project" name="lib" />
+        </element>
       </element>
     </root>
   </artifact>
