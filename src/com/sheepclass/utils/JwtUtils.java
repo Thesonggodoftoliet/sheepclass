@@ -17,9 +17,9 @@ public class JwtUtils {
             System.out.println("token " + token);
             return token;
         }catch (JWTCreationException e){
-            e.printStackTrace();
-            return null;
+
         }
+        return null;
     }
 
     public static int verifyToken(String token){
@@ -29,9 +29,9 @@ public class JwtUtils {
             DecodedJWT jwt = verifier.verify(token);
             return 1;//验证成功
         }catch (JWTVerificationException e){
-            e.printStackTrace();
-            return 0;
+
         }
+        return 0;
     }
 
     public static int decodeToken(String token){
@@ -40,10 +40,8 @@ public class JwtUtils {
             Claim claim = jwt.getClaim("userid");//获取token中的UserId
             return claim.asInt();
         }catch (JWTDecodeException e){
-            e.printStackTrace();
-            return -1;
+
         }
+        return -1;
     }
-
-
 }

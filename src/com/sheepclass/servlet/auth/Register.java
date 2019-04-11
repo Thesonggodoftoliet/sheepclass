@@ -2,6 +2,7 @@ package com.sheepclass.servlet.auth;
 
 import com.sheepclass.entity.Users;
 import com.sheepclass.service.Auth;
+import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +42,8 @@ public class Register extends HttpServlet {
         Auth auth = new Auth();
         if (auth.addNewuser(user) !=0) {
             try {
-                msg.put("token", auth.checkPassword(user));
+                user = auth.getUserinfo();
+                msg.put("token", JwtUtils.createToken(user.getUserid()));
                 msg.put("tag",1);
             }catch (JSONException e){
                 e.printStackTrace();

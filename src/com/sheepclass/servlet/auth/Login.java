@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Auth auth = new Auth();
+        Auth auth = new Auth(user);
         int userid = auth.checkPassword(user);
         String token;
         if (userid != 0) {
