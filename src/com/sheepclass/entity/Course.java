@@ -13,7 +13,7 @@ public class Course {
 	private int courseid;
 	private String coursename;
 	private String info;
-	private String Subject;
+	private String subject;
 	private String img;
 
 	public int getCourseid() {
@@ -41,11 +41,11 @@ public class Course {
 	}
 
 	public String getSubject() {
-		return Subject;
+		return subject;
 	}
 
 	public void setSubject(String subject) {
-		Subject = subject;
+		subject = subject;
 	}
 
 	public String getImg() {
