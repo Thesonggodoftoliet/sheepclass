@@ -17,4 +17,8 @@ public class Auth {
             return sqluser.getUserid();//验证成功
         return 0;//验证失败
     }
+
+    public int addNewuser(Users user){
+        return userDao.addUser(user);
+    }
 }
