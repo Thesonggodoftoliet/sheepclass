@@ -100,6 +100,37 @@ public final class JdbcUtils {
 		return list;
 	}
 
+	public static Object getObject(Class clazz, String sql,Object... ps) {
+		Connection conn = getConn();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		Object obj = null;
+		try {
+			st = conn.prepareStatement(sql);
+			for (int i = 1;i<=ps.length;i++)
+				st.setObject(i,ps[i-1]);
+			rs = st.executeQuery();
+			ResultSetMetaData metaData = rs.getMetaData();
+			if (rs.next()) { // 有结果
+				obj = clazz.newInstance(); // 创建实例
+				for (int i = 1; i <= metaData.getColumnCount(); i++) { // 横向读入（按列读入）
+					BeanUtils.copyProperty(obj, metaData.getColumnName(i), rs.getObject(i));
+				}
+			}
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs, st, conn);
+		}
+		return obj;
+	}
+
 	/**
 	 * 获取单个结果
 	 * 
