@@ -6,13 +6,177 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sheepclass/dao/ChapterDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sheepclass/dao/MistakesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sheepclass/dao/implement/ChapterDaoImpl.java" afterDir="false" />
+    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="从数据库初始化">
+      <change afterPath="$PROJECT_DIR$/web/assets/Polyglot-Language-Switcher-master/css/polyglot-language-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/SmoothScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap-touch-spin/jquery.bootstrap-touchspin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_sprite@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Bubblegum_Sans/BubblegumSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/gmaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/hover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_15_0b3e6f_40x40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-medium_30_0b58a2_4x4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_20_333333_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_30_a32d00_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_40_00498f_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_gloss-wave_20_111111_500x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_00498f_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_98d2fb_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_9ccdfc_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.bxslider/jquery.bxslider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery/jquery-1.12.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/masterslider/masterslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/owl.carousel-2/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/owl.carousel-2/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/coloredbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_3x3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_3x3_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/layers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/navigation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.actions.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.kenburn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.migration.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.navigation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.slideanims.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/jquery.themepunch.revolution.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/jquery.themepunch.tools.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/common-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/light-skin-1-retina.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/light-skin-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/grab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/grabbing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/masterslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/ms-vertical.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/video-close-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/footer-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/page-title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/submenu-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/event.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/footer-style2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/footer-style3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/pattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/popular-class.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/team.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/testimonial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/default-map-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/user_login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/service/Learn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sheepclass/service/Learn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/entity/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/entity/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/utils/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sheepclass_war_exploded/WEB-INF/classes/com/sheepclass/utils/JdbcUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/entity/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/utils/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/utils/JdbcUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sheepclass/com/sheepclass/utils/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,64 +189,86 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1834514568">
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
+          <entry key="java" value="3" />
+          <entry key="js" value="3" />
+          <entry key="jsp" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="3" />
+          <entry key="JSP" value="7" />
+          <entry key="JavaScript" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="10" />
+          <entry key="js" value="600" />
+          <entry key="jsp" value="213" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10" />
+          <entry key="JSP" value="213" />
+          <entry key="JavaScript" value="600" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Learn.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#429#430#0" expanded="true" />
-                    <element signature="e#476#477#0" expanded="true" />
-                    <element signature="e#418#419#0" expanded="true" />
-                    <element signature="e#449#450#0" expanded="true" />
-                    <element signature="e#710#711#0" expanded="true" />
-                    <element signature="e#742#743#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/MistakesDao.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1434">
-                  <caret line="142" column="72" lean-forward="true" selection-start-line="142" selection-start-column="72" selection-end-line="142" selection-end-column="72" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Chapter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#334#335#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/user_login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="59" lean-forward="true" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,11 +278,23 @@
         <option value="HttpServlet" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>g</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -120,8 +318,6 @@
         <option value="$PROJECT_DIR$/src/com/sheepclass/dao/implement/UserDaoIm.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/service/Auth.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Register.java" />
-        <option value="$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Login.java" />
-        <option value="$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/dao/CourseDao.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/entity/Course.java" />
@@ -131,8 +327,18 @@
         <option value="$PROJECT_DIR$/src/com/sheepclass/dao/implement/ChapterDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/service/Learn.java" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/dao/MistakesDao.java" />
+        <option value="$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Login.java" />
+        <option value="$PROJECT_DIR$/web/js/user_login.js" />
+        <option value="$PROJECT_DIR$/web/login.jsp" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -142,20 +348,19 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="88" />
+    <option name="y" value="23" />
+    <option name="width" value="1393" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +383,64 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sheepclass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sheepclass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="servlet" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sheepclass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="servlet" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="sheepclass" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="sheepclass" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,12 +451,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554953829461" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555069864996" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zhaoying" />
+    <property name="last_opened_file_path" value="$USER_HOME$/zhaoying" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -202,7 +465,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.63678163" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -215,6 +478,7 @@
       <recent name="com.sheepclass.filter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="E:\sheepclass\web\WEB-INF\lib" />
       <recent name="E:\sheepclass\src\com" />
       <recent name="E:\sheepclass\src\com\sheepclass" />
@@ -233,7 +497,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JwtUtilsTest.createToken">
+  <component name="RunManager" selected="Tomcat Server.login.jsp (1)">
     <configuration name="JwtUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sheepclass.utils.JwtUtils" />
       <module name="sheepclass" />
@@ -243,65 +507,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Manual container configuration: JwtUtilsTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <module name="sheepclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sheepclass.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="Manual container configuration" />
-        </value>
-      </option>
-      <option name="PACKAGE_NAME" value="com.sheepclass.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.sheepclass.utils.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Manual container configuration: JwtUtilsTest.createToken" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <module name="sheepclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sheepclass.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="Manual container configuration" />
-        </value>
-      </option>
-      <option name="PACKAGE_NAME" value="com.sheepclass.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.sheepclass.utils.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="createToken" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JwtUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sheepclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sheepclass.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sheepclass.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.sheepclass.utils.JwtUtilsTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -327,11 +532,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54614" />
       </RunnerSettings>
@@ -384,8 +589,223 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sheepclass" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.131" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/sheepclass_war_exploded/" />
+    <configuration name="checkout-page.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/checkout-page.html" />
+      <deployment>
+        <artifact name="sheepclass:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54614" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sheepclass:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="login.jsp (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.jsp" />
+      <deployment>
+        <artifact name="sheepclass:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54614" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sheepclass:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="login.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.jsp" />
+      <deployment>
+        <artifact name="sheepclass:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54614" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sheepclass:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="sheepclass" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="sheepclass:war exploded">
@@ -397,11 +817,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_sheepclass" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54614" />
       </RunnerSettings>
@@ -458,20 +878,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JwtUtils" />
-      <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest" />
-      <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest.createToken" />
-      <item itemvalue="JUnit.JwtUtilsTest" />
-      <item itemvalue="JUnit.JwtUtilsTest.createToken" />
       <item itemvalue="Tomcat Server.sheepclass" />
+      <item itemvalue="Application.JwtUtils" />
+      <item itemvalue="JUnit.JwtUtilsTest.createToken" />
+      <item itemvalue="Tomcat Server.login.jsp" />
+      <item itemvalue="Tomcat Server.checkout-page.html" />
+      <item itemvalue="Tomcat Server.login.jsp (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.login.jsp (1)" />
+        <item itemvalue="Tomcat Server.checkout-page.html" />
+        <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="JUnit.JwtUtilsTest.createToken" />
         <item itemvalue="Application.JwtUtils" />
-        <item itemvalue="JUnit.JwtUtilsTest" />
-        <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest" />
-        <item itemvalue="Arquillian JUnit.Manual container configuration: JwtUtilsTest.createToken" />
       </list>
     </recent_temporary>
   </component>
@@ -492,6 +912,10 @@
       <workItem from="1554948042465" duration="5784000" />
       <workItem from="1554988729457" duration="522000" />
       <workItem from="1554989753740" duration="3051000" />
+      <workItem from="1555063116455" duration="1802000" />
+      <workItem from="1555065047811" duration="181000" />
+      <workItem from="1555065483785" duration="248000" />
+      <workItem from="1555065929374" duration="3691000" />
     </task>
     <task id="LOCAL-00001" summary="从数据库初始化">
       <created>1554801359948</created>
@@ -543,7 +967,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24882000" />
+    <option name="totallyTimeSpent" value="30979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,9 +979,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="755" y="23" width="1393" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14872068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1273131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -567,7 +992,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573562" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49518874" visible="true" weight="0.32738853" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -575,10 +1000,10 @@
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5042644" side_tool="true" visible="true" weight="0.19522777" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49733475" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048112" side_tool="true" weight="0.32738853" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49666914" weight="0.32866243" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -589,10 +1014,14 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="从数据库初始化" />
@@ -615,265 +1044,75 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/jieba/DictSegment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Homework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#385#386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Knowledge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Mistakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#273#274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jieba/DictSegment.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Homework.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Knowledge.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Mistakes.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtilsTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/UserDaoIm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/UserDaoIm.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/ReciveUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Schedule.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Register.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Course.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/UserDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Users.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/SearchUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/PraseUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/CourseDaoImle.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Auth.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Course.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/CourseDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Chapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/ChapterDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/ChapterDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Learn.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/MistakesDao.java" />
+    <entry file="file://$PROJECT_DIR$/web/user/login.jsp" />
     <entry file="file://$PROJECT_DIR$/test/com/sheepclass/utils/JwtUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/ReciveUtils.java">
+    <entry file="file://$PROJECT_DIR$/web/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Schedule.java">
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/checkout-page.html" />
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Register.java">
+    <entry file="file://$PROJECT_DIR$/web/js/user_login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+        <state relative-caret-position="15">
+          <caret line="1" column="59" lean-forward="true" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="358">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Course.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java">
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/SearchUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/PraseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/CourseDaoImle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/CourseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1434">
-          <caret line="142" column="72" lean-forward="true" selection-start-line="142" selection-start-column="72" selection-end-line="142" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/Chapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#334#335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/ChapterDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/ChapterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Learn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/MistakesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="272">
+          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
         </state>
       </provider>
     </entry>
