@@ -15,7 +15,6 @@ public class ReciveUtils {
         InputStream js = request.getInputStream();
         InputStreamReader jsr = new InputStreamReader(js);
         BufferedReader br = new BufferedReader(jsr);
-
         String json = br.readLine();
         System.out.println("有东西吗"+json);
 

@@ -23,6 +23,8 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Login");
         PrintWriter out = response.getWriter();
+        //System.out.println(request.toString());
+       // String a = request.getParameter("account"); System.out.println(a);
         JSONObject jsonObject = ReciveUtils.getObject(request);
         JSONObject msg = new JSONObject();
         Users user = new Users();
