@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>lalalala</title>
   </head>
   <body>
-  $END$
+  宝贝包
   </body>
 </html>

@@ -1,8 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="sheepclass:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="">
+    <list default="true" id="0a79f231-f392-455f-b145-572fafc0128d" name="Default Changelist" comment="login页面，JS文件做初步的判断">
+      <change afterPath="$PROJECT_DIR$/web/assets/Polyglot-Language-Switcher-master/css/polyglot-language-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/SmoothScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap-touch-spin/jquery.bootstrap-touchspin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/fancybox_sprite@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/flaticon/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Bubblegum_Sans/BubblegumSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/fonts/Dosis/Dosis-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/gmaps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/hover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/icomoon/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_15_0b3e6f_40x40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-medium_30_0b58a2_4x4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_20_333333_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_30_a32d00_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_dots-small_40_00498f_2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-bg_gloss-wave_20_111111_500x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_00498f_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_98d2fb_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_9ccdfc_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-ui-1.11.4/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.bxslider/jquery.bxslider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery.mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/jquery/jquery-1.12.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/masterslider/masterslider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/owl.carousel-2/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/owl.carousel-2/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/coloredbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_3x3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_3x3_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/gridtile_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/assets/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/layers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/navigation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/css/settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.actions.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.kenburn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.migration.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.navigation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.slideanims.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/extensions/revolution.extension.video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/jquery.themepunch.revolution.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/revolution/js/jquery.themepunch.tools.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/common-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/light-skin-1-retina.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/light-skin-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/skins/default/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/grab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/grabbing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/masterslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/ms-vertical.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/masterslider/style/video-close-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/background/footer-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/page-title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/sep-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icons/submenu-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/main-slider/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/event.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/footer-style2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/footer-style3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/pattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/popular-class.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/team.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/overly/testimonial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/product/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/resource/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sponsors/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/team/t1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/default-map-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/user/common_login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/user/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sheepclass/META-INF/sheepclass.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/Schedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/chapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/homework.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/knowledge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/mistakes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/entity/users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,34 +187,148 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1834514568">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="css" value="6" />
+          <entry key="java" value="15" />
+          <entry key="js" value="6" />
+          <entry key="jsp" value="6" />
+          <entry key="png" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="CSS" value="6" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="15" />
+          <entry key="JSP" value="6" />
+          <entry key="JavaScript" value="6" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="539" />
+          <entry key="js" value="1175" />
+          <entry key="jsp" value="421" />
+          <entry key="txt" value="31" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="539" />
+          <entry key="JSP" value="421" />
+          <entry key="JavaScript" value="1175" />
+          <entry key="PLAIN_TEXT" value="31" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="3" />
+          <entry key="git.checkout.as.new.branch" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java">
+        <entry file="file://$PROJECT_DIR$/web/user/common_login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="325" column="72" selection-start-line="325" selection-start-column="72" selection-end-line="325" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="215" column="9" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/masterslider/masterslider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="8692" column="31" selection-start-line="8692" selection-start-column="31" selection-end-line="8692" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/flaticon/flaticon.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/icomoon/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/chapter.java">
+        <entry file="file://$PROJECT_DIR$/web/assets/revolution/css/settings.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="149">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db.properties">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="64" column="56" lean-forward="true" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/default-map-script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -48,12 +338,33 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>image</find>
+      <find>images</find>
+      <find>css</find>
+      <find>href</find>
+      <find>src</find>
+      <find>&lt;%=request.getContextPath()%&gt;</find>
+      <find>map</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>..</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,13 +372,36 @@
         <option value="$PROJECT_DIR$/src/com/sheepclass/entity/User.java" />
         <option value="$PROJECT_DIR$/src/db.properties" />
         <option value="$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java" />
+        <option value="$PROJECT_DIR$/web/user/login.jsp.js" />
+        <option value="$PROJECT_DIR$/src/com/sheepclass/entity/users.java" />
+        <option value="$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/user/common_login.js" />
+        <option value="$PROJECT_DIR$/web/user/login.jsp" />
+        <option value="$PROJECT_DIR$/web/assets/icomoon/style.css" />
+        <option value="$PROJECT_DIR$/web/assets/flaticon/flaticon.css" />
+        <option value="$PROJECT_DIR$/web/assets/revolution/css/settings.css" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="681" />
+    <option name="y" value="23" />
+    <option name="width" value="1391" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -85,14 +419,7 @@
             </path>
             <path>
               <item name="sheepclass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sheepclass" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sheepclass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sheepclass" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -104,17 +431,20 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554801820684" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555052080493" />
+    <property name="last.edited.regexp" value="Sample Text" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.63678163" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/page-images" />
       <recent name="E:\sheepclass\web\WEB-INF\lib" />
     </key>
   </component>
@@ -130,7 +460,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GenEntityTable">
+  <component name="RunManager" selected="Tomcat Server.login.jsp">
     <configuration name="GenEntityTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sheepclass.utils.GenEntityTable" />
       <module name="sheepclass" />
@@ -149,11 +479,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54614" />
       </RunnerSettings>
@@ -206,8 +536,87 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sheepclass" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.131" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/sheepclass_war_exploded/" />
+    <configuration name="login.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/user/login.jsp" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="sheepclass:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_sheepclass" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54614" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="JAVA_TOOL_OPTIONS" />
+          <option name="VALUE" value="-Dfile.encoding=UTF-8" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sheepclass:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="sheepclass" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="sheepclass:war exploded">
@@ -219,11 +628,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_sheepclass" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54614" />
       </RunnerSettings>
@@ -282,9 +691,11 @@
     <list>
       <item itemvalue="Tomcat Server.sheepclass" />
       <item itemvalue="Application.GenEntityTable" />
+      <item itemvalue="Tomcat Server.login.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="Application.GenEntityTable" />
       </list>
     </recent_temporary>
@@ -300,6 +711,10 @@
       <option name="presentableId" value="Default" />
       <updated>1554798730136</updated>
       <workItem from="1554798772673" duration="3080000" />
+      <workItem from="1554863028791" duration="3272000" />
+      <workItem from="1554885861837" duration="158000" />
+      <workItem from="1554952156571" duration="6249000" />
+      <workItem from="1555033889366" duration="8958000" />
     </task>
     <task id="LOCAL-00001" summary="从数据库初始化">
       <created>1554801359948</created>
@@ -319,81 +734,165 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3080000" />
+    <option name="totallyTimeSpent" value="21717000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="57" y="23" width="1391" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8170056" visible="true" weight="0.19644181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.3286334" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.18299446" side_tool="true" visible="true" weight="0.19644181" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7435137" weight="0.34649682" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49962825" weight="0.32866243" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018532" side_tool="true" visible="true" weight="0.31082803" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49814677" visible="true" weight="0.31082803" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="从数据库初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="从数据库初始化" />
+    <MESSAGE value="login页面，JS文件做初步的判断" />
+    <option name="LAST_COMMIT_MESSAGE" value="login页面，JS文件做初步的判断" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java" />
     <entry file="file://$PROJECT_DIR$/src/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="45">
           <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/GenEntityTable.java">
+    <entry file="file://$PROJECT_DIR$/web/user/login.js" />
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/logo/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/java-jwt-3.8.0.jar!/com/auth0/jwt/JWTDecoder.class" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/implement/UserDaoIm.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/dao/UserDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/chapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/course.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JwtUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/PraseUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/ReciveUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/SearchUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/utils/JdbcUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/filter/CharacterEncodingFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/service/Auth.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/servlet/auth/Login.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/homework.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/users.java" />
+    <entry file="file://$PROJECT_DIR$/web/assets/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="325" column="72" selection-start-line="325" selection-start-column="72" selection-end-line="325" selection-end-column="72" />
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/common_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="64" column="56" lean-forward="true" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sheepclass/entity/chapter.java">
+    <entry file="file://$PROJECT_DIR$/web/js/default-map-script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="215" column="9" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/masterslider/masterslider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="8692" column="31" selection-start-line="8692" selection-start-column="31" selection-end-line="8692" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/icomoon/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/flaticon/flaticon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/revolution/css/settings.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -407,7 +906,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.63678163" />
                 <option value="0.5" />
               </list>
             </option>
@@ -431,7 +930,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.63678163" />
               </list>
             </option>
           </splitter-proportions>
@@ -455,7 +954,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.63678163" />
               </list>
             </option>
           </splitter-proportions>
