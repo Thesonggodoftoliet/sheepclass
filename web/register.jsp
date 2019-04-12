@@ -89,7 +89,7 @@
 
 <section class="page-title center">
     <div class="container">
-        <h2>用 户登 录</h2>
+        <h2>用 户 注 册</h2>
 
     </div>
 </section>
@@ -101,7 +101,7 @@
 
         <!--Default Links-->
         <ul class="default-links">
-            <li>没有账号 ？ <a href="register.jsp">点击这里注册，加入我们吧</a></li>
+            <li>已经有账号 ？ <a href="login.jsp">点击这里登录</a></li>
         </ul>
         <div class="row clearfix">
             <div class="col-md-7 col-sm-12 col-xs-12">
@@ -109,23 +109,63 @@
                 <div class="billing-details">
                     <div class="shop-form" style="margin-left: 200px">
 
-                            <div class="default-title" style="margin-left: 200px"><h2>       登 录 信 息</h2></div>
+                            <div class="default-title" style="margin-left: 200px"><h2>       注 册 信 息 </h2></div>
 
                             <div class="row clearfix">
                                 <!--Form Group-->
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">     手机号/邮箱 <sup>*</sup> </div>
-                                    <input type="text" name="field-name" value="" placeholder="" id="account">
-                                    <div id="alert_usernum"></div>
+                                    <div class="field-label">     姓 名 <sup>*</sup> </div>
+                                    <input type="text" name="field-name" value="" placeholder="" id="username">
+                                    <div id="alert_username"></div>
                                 </div>
 
                                 <!--Form Group-->
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">   密 码<sup>*</sup> </div>
+                                    <div class="field-label">   密 码 <sup>*</sup> </div>
                                     <input type="text" name="field-name" value="" placeholder=""  id="userpwd">
                                     <div id="alert_password"></div>
                                 </div>
-                                <button type="submit" class="theme-btn btn-style-one" style="margin-left: 200px" onclick="login_submit()">   确  定 <span class="fa fa-long-arrow-right"></span></button>
+
+                                <!--Form Group-->
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">   emails <sup>*</sup> </div>
+                                    <input type="text" name="field-name" value="" placeholder=""  id="email">
+                                    <div id="alert_email"></div>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">   电 话 <sup>*</sup> </div>
+                                    <input type="text" name="field-name" value="" placeholder=""  id="phone">
+                                    <div id="alert_phone"></div>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">   性 别 <sup>*</sup> </div>
+                                    <select id="sex">
+                                        <option>女</option>
+                                        <option>男</option>
+                                    </select>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label"> 身份 <sup>*</sup> </div>
+                                    <select id="identity">
+                                        <option>家长</option>
+                                        <option>学生</option>
+                                    </select>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">   生 日 (格式为19980928) <sup>*</sup> </div>
+                                    <input type="text" name="field-name" value="" placeholder=""  id="birthday">
+                                    <div id="alert_birthday"></div>
+                                </div>
+
+                                <button type="submit" class="theme-btn btn-style-one" style="margin-left: 200px" onclick="register_submit()">   确  定 <span class="fa fa-long-arrow-right"></span></button>
                             </div>
 
                     </div>
@@ -211,6 +251,7 @@
     <!--<script src="js/default-map-script.js"></script>-->
     <script src="js/script.js"></script>
     <script src="js/user_login.js"></script>
+    <script src="js/user_register.js"></script>
 </div>
 </body>
 </html>

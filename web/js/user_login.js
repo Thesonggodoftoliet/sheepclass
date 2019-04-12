@@ -1,22 +1,55 @@
+function ajax_login_servlet() {
+    alert($('#account').val());
+    $.ajax({
+        type:"get",
+        url:"/auth/Login", //跳转
+        data: {account:$('#account').val(),userpwd:$('#userpwd').val()},
+        dataType:"json",
+        async:false,
+        success:function(msg){
+            alert(msg.tag);
+        }, error: function (XMLHttpRequest, textStatus) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        }
+    });
+
+}
+
 function login_submit() {
     var usernum = document.getElementById("account").value;
     var password = document.getElementById("userpwd").value;
-     alert("9999");
+     //alert("9999");
      if(checkPassword(password)===false) {
          document.getElementById("alert_password").innerHTML="请输入正确的密码";
          document.getElementById("alert_usernum").innerHTML="";
          return false;
 
-     }else if(checkPhone(usernum)===false && checkEmail(usernum)===false) {
-         document.getElementById("alert_usernum").innerHTML="请输入正确的手机号或者邮箱";
+     }else if(checkPhone(usernum)===false){
+         if( checkEmail(usernum)===false) {
+             document.getElementById("alert_usernum").innerHTML = "请输入正确的手机号或者邮箱";
+             document.getElementById("alert_password").innerHTML = "";
+             return false;
+         }else{
+             document.getElementById("alert_password").innerHTML="";
+             document.getElementById("alert_usernum").innerHTML="2";
+             ajax_login_servlet();
+             return true;
+         }
+     }else if(checkPhone(usernum)===true){
          document.getElementById("alert_password").innerHTML="";
-         return false;
-
+         document.getElementById("alert_usernum").innerHTML="";
+         ajax_login_servlet();
+         return true;
      }else{
          document.getElementById("alert_password").innerHTML="";
          document.getElementById("alert_usernum").innerHTML="";
+         ajax_login_servlet();
          return true;
      }
+
+
 }
 
 function checkPassword(password){
@@ -30,12 +63,14 @@ function checkPassword(password){
 }
 
 function checkPhone(usernum) {
-    if(usernum.length!==11)
+    if (usernum.length !== 11)
     {
+        alert(1);
         return false;
     }
-    var myreg = /^(((13[0-9])|(15[0-9])|(18[0-9]))+\d{8})$/;
-    return !myreg.test(usernum) !== false;
+    var myreg1 = /^(((13[0-9])|(15[0-9])|(18[0-9]))+\d{8})$/;
+    alert(myreg1.test(usernum));
+    return !myreg1.test(usernum) !== false;
 
 
 }
@@ -45,6 +80,7 @@ function checkEmail(usernum) {
     {
         return false;
     }
-    var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-    return !myreg.test(usernum) !== false;
+    var myreg2 = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+    alert(myreg2.test(usernum));
+    return !myreg2.test(usernum) !== false;
 }
