@@ -1,20 +1,27 @@
-function ajax_reg_servlet() {
+function GetJsonData() {
 
     var regist_time = (new Date()).getTime();
     console.log(regist_time); //ms
 
-    var username = document.getElementById("username").value;
-    var userpwd = document.getElementById("userpwd").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var sex = document.getElementById("sex").value;
-    var identity = document.getElementById("identity").value;
-    var birthday =  document.getElementById("birthday").value;
+    var json = {
+        "username":$("#username").val(),
+        "userowd":$("#userpwd").val(),
+        "email":$("#email").val(),
+        "phone":$("#phone").val(),
+        "sex":$("#sex").val(),
+        "identity":$("#identity").val(),
+        "birthday":$("#birthday").val(),
+        "register_time":regist_time,
+        "login_time":regist_time
+    };
+    return json;
+}
 
+function ajax_reg_servlet() {
     $.ajax({
         type:"get",
         url:"/auth/Register", //跳转
-        data: {username:username,userpwd:userpwd,email:email,phone:phone,sex:sex,identity:identity,birthday:birthday,register_time:regist_time,login_time:regist_time},
+        data:JSON.stringify(GetJsonData),
         dataType:"json",
         contentType:"application/json;charset=utf-8",
         async:false,

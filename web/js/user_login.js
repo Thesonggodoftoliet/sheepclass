@@ -1,26 +1,22 @@
 function GetJsonData() {
     var json = {
-        "account":15071091360,
-        "userpwd":"123eded"
+        "account":$("#account").val(),
+        "userpwd":$("#userpwd").val()
     };
     return json;
 }
 
 function ajax_login_servlet() {
     alert($('#account').val());
-
     $.ajax({
-        type:"get",
+        type:"post",
         url:"/auth/Login", //跳转
-        contentType:"text/html;charset=UTF-8",
-        data:{
-            "account":15071091360,
-            "userpwd":"123eded"
-        },
+        contentType:"application/json;charset=UTF-8",
+        data:JSON.stringify(GetJsonData()),
         dataType:"json",
         async:false,
         success:function(msg){
-            alert(msg.tag);
+            alert("hhh");
         }, error: function (XMLHttpRequest, textStatus) {
             alert(XMLHttpRequest.status);
             alert(XMLHttpRequest.readyState);
