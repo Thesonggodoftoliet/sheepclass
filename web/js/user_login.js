@@ -1,17 +1,16 @@
 function ajax_login_servlet() {
     alert($('#account').val());
     $.ajax({
-        type:"get",
-        url:"/auth/Login", //跳转
+        type:"POST",
+        url:"http://localhost:8080/sheepclass_war_exploded/auth/Login", //跳转
         data: {account:$('#account').val(),userpwd:$('#userpwd').val()},
         dataType:"json",
+        contentType:"application/json",
         async:false,
         success:function(msg){
             alert(msg.tag);
         }, error: function (XMLHttpRequest, textStatus) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            alert("失败");
         }
     });
 
