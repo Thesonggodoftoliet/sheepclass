@@ -19,9 +19,9 @@ function GetJsonData() {
 
 function ajax_reg_servlet() {
     $.ajax({
-        type:"get",
+        type:"post",
         url:"/auth/Register", //跳转
-        data:JSON.stringify(GetJsonData),
+        data:JSON.stringify(GetJsonData()),
         dataType:"json",
         contentType:"application/json;charset=utf-8",
         async:false,
