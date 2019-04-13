@@ -130,7 +130,6 @@ function judgePhone(email) {
 }
 
 function judgeBirthday(birthday) {
-
     if(birthday.length!==8) {
         document.getElementById("alert_birthday").innerHTML="生日格式注意";
         return false;

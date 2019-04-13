@@ -14,13 +14,12 @@ function ajax_login_servlet() {
         contentType:"application/json;charset=UTF-8",
         data:JSON.stringify(GetJsonData()),
         dataType:"json",
+        contentType:"application/json",
         async:false,
         success:function(msg){
             alert("hhh");
         }, error: function (XMLHttpRequest, textStatus) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            alert("失败");
         }
     });
 
