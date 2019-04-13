@@ -5,7 +5,7 @@ function GetJsonData() {
 
     var json = {
         "username":$("#username").val(),
-        "userowd":$("#userpwd").val(),
+        "userpwd":$("#userpwd").val(),
         "email":$("#email").val(),
         "phone":$("#phone").val(),
         "sex":$("#sex").val(),
