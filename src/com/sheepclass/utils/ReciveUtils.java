@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 public class ReciveUtils {
     public static JSONObject getObject(HttpServletRequest request) throws IOException {
         InputStream js = request.getInputStream();
+        System.out.println(js.available());
         InputStreamReader jsr = new InputStreamReader(js);
         BufferedReader br = new BufferedReader(jsr);
         String json = br.readLine();

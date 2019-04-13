@@ -10,12 +10,22 @@ function ajax_reg_servlet() {
     var sex = document.getElementById("sex").value;
     var identity = document.getElementById("identity").value;
     var birthday =  document.getElementById("birthday").value;
-
+    var obj = JSON.stringify({"username":username,
+        "userpwd":userpwd,
+        "email":email,
+        "phone":phone,
+        "sex":sex,
+        "identity":identity,
+        "birthday":birthday,
+        "register_time":regist_time,
+        "login_time":regist_time});
+    alert(obj);
     $.ajax({
-        type:"get",
-        url:"/auth/Register", //跳转
-        data: {username:username,userpwd:userpwd,email:email,phone:phone,sex:sex,identity:identity,birthday:birthday,register_time:regist_time,login_time:regist_time},
+        type:"post",
+        url:"http://localhost:8080/sheepclass_war_exploded/auth/Register", //跳转
+        data: obj,
         dataType:"json",
+        contentType:"application/json;charset=utf-8",
         async:false,
         success:function(msg){
             alert(msg.tag);
@@ -93,7 +103,7 @@ function judgePhone(email) {
 }
 
 function judgeBirthday(birthday) {
-
+    alert("记得写生日");
     if(birthday==="") document.getElementById("alert_birthday").innerHTML="记得写生日";
     else document.getElementById("alert_birthday").innerHTML="";
 
