@@ -1,29 +1,27 @@
-function ajax_reg_servlet() {
+function GetJsonData() {
 
     var regist_time = (new Date()).getTime();
     console.log(regist_time); //ms
 
-    var username = document.getElementById("username").value;
-    var userpwd = document.getElementById("userpwd").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var sex = document.getElementById("sex").value;
-    var identity = document.getElementById("identity").value;
-    var birthday =  document.getElementById("birthday").value;
-    var obj = JSON.stringify({"username":username,
-        "userpwd":userpwd,
-        "email":email,
-        "phone":phone,
-        "sex":sex,
-        "identity":identity,
-        "birthday":birthday,
+    var json = {
+        "username":$("#username").val(),
+        "userpwd":$("#userpwd").val(),
+        "email":$("#email").val(),
+        "phone":$("#phone").val(),
+        "sex":$("#sex").val(),
+        "identity":$("#identity").val(),
+        "birthday":$("#birthday").val(),
         "register_time":regist_time,
-        "login_time":regist_time});
-    alert(obj);
+        "login_time":regist_time
+    };
+    return json;
+}
+
+function ajax_reg_servlet() {
     $.ajax({
         type:"post",
-        url:"http://localhost:8080/sheepclass_war_exploded/auth/Register", //��ת
-        data: obj,
+        url:"/auth/Register", //跳转
+        data:JSON.stringify(GetJsonData()),
         dataType:"json",
         contentType:"application/json;charset=utf-8",
         async:false,
@@ -39,19 +37,29 @@ function ajax_reg_servlet() {
 }
 
 function register_submit(){
-    judgeUsername(document.getElementById("username").value);
-    judgeUserpwd(document.getElementById("userpwd").value);
-    judgeEmail(document.getElementById("email").value);
-    judgePhone(document.getElementById("phone").value);
-    judgeBirthday(document.getElementById("birthday").value);
+    if(judgeUsername(document.getElementById("username").value)===true){
+        if(judgeUserpwd(document.getElementById("userpwd").value)===true){
+            if(judgeEmail(document.getElementById("email").value)===true){
+                if(judgePhone(document.getElementById("phone").value)===true){
+                    if( judgeBirthday(document.getElementById("birthday").value)===true){
+                        ajax_reg_servlet();
+                    }
 
-    ajax_reg_servlet();
+                }
+            }
+        }
+    }
 }
 
 function judgeUsername(username) {
-    if(username==="") document.getElementById("alert_username").innerHTML="�ǵ�д����";
-    else document.getElementById("alert_username").innerHTML="";
-
+    if(username==="") {
+        document.getElementById("alert_username").innerHTML="记得写名字";
+        return false;
+    }
+    else {
+        document.getElementById("alert_username").innerHTML="";
+        return true;
+    }
 }
 
 function judgeUserpwd(password) {
@@ -61,9 +69,15 @@ function judgeUserpwd(password) {
     }
     var Reg = /^[0-9a-zA-Z]*$/;
     if (Reg.test(password)===false) flag = 1;
-
-    if (flag === 1)  document.getElementById("alert_password").innerHTML="�����ʽ����";
-    else document.getElementById("alert_password").innerHTML="";
+  
+    if (flag === 1)  {
+        document.getElementById("alert_password").innerHTML="密码格式不对";
+        return false;
+    }
+    else {
+        document.getElementById("alert_password").innerHTML="";
+        return true;
+    }
 
 
 }
@@ -80,8 +94,14 @@ function judgeEmail(email) {
         flag1 = 1;
     }
 
-    if (flag1 === 1)  document.getElementById("alert_email").innerHTML="�����ʽ����";
-    else document.getElementById("alert_email").innerHTML="";
+    if (flag1 === 1)  {
+        document.getElementById("alert_email").innerHTML="邮箱格式不对";
+        return false;
+    }
+    else {
+        document.getElementById("alert_email").innerHTML="";
+        return true;
+    }
 
 }
 
@@ -96,15 +116,25 @@ function judgePhone(email) {
     if(myreg3.test(email) === false){
         flag2 = 1;
     }
-
-    if (flag2 === 1)  document.getElementById("alert_phone").innerHTML="phone��ʽ����";
-    else document.getElementById("alert_phone").innerHTML="";
+    if (flag2 === 1)  {
+        document.getElementById("alert_phone").innerHTML="phone格式不对";
+        return false;
+    }
+    else {
+        document.getElementById("alert_phone").innerHTML="";
+        return true;
+    }
 
 }
 
 function judgeBirthday(birthday) {
-    alert("�ǵ�д����");
-    if(birthday==="") document.getElementById("alert_birthday").innerHTML="�ǵ�д����";
-    else document.getElementById("alert_birthday").innerHTML="";
+    if(birthday.length!==8) {
+        document.getElementById("alert_birthday").innerHTML="生日格式注意";
+        return false;
+    }
+    else {
+        document.getElementById("alert_birthday").innerHTML="";
+        return true;
+    }
 
 }
