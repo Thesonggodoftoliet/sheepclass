@@ -8,3 +8,6 @@
 out
 gen
 
+*.kotlin_module
+.idea/encodings.xml
+.idea/encodings.xml

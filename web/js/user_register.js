@@ -60,7 +60,6 @@ function judgeUsername(username) {
         document.getElementById("alert_username").innerHTML="";
         return true;
     }
-
 }
 
 function judgeUserpwd(password) {
@@ -70,7 +69,7 @@ function judgeUserpwd(password) {
     }
     var Reg = /^[0-9a-zA-Z]*$/;
     if (Reg.test(password)===false) flag = 1;
-
+  
     if (flag === 1)  {
         document.getElementById("alert_password").innerHTML="密码格式不对";
         return false;
@@ -117,7 +116,6 @@ function judgePhone(email) {
     if(myreg3.test(email) === false){
         flag2 = 1;
     }
-
     if (flag2 === 1)  {
         document.getElementById("alert_phone").innerHTML="phone格式不对";
         return false;
