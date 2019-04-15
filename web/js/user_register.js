@@ -22,7 +22,7 @@ function ajax_reg_servlet() {
     alert(obj);
     $.ajax({
         type:"post",
-        url:"http://localhost:8080/sheepclass_war_exploded/auth/Register", //跳转
+        url:"http://localhost:8080/sheepclass_war_exploded/auth/Register", //��ת
         data: obj,
         dataType:"json",
         contentType:"application/json;charset=utf-8",
@@ -49,7 +49,7 @@ function register_submit(){
 }
 
 function judgeUsername(username) {
-    if(username==="") document.getElementById("alert_username").innerHTML="记得写名字";
+    if(username==="") document.getElementById("alert_username").innerHTML="�ǵ�д����";
     else document.getElementById("alert_username").innerHTML="";
 
 }
@@ -62,7 +62,7 @@ function judgeUserpwd(password) {
     var Reg = /^[0-9a-zA-Z]*$/;
     if (Reg.test(password)===false) flag = 1;
 
-    if (flag === 1)  document.getElementById("alert_password").innerHTML="密码格式不对";
+    if (flag === 1)  document.getElementById("alert_password").innerHTML="�����ʽ����";
     else document.getElementById("alert_password").innerHTML="";
 
 
@@ -80,7 +80,7 @@ function judgeEmail(email) {
         flag1 = 1;
     }
 
-    if (flag1 === 1)  document.getElementById("alert_email").innerHTML="邮箱格式不对";
+    if (flag1 === 1)  document.getElementById("alert_email").innerHTML="�����ʽ����";
     else document.getElementById("alert_email").innerHTML="";
 
 }
@@ -97,14 +97,14 @@ function judgePhone(email) {
         flag2 = 1;
     }
 
-    if (flag2 === 1)  document.getElementById("alert_phone").innerHTML="phone格式不对";
+    if (flag2 === 1)  document.getElementById("alert_phone").innerHTML="phone��ʽ����";
     else document.getElementById("alert_phone").innerHTML="";
 
 }
 
 function judgeBirthday(birthday) {
-    alert("记得写生日");
-    if(birthday==="") document.getElementById("alert_birthday").innerHTML="记得写生日";
+    alert("�ǵ�д����");
+    if(birthday==="") document.getElementById("alert_birthday").innerHTML="�ǵ�д����";
     else document.getElementById("alert_birthday").innerHTML="";
 
 }
