@@ -12,6 +12,12 @@ public class KnowledgeDaoImpl implements KnowledgeDao {
     }
 
     @Override
+    public int createViewByid(int knowledgeid) {
+        String sql = "create or replace view knowledge_view_? as select * from homework where sets like '[?][?,][,?,][,?]'";
+        return JdbcUtils.executeSQL(sql,knowledgeid,knowledgeid,knowledgeid,knowledgeid,knowledgeid);
+    }
+
+    @Override
     public int addKnowledge(Knowledge knowledge) {
         String sql = "insert into knowledge values(?,?,?)";
         return JdbcUtils.executeSQL(sql,knowledge.getKnowledgeid(),knowledge.getContent(),knowledge.getLevel());
