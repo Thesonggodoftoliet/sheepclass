@@ -4,6 +4,7 @@ import com.sheepclass.entity.Knowledge;
 
 public interface KnowledgeDao {
     Knowledge getKnowledgeByid(int knowledgeid);
+    int createViewByid(int knowledgeid);
     int addKnowledge(Knowledge knowledge);
     int updateKnowledge(Knowledge knowledge);
     int deleteKnowledgeByid(int knowledgeid);

@@ -2,10 +2,13 @@ package com.sheepclass.service;
 
 import com.sheepclass.dao.ChapterDao;
 import com.sheepclass.dao.CourseDao;
+import com.sheepclass.dao.ScheduleDao;
 import com.sheepclass.dao.implement.ChapterDaoImpl;
 import com.sheepclass.dao.implement.CourseDaoImle;
+import com.sheepclass.dao.implement.ScheduleDaoimpl;
 import com.sheepclass.entity.Chapter;
 import com.sheepclass.entity.Course;
+import com.sheepclass.entity.Schedule;
 
 import java.util.List;
 
@@ -13,6 +16,7 @@ import java.util.List;
 public class Learn {
     private CourseDao courseDao = new CourseDaoImle();
     private ChapterDao chapterDao = new ChapterDaoImpl();
+    private ScheduleDao scheduleDao = new ScheduleDaoimpl();
 
     List<Course> getAllcourse(){
         return courseDao.getAllCourse();
@@ -28,5 +32,13 @@ public class Learn {
 
     Chapter getChapter(Chapter chapter){
         return chapterDao.getChapterByChapterId(chapter.getSerialnum(),chapter.getCourseid());
+    }
+
+    Schedule getSchedule(int userid){
+        return scheduleDao.getScheduleByuserid(userid);
+    }
+
+    int updateSchedule(Schedule schedule){
+        return scheduleDao.updateScheduleByuserid(schedule);
     }
 }
