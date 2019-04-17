@@ -1,6 +1,11 @@
 package com.sheepclass.entity;
 
+import com.sheepclass.dao.KnowledgeDao;
+import com.sheepclass.dao.implement.KnowledgeDaoImpl;
+import com.sheepclass.utils.PraseUtils;
+
 import java.util.Date;
+import java.util.List;
 
 /**
  * <p>Title: </p>
@@ -9,7 +14,7 @@ import java.util.Date;
  * 
  * @date 2019-04-09
  */ 
-public class Homework {
+public class Homework implements Comparable{
 	private int homeworkid;
 	private String a;
 	private String b;
@@ -18,8 +23,25 @@ public class Homework {
 	private String correct;
 	private String content;
 	private String sets;
+	private int level;
 
-	public int getHomeworkid() {
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level){
+		this.level = level;
+	}
+	public void setLevel() {
+		int count = 0;
+		List<Integer> list = PraseUtils.sToi(this.sets);
+		KnowledgeDao knowledgeDao = new KnowledgeDaoImpl();
+		for (int i = 0;i<list.size();i++)
+			count+=knowledgeDao.getKnowledgeByid(list.get(i)).getLevel();
+		this.level = count;
+	}
+
+	public int getHomeworkid(){
 		return homeworkid;
 	}
 
@@ -81,5 +103,11 @@ public class Homework {
 
 	public void setSets(String sets) {
 		this.sets = sets;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Homework p = (Homework)o;
+		return this.homeworkid-p.homeworkid;
 	}
 }

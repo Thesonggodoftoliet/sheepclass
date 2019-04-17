@@ -9,8 +9,6 @@
 <%@ page import="java.util.*"%>
 <html>
 <head>
-    <meta charset="UTF-8">
-	
 	<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
     <title></title>
 
