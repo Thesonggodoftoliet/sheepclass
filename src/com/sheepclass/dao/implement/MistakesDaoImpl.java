@@ -14,6 +14,12 @@ public class MistakesDaoImpl implements MistakesDao {
     }
 
     @Override
+    public Mistakes getMistakesById(Mistakes mistakes) {
+        String sql = "select * from mistakes where userid = ?,courseid=?,homeworkid=?";
+        return (Mistakes) JdbcUtils.getObject(Mistakes.class,sql,mistakes.getUserid(),mistakes.getCourseid(),mistakes.getHomeworkid());
+    }
+
+    @Override
     public List<Mistakes> getMistakesByuserid(int userid) {
         String sql = "select * from mistake_view_"+userid;
         return JdbcUtils.getList(Mistakes.class,sql);
@@ -27,8 +33,14 @@ public class MistakesDaoImpl implements MistakesDao {
 
     @Override
     public int addMistakes(Mistakes mistakes) {
-        String sql = "insert into mistakes values(?,?,?)";
-        return JdbcUtils.executeSQL(sql,mistakes.getUserid(),mistakes.getHomeworkid(),mistakes.getCourseid());
+        String sql = "insert into mistakes values(?,?,?,?,?)";
+        return JdbcUtils.executeSQL(sql,mistakes.getUserid(),mistakes.getHomeworkid(),mistakes.getCourseid(),mistakes.getReviewtimes(),mistakes.getWrongtimes());
+    }
+
+    @Override
+    public int updateMistakes(Mistakes mistakes) {
+        String sql = "update mistakes set reviewtimes = ?,wrongtimes = ? where userid = ? and courseid = ? and homeworkid=?";
+        return JdbcUtils.executeSQL(sql,mistakes.getReviewtimes(),mistakes.getWrongtimes(),mistakes.getUserid(),mistakes.getCourseid(),mistakes.getHomeworkid());
     }
 
     @Override
