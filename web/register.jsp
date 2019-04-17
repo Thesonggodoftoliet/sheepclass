@@ -155,8 +155,8 @@
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label"> 身份 <sup>*</sup> </div>
                                     <select id="identity">
-                                        <option>家长</option>
-                                        <option>学生</option>
+                                        <option value="1">家长</option>
+                                        <option value="0">学生</option>
                                     </select>
                                 </div>
 
