@@ -13,6 +13,8 @@ public class Mistakes {
 	private int userid;
 	private int homeworkid;
 	private int courseid;
+	private int reviewtimes;//复习次数且正确次数
+	private int wrongtimes;//错误次数
 
 	public int getUserid() {
 		return userid;
@@ -36,5 +38,21 @@ public class Mistakes {
 
 	public void setCourseid(int courseid) {
 		this.courseid = courseid;
+	}
+
+	public int getReviewtimes() {
+		return reviewtimes;
+	}
+
+	public void setReviewtimes(int reviewtimes) {
+		this.reviewtimes = reviewtimes;
+	}
+
+	public int getWrongtimes() {
+		return wrongtimes;
+	}
+
+	public void setWrongtimes(int wrongtimes) {
+		this.wrongtimes = wrongtimes;
 	}
 }
