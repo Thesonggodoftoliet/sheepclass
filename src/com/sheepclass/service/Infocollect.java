@@ -10,7 +10,7 @@ import com.sheepclass.entity.Schedule;
 public class Infocollect {
     MistakesDao mistakesDao = null;
     ScheduleDao scheduleDao = null;
-    int setSchedule(Schedule schedule){
+    int setSchedule(Schedule schedule){//断点
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
         if (scheduleDao.getScheduleByuserid(schedule.getUserid()) == null)

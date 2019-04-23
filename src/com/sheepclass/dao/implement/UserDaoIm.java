@@ -25,14 +25,14 @@ public class UserDaoIm implements UserDao {
 
     @Override
     public int addUser(Users user) {
-        String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?,?)";
-        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),null,user.getBirthday(),user.getRegistTime(),user.getLoginTime());
+        String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?)";
+        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),null,user.getBirthday(),user.getRegistTime());
     }
 
     @Override
     public int setUser(Users user) {
         String sql = "update users set nickname = ?,userpwd =?,email=?,phone=?,sex=?,parentid=?,birthday=?,login_time=?";
-        return JdbcUtils.executeSQL(sql,user.getNickname(),user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getParentid(),user.getBirthday(),user.getLoginTime());
+        return JdbcUtils.executeSQL(sql,user.getNickname(),user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getParentid(),user.getBirthday());
     }
 
     @Override
