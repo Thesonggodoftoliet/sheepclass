@@ -20,7 +20,6 @@ public class Users {
 	private int parentid;
 	private long birthday;
 	private long regist_time;
-	private long login_time;
 
 	public String getNickname() {
 		return nickname;
@@ -102,11 +101,4 @@ public class Users {
 		this.regist_time = registTime;
 	}
 
-	public long getLoginTime() {
-		return login_time;
-	}
-
-	public void setLoginTime(long loginTime) {
-		this.login_time = loginTime;
-	}
 }
