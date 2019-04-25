@@ -62,43 +62,43 @@ public class Learn {
             return p.num-this.num;//降序排列
         }
     }
-    List<Course> getAllcourse(){
+    public List<Course> getAllcourse(){
         if (courseDao == null)
             courseDao = new CourseDaoImle();
         return courseDao.getAllCourse();
     }
 
-    List<Course> getCoursesBysub(String subject){
+    public List<Course> getCoursesBysub(String subject){
         if (courseDao == null)
             courseDao = new CourseDaoImle();
         return courseDao.getCoursesBysub(subject);
     }
 
-    List<Chapter> getChapterByCourse(int courseid){
+    public List<Chapter> getChapterByCourse(int courseid){
         if (chapterDao == null)
             chapterDao = new ChapterDaoImpl();
         return chapterDao.getChapterByCourse(courseid);
     }
 
-    Chapter getChapter(Chapter chapter){
+    public Chapter getChapter(Chapter chapter){
         if (chapterDao == null)
             chapterDao = new ChapterDaoImpl();
         return chapterDao.getChapterByChapterId(chapter.getSerialnum(),chapter.getCourseid());
     }
 
-    Schedule getSchedule(int userid){
+    public Schedule getSchedule(int userid){
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
         return scheduleDao.getScheduleByuserid(userid);
     }
 
-    int updateSchedule(Schedule schedule){
+    public int updateSchedule(Schedule schedule){
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
         return scheduleDao.updateScheduleByuserid(schedule);
     }
 
-    List<Homework> generateHomework(String sets){
+    public List<Homework> generateHomework(String sets){
         if (homeworkDao == null)
             homeworkDao = new HomeworkDaoImpl();
         List<Integer> knowledges = PraseUtils.sToi(sets);
@@ -152,7 +152,7 @@ public class Learn {
         return homeworkList;
     }
 
-    List<Homework> getMistakesByuserid(int userid){
+    public List<Homework> getMistakesByuserid(int userid){
         /*（待做）传回的时候应当加上课程名等*/
         if (mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();

@@ -37,6 +37,7 @@ public class Auth {
     public int addNewuser(Users user){
         int tag = userDao.addUser(user);
         sqluser = userDao.getUserByEmail(user.getEmail());
+        logintime(sqluser.getUserid());
         return tag;
     }
 
