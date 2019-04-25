@@ -9,11 +9,14 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
+import java.util.Calendar;
+
 public class JwtUtils {
     public static String createToken(int userid) {
         try {
+            Calendar calendar = Calendar.getInstance();
             Algorithm algorithm = Algorithm.HMAC256("secret");//签发秘钥
-            String token = JWT.create().withIssuer("LYF").withClaim("userid",userid).sign(algorithm);//签发人是LYF 并在token中存入UserId
+            String token = JWT.create().withIssuer("LYF").withClaim("userid",userid).withClaim("time",calendar.getTimeInMillis()).sign(algorithm);//签发人是LYF 并在token中存入UserId
             System.out.println("token " + token);
             return token;
         }catch (JWTCreationException e){

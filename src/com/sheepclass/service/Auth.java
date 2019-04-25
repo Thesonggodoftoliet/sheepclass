@@ -1,14 +1,19 @@
 package com.sheepclass.service;
 
+import com.sheepclass.dao.LearninginfoDao;
 import com.sheepclass.dao.UserDao;
+import com.sheepclass.dao.implement.LearninginfoDaoimple;
 import com.sheepclass.dao.implement.UserDaoIm;
+import com.sheepclass.entity.Learninginfo;
 import com.sheepclass.entity.Users;
 
-import java.util.Date;
+import java.util.*;
 
 public class Auth {
     private UserDao userDao= new UserDaoIm();
     private Users sqluser;
+    private LearninginfoDao learninginfoDao = new LearninginfoDaoimple();
+    private static Calendar calendar = Calendar.getInstance();
 
     public  Auth(){
 
@@ -23,16 +28,7 @@ public class Auth {
     }
     public int checkPassword(Users user){
         if (sqluser.getUserpwd().equals(user.getUserpwd())) {
-            Date lastlogin = new Date(sqluser.getLoginTime());
-            Date now = new Date();
-            if (lastlogin.getDate() != now.getDate()){//如果不是当天登陆
-                if(now.getDay()== 1)//周一清空七天登陆
-                    sqluser.setLogin_times(1);
-                else
-                    sqluser.setLogin_times(sqluser.getLogin_times()+1);
-            }
-            sqluser.setLoginTime(user.getLoginTime());//更新时间
-            userDao.setUser(sqluser);
+            logintime(sqluser.getUserid());//设置登录时间
             return sqluser.getUserid();//验证成功
         }
         return 0;//验证失败
@@ -41,10 +37,28 @@ public class Auth {
     public int addNewuser(Users user){
         int tag = userDao.addUser(user);
         sqluser = userDao.getUserByEmail(user.getEmail());
+        logintime(sqluser.getUserid());
         return tag;
     }
 
     public Users getUserinfo(){
         return sqluser;
+    }
+
+    public int logintime(int userid){
+        List<Learninginfo> learninginfos = learninginfoDao.getLearningtime(userid,calendar.getTimeInMillis());
+        Collections.sort(learninginfos);
+        Learninginfo learninginfo = learninginfos.get(0);
+        Date date = new Date(learninginfo.getLogintime());
+        int tag;
+        if (date.getMonth() == calendar.getTime().getMonth() && date.getDate() == calendar.getTime().getDate()){//当天多次登录
+            learninginfo.setLogintime(calendar.getTimeInMillis());
+            tag = learninginfoDao.updateInfo(learninginfo);
+        }else {
+            learninginfo.setLogintime(calendar.getTimeInMillis());
+            learninginfo.setLogouttime(0);
+            tag = learninginfoDao.addInfo(learninginfo);
+        }
+        return tag;
     }
 }

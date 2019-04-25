@@ -1,6 +1,6 @@
 package com.sheepclass.entity;
 
-public class Learninginfo {
+public class Learninginfo implements Comparable{
     private int key;
     private int userid;
     private long logintime;
@@ -36,5 +36,11 @@ public class Learninginfo {
 
     public void setLogouttime(long logouttime) {
         this.logouttime = logouttime;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Learninginfo p = (Learninginfo)o;
+        return (int)(this.logintime - p.logintime);
     }
 }
