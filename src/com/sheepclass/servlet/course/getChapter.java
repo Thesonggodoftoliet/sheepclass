@@ -8,13 +8,11 @@ import com.sheepclass.entity.Chapter;
 import com.sheepclass.entity.Schedule;
 import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
-import net.sf.json.JSON;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
