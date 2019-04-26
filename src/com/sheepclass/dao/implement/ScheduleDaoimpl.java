@@ -12,15 +12,21 @@ public class ScheduleDaoimpl implements ScheduleDao {
     }
 
     @Override
+    public Schedule getScheduleBycourseid(int userid, int courseid) {
+        String sql = "select * from _schedule where userid = ? and courseid = ?";
+        return (Schedule)JdbcUtils.getObject(Schedule.class,sql,userid,courseid);
+    }
+
+    @Override
     public int addSchedule(Schedule schedule) {
         String sql = "insert into _schedule values(?,?,?,?,?)";
         return JdbcUtils.executeSQL(sql,schedule.getSerialnum(),schedule.getCourseid(),schedule.getUserid(),schedule.getBreaktime(),schedule.getFinish());
     }
 
     @Override
-    public int updateScheduleByuserid(Schedule schedule) {
-        String sql = "update _schedule set serialnum = ?,courseid=?,breaktime=?,finish where userid=?";
-        return JdbcUtils.executeSQL(sql,schedule.getSerialnum(),schedule.getCourseid(),schedule.getBreaktime(),schedule.getFinish());
+    public int updateScheduleBycourseid(Schedule schedule) {
+        String sql = "update _schedule set serialnum = ?,breaktime=?,finish=? where courseid=? and userid =?";
+        return JdbcUtils.executeSQL(sql,schedule.getSerialnum(),schedule.getBreaktime(),schedule.getFinish(),schedule.getCourseid(),schedule.getUserid());
     }
 
     @Override

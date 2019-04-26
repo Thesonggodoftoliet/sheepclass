@@ -25,14 +25,20 @@ public class UserDaoIm implements UserDao {
 
     @Override
     public int addUser(Users user) {
-        String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?)";
-        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),null,user.getBirthday(),user.getRegistTime());
+        String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?,?)";
+        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),null,user.getBirthday(),user.getRegistTime(),null);
     }
 
     @Override
     public int setUser(Users user) {
-        String sql = "update users set nickname = ?,userpwd =?,email=?,phone=?,sex=?,parentid=?,birthday=?,login_time=?";
-        return JdbcUtils.executeSQL(sql,user.getNickname(),user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getParentid(),user.getBirthday());
+        String sql = "update users set nickname = ?,userpwd =?,email=?,phone=?,sex=?,parentid=?,birthday=? where userid = ?";
+        return JdbcUtils.executeSQL(sql,user.getNickname(),user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getParentid(),user.getBirthday(),user.getUserid());
+    }
+
+    @Override
+    public int updateTotTime(Users user) {
+        String sql = "update users set tottime = ? where userid = ?";
+        return JdbcUtils.executeSQL(sql,user.getTot_time(),user.getUserid());
     }
 
     @Override
