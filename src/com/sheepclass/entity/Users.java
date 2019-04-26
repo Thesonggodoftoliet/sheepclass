@@ -20,6 +20,15 @@ public class Users {
 	private int parentid;
 	private long birthday;
 	private long regist_time;
+	private long tot_time;
+
+	public long getTot_time() {
+		return tot_time;
+	}
+
+	public void setTot_time(long tot_time) {
+		this.tot_time = tot_time;
+	}
 
 	public String getNickname() {
 		return nickname;

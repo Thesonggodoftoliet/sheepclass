@@ -8,6 +8,12 @@ import java.util.List;
 
 public class CourseDaoImle implements CourseDao {
     @Override
+    public Course getcourseByid(int courseid) {
+        String sql = "select * from course where courseid = ?";
+        return (Course)JdbcUtils.getObjectById(Course.class,sql,courseid);
+    }
+
+    @Override
     public List<Course> getAllCourse() {
         String sql = "select * from course";
         return JdbcUtils.getList(Course.class,sql);

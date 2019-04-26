@@ -9,5 +9,6 @@ public interface UserDao {
     Users getUserByEmail(String email);
     int addUser(Users user);
     int setUser(Users user);
+    int updateTotTime(Users user);
     int deleteUserById(int userid);
 }

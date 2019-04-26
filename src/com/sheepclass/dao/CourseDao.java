@@ -5,6 +5,7 @@ import com.sheepclass.entity.Course;
 import java.util.List;
 
 public interface CourseDao {
+    Course getcourseByid(int courseid);
     List<Course> getAllCourse();
     List<Course> getCoursesBysub(String subject);
     int addCourse(Course course);
