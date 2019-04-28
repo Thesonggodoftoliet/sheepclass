@@ -80,22 +80,22 @@ public class Learn {
         return chapterDao.getChapterByCourse(courseid);
     }
 
-    public Chapter getChapter(Chapter chapter){
+    public Chapter getChapter(float serialnum,int courseid){
         if (chapterDao == null)
             chapterDao = new ChapterDaoImpl();
-        return chapterDao.getChapterByChapterId(chapter.getSerialnum(),chapter.getCourseid());
+        return chapterDao.getChapterByChapterId(serialnum,courseid);
     }
 
-    public Schedule getSchedule(int userid){
+    public Schedule getSchedule(int userid,int courseid){
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
-        return scheduleDao.getScheduleByuserid(userid);
+        return scheduleDao.getScheduleBycourseid(userid,courseid);
     }
 
     public int updateSchedule(Schedule schedule){
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
-        return scheduleDao.updateScheduleByuserid(schedule);
+        return scheduleDao.updateScheduleBycourseid(schedule);
     }
 
     public List<Homework> generateHomework(String sets){

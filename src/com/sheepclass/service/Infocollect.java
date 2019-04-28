@@ -16,7 +16,7 @@ public class Infocollect {
         if (scheduleDao.getScheduleByuserid(schedule.getUserid()) == null)
             return scheduleDao.addSchedule(schedule);
         else
-            return scheduleDao.updateScheduleByuserid(schedule);
+            return scheduleDao.updateScheduleBycourseid(schedule);
     }
 
     int addMistakes(Mistakes mistakes){
