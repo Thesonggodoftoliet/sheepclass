@@ -4,11 +4,13 @@ import com.sheepclass.dao.ScheduleDao;
 import com.sheepclass.entity.Schedule;
 import com.sheepclass.utils.JdbcUtils;
 
+import java.util.List;
+
 public class ScheduleDaoimpl implements ScheduleDao {
     @Override
-    public Schedule getScheduleByuserid(int userid) {
-        String sql = "select * from _schedule where userid = ?";
-        return (Schedule) JdbcUtils.getObjectById(Schedule.class,sql,userid);
+    public List<Schedule> getScheduleByuserid(int userid) {
+        String sql = "select * from _schedule where userid = "+userid;
+        return JdbcUtils.getList(Schedule.class,sql);
     }
 
     @Override

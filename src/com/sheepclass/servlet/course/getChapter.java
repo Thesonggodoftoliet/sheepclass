@@ -6,6 +6,7 @@ import com.sheepclass.dao.implement.ChapterDaoImpl;
 import com.sheepclass.dao.implement.ScheduleDaoimpl;
 import com.sheepclass.entity.Chapter;
 import com.sheepclass.entity.Schedule;
+import com.sheepclass.service.Learn;
 import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
 import org.json.JSONException;
@@ -45,6 +46,8 @@ public class getChapter extends HttpServlet {
                 msg.put("token",token);
                 msg.put("chapter"," ");
                 msg.put("breakpoint"," ");
+                msg.put("isFinish"," ");
+                msg.put("courseid"," ");
             }catch (JSONException e){
                 e.printStackTrace();
             }
@@ -65,16 +68,16 @@ public class getChapter extends HttpServlet {
                     msg.put("chapter", " ");
                     msg.put("breakpoint", " ");
                     msg.put("isFinish"," ");
+                    msg.put("courseid"," ");
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
             }else {
                 Schedule schedule;
-                ScheduleDao scheduleDao = new ScheduleDaoimpl();
-                schedule = scheduleDao.getScheduleBycourseid(userid,courseid);
+                Learn learn = new Learn();
+                schedule = learn.getSchedule(userid,courseid);
                 Chapter chapter;
-                ChapterDao chapterDao = new ChapterDaoImpl();
-                chapter = chapterDao.getChapterByChapterId(serialnum,courseid);
+                chapter = learn.getChapter(serialnum,courseid);
                 try{
                     JSONObject chap = new JSONObject();
                     chap.put("chaptername",chapter.getChaptername());
@@ -84,6 +87,7 @@ public class getChapter extends HttpServlet {
                     msg.put("chapter",chap);
                     msg.put("breakpoint",schedule.getBreaktime());
                     msg.put("isFinish",schedule.getFinish());
+                    msg.put("courseid",courseid);
                 }catch (JSONException e){
                     e.printStackTrace();
                 }

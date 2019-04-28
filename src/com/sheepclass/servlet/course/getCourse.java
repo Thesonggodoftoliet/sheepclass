@@ -55,7 +55,20 @@ public class getCourse extends HttpServlet {
                 token = JwtUtils.createToken(userid);
             }else {
                 courseList = learn.getCoursesBysub(subject);
-                jsonArray = new JSONArray(courseList);
+                jsonArray = new JSONArray();
+                for (int i=0;i<courseList.size();i++){
+                    try{
+                        JSONObject course =new JSONObject();
+                        course.put("courseid",courseList.get(i).getCourseid());
+                        course.put("coursename",courseList.get(i).getCoursename());
+                        course.put("subject",courseList.get(i).getSubject());
+                        course.put("info",courseList.get(i).getInfo());
+                        course.put("img",courseList.get(i).getImg());
+                        jsonArray.put(course);
+                    }catch (JSONException e){
+                        e.printStackTrace();
+                    }
+                }
                 token = JwtUtils.createToken(userid);
             }
             try{
