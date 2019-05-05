@@ -1,6 +1,9 @@
 package com.sheepclass.utils;
 
 
+import com.jieba.JiebaSegmenter;
+import com.sheepclass.entity.Knowledge;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,4 +18,20 @@ public class SearchUtils {
         return cuisines;
     }*/
 
+    public static List<Knowledge> getKnowledge(String content){
+        int i = 0;
+        List<String> temp;
+        List<Knowledge> knowledges = new ArrayList<>();
+        JiebaSegmenter jiebaSegmenter =new JiebaSegmenter();
+        temp=jiebaSegmenter.sentenceProcess(content);
+        while (i<temp.size()){
+            if (temp.get(i).length()<1) {
+                temp.remove(i);
+            }
+            else i++;
+        }
+
+        return null;
+    }
 }
+
