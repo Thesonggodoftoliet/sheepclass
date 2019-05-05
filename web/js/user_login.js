@@ -1,9 +1,20 @@
+//换成JSON
 function GetJsonData() {
     var json = {
         "account":$("#account").val(),
         "userpwd":$("#userpwd").val()
     };
     return json;
+}
+
+//COOKIE存储TOKEN
+function setCookie(cname,cvalue)
+{
+    var expdate = new Date();   //初始化时间
+    expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
+    var expires = "expires="+expdate.toGMTString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+    alert("调用cookie成功");
 }
 
 function ajax_login_servlet() {
@@ -16,7 +27,12 @@ function ajax_login_servlet() {
         dataType:"json",
         async:false,
         success:function(msg){
-            alert("hhh");
+            if(msg.tag===0){
+                alert("不晓得啥原因 反正你登不上了");
+            }else{
+                window.location.href="index.jsp";
+                setCookie("token",msg.token);
+            }
         }, error: function (XMLHttpRequest, textStatus) {
             alert("失败");
         }

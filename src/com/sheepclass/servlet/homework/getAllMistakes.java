@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("homework/getAllMistakes")
+@WebServlet("/homework/getAllMistakes")
 public class getAllMistakes extends HttpServlet {
 
     public getAllMistakes() {
