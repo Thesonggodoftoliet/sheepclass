@@ -1,15 +1,20 @@
 package com.sheepclass.service;
 
+import com.sheepclass.dao.HomeworkDao;
 import com.sheepclass.dao.MistakesDao;
 import com.sheepclass.dao.ScheduleDao;
+import com.sheepclass.dao.implement.HomeworkDaoImpl;
 import com.sheepclass.dao.implement.MistakesDaoImpl;
 import com.sheepclass.dao.implement.ScheduleDaoimpl;
+import com.sheepclass.entity.Homework;
+import com.sheepclass.entity.Knowledge;
 import com.sheepclass.entity.Mistakes;
 import com.sheepclass.entity.Schedule;
 
 public class Infocollect {
     MistakesDao mistakesDao = null;
     ScheduleDao scheduleDao = null;
+    HomeworkDao homeworkDao = null;
     int setSchedule(Schedule schedule){//断点
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
@@ -23,6 +28,11 @@ public class Infocollect {
         if (mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();
         return mistakesDao.addMistakes(mistakes);
+    }
+
+    int addMistakes(int courseid,String content){
+
+        return 0;
     }
 
     int setMistakes(Mistakes mistakes){

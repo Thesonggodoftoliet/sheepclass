@@ -35,7 +35,7 @@ public class pickWord {
         return null;
     }
 
-    public static List<String> pickWordString(String spicture){
+    public static String pickWordString(String spicture){
         String host = "http://spwzsb.market.alicloudapi.com";
         String path = "/word/video/recognize";
         String method = "POST";
@@ -58,7 +58,7 @@ public class pickWord {
         System.out.println("encode"+encode);
         bodys.put("contentBase64", encode);
         //返回值
-        List<String> wordlist = new ArrayList<String>();
+        String temp = "";
 
         try {
             HttpResponse response = HttpUtils.doPost(host, path, method, headers, querys, bodys);
@@ -77,14 +77,14 @@ public class pickWord {
                 contents = contents.replace("\"", "");
                 contents = contents.replace(",", "");
                 contents = contents.replace("]", "");
-                wordlist.add(contents);
-                System.out.println(wordlist.get(i));
+                temp = temp+contents;
+                System.out.println(content);
             }
             // System.out.println(EntityUtils.toString(response.getEntity()));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return wordlist;
+        return temp;
     }
 
     public static void main(String[] args) {
