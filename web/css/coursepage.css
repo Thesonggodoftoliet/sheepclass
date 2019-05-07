@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/** {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}*/
+* {
+	margin:0px;
+	padding:0px;
+	border:none;
+	outline:none;
+}
+hr {
+    width: 1150px;
+    margin: 10px 152px;
+}
+
+@media (min-width: 1200px) { /*定义输出设备中的页面最小可见区域宽度*/
+  .container {
+    padding: 0;
+  }
+}
+.header {
+    position: relative;
+    z-index: 99;
+    
+}
+/*================== main header ===============*/
+
+.main-header {
+    position:relative;
+    width:100%;
+    left:0px;
+    top:0px;
+    z-index:99;
+    padding-top: 0px;
+    background: transparent;
+    transition:all 300ms ease;
+    -moz-transition:all 300ms ease;
+    -webkit-transition:all 300ms ease;
+    -ms-transition:all 300ms ease;
+    -o-transition:all 300ms ease;   
+}
+/*==================== main header logo ============================*/
+.main-header .logo {
+    position: relative;
+    margin-top: 29px;
+    z-index: 9999;
+    transition:all 300ms ease;
+    -moz-transition:all 300ms ease;
+    -webkit-transition:all 300ms ease;
+    -ms-transition:all 300ms ease;
+    -o-transition:all 300ms ease;   
+}
+/*=============== container =======================*/
+  .container {
+    padding: 0;
+    width: 1170px;
+    height:155px;
+    margin-right: auto;
+    margin-left: auto
+  }
+/*top*/
+
+
+
+/*技术盒子*/
+.skill_nav {
+	margin-top:-10%;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    width: 1180px;
+    height: 75px
+}
+
+/*具体技术分类*/
+.technology {
+    margin: 150px;
+    height: 75px;
+    /*border: 1px solid blue;*/
+    width: 1180px;
+}
+
+.technology ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 75px; /*行高为父类高度就会垂直居中*/
+    font-weight: bold;
+    margin-right: 25px;
+
+}
+
+.technology ul li a {
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+.technology ul li a:hover:not(.active) {
+    color: #ffc333;
+    font-size: 20px;
+}
+
+/*这里无法设置，第一个子元素生效，只能通过这样设置第一个链接的样式*/
+.technology ul li a.active {
+    font-size: 20px;
+    color: #ffc333;
+    text-decoration: red;
+
+}
+
+/*详细技术*/
+.skill_all {
+
+    margin-left: 152px;
+    overflow: hidden;
+    width: 1180px;
+    height: auto;
+    /*border: 1px solid #fe8f1b;*/
+    margin-bottom: 30px;
+
+}
+
+.skill_all ul li {
+    margin-top: 5px;
+    list-style-type: none;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+.skill_all ul li a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+
+}
+
+.skill_all ul li a:hover:not(.active) {
+    font-size: 16px;
+    color: #2d3236;
+    text-decoration: none;
+    background-color: #ffc333;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+/*这里无法设置，第一个子元素生效，只能通过这样设置第一个链接的样式*/
+ .skill_all ul li a.active {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: #ffc333;
+    border-radius: 20px;
+    padding: 5px 10px;
+} 
+
+/*视频区*/
+ .skill_video {
+
+    width: 1187px;
+    /* 1200px */
+    height: auto;
+    /* border: 1px solid black; */
+    
+    margin-left: 152px;
+    overflow: hidden; /* 加上这一句视频布局就向前靠了 */
+
+} 
+
+.skill_video li {
+    list-style-type: none;
+    float: left;
+    margin-right: 26px;
+    margin-left: 0px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+/*第四个右边距为0*/
+.skill_video li.not_margin_right {
+    margin-right: 0;
+}
+
+.single_video {
+    margin: 0 auto;
+    width: 275px;
+    height: 320px;
+    /*border: 1px solid blue;*/
+
+}
+
+.skill_video img {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 272px;
+    height: 150px;
+    border-radius: 8px;
+    transition: all 0.6s;
+    overflow: visible;
+}
+.skill_video img:hover {
+    /*定义2d转换*/
+    transform: scale(1.1);
+}
+
+.skill_video_title {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.evaluate {
+    margin: 8px 0;
+}
+
+.evaluate a {
+    text-decoration: none;
+}
+
+.evaluate span {
+    font-size: 11px;
+    color: #2d3236;
+}
+
+.evaluate img {
+    vertical-align: middle; /*图片和文字对齐*/
+    width: 18px;
+    height: 18px;
+}
+
+.describe {
+    font-size: 11px;
+    color: #66727b;
+    text-indent: 2em;
+    text-align: left;
+}
+/*支付搜藏*/
+.video_pay{
+    margin-top: 10px;
+}
+
+.video_pay a {
+    color: black;
+    text-decoration: none;
+}
+
+.video_pay a span.video_pay_span_right{
+    color: #66727b;
+    float: right;
+    margin-left: 135px;
+}
+
+.video_pay a span.video_pay_span_left{
+
+}
+/*分页查询*/
+.page ul.pagination {
+    /*https://www.cnblogs.com/hy-sunny/p/5602236.html*/
+    /*行内块元素*/
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.page ul.pagination li {
+    /*与其他元素在同一行上*/
+    display: inline-block;
+    margin: 5px 5px;
+
+}
+
+.page ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 10px 16px;
+    transition: background-color .3s;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.page ul.pagination li a.active {
+    color: white;
+    background-color: #ffc333;
+}
+
+.page ul.pagination li a:hover:not(.active) {
+    background-color: #ffc333;
+    color: #dddddd;
+}
+
+.page {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.foot{
+    width:1520px;
+    height: 110px;
+    background-color:#ffc333;
+}
+
+.foot ul {
+    margin-left: 140px;
+}
+
+.foot ul li{
+    margin-top: 30px;
+    margin-left: 35px;
+    display: inline-block;
+}
+
+.foot ul li a{
+    float: left;
+    text-decoration: none;
+    color: white;
+}
+
+#ower{
+    margin-left: 175px;
+    color: #dddddd;
+}

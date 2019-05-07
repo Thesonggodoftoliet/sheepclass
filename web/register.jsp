@@ -66,13 +66,13 @@
 
                         <div class="navbar-collapse collapse text-center">
                             <ul>
-                                <li><a href="index.html">首 页</a></li>
-                                <li><a href="events.html">课 程 学 习</a></li>
-                                <li><a href="about.html">个 人 天 地</a>
+                                <li><a href="index.jsp">首 页</a></li>
+                                <li><a href="coursepage.jsp">课 程 学 习</a></li>
+                                <li><a href="person.jsp">个 人 天 地</a>
                                     <ul class="submenu">
-                                        <li><a href="product-details.html">错 题 园 地</a></li>
-                                        <li><a href="cart-page.html">分 析 报 告</a></li>
-                                        <li><a href="checkout-page.html">账 户 中 心</a></li>
+                                        <li><a href="wrong.jsp">错 题 园 地</a></li>
+                                        <li><a href="reports.jsp">分 析 报 告</a></li>
+                                        <li><a href="person-center.jsp">账 户 中 心</a></li>
                                     </ul>
                                 </li>
                             </ul>
