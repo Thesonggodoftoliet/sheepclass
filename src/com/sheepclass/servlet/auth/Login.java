@@ -4,6 +4,7 @@ import com.sheepclass.entity.Users;
 import com.sheepclass.service.Auth;
 import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
+import com.sheepclass.utils.getPhoto;
 import org.json.JSONException;
 import org.json.JSONObject;
 
