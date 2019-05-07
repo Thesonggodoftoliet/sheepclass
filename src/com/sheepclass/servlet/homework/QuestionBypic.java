@@ -1,18 +1,22 @@
 package com.sheepclass.servlet.homework;
 
-import com.sheepclass.utils.JwtUtils;
-import com.sheepclass.utils.ReciveUtils;
+import com.sheepclass.entity.Homework;
+import com.sheepclass.entity.Knowledge;
+import com.sheepclass.service.Infocollect;
+import com.sheepclass.service.Learn;
+import com.sheepclass.utils.*;
 import netscape.javascript.JSException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/QuestionBypic")
+@WebServlet("/homework/QuestionBypic")
 public class QuestionBypic extends HttpServlet {
 
     public QuestionBypic() {
@@ -40,16 +44,29 @@ public class QuestionBypic extends HttpServlet {
             }
         }else {
             double time = 0;
+            String path = null;
             int userid = 0;
+            int courseid=0;
             try{
                 time = obj.getDouble("time");
                 userid = JwtUtils.decodeToken(token);
                 token = JwtUtils.createToken(userid);
+                courseid = obj.getInt("courseid");
+                path = obj.getString("path");
+                String photopath=getPhoto.grabberVideoFramer(time,path);
+                String content = pickWord.pickWordString(photopath);
+                Infocollect infocollect =new Infocollect();
+                infocollect.addMistakes(courseid,content,userid);
+                msg.put("token",token);
+                msg.put("tag",1);
+
             }catch (JSONException e){
                 e.printStackTrace();
             }
-
         }
+        out.print(msg);
+        out.flush();
+        out.close();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

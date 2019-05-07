@@ -20,26 +20,10 @@ public class getPhoto {
     //视频帧图片存储路径
     private static String videoFramesPath = "/Users/chenan/sheepclassdemo/web/SCREEN-SHOT/";
 
-    //图片完整路径
-    private String photoName;
 
-    //暂停时间
-    private double curTime;
-    private int curFlames;
+    public static String grabberVideoFramer(double curTime,String videoFileName){
 
-    //文件名
-    private String videoFileName;
-
-
-    public getPhoto(double curTime,String videoFileName ){
-        this.curTime = curTime;
-        this.videoFileName=videoFileName.substring(0,videoFileName.indexOf('.'));
-        System.out.println("hhhhhh   "+this.videoFileName);
-
-    }
-
-    public void grabberVideoFramer(){
-
+        videoFileName = videoFileName.substring(0,videoFileName.indexOf(','));
         /*
             获取视频文件
          */
@@ -56,7 +40,7 @@ public class getPhoto {
              * */
             int ftp = fFmpegFrameGrabber.getLengthInFrames();
 
-            curFlames = changeStoZ(fFmpegFrameGrabber);
+            int curFlames = changeStoZ(fFmpegFrameGrabber,curTime);
 
             //Frame对象
             Frame frame = null;
@@ -97,33 +81,18 @@ public class getPhoto {
 
             //stop
             fFmpegFrameGrabber.stop();
-            setphotoName(photoName);
+
+            return photoName;
 
         } catch ( IOException E) {
             E.printStackTrace();
         }
 
-
-
-
-    }
-
-    public static void main(String args[]){
-        getPhoto g = new getPhoto(10.383,"history_sanguo.mp4");
-        g.grabberVideoFramer();
-    }
-
-    public void setphotoName(String photoName){
-        this.photoName = photoName;
+        return null;
 
     }
 
-    public String getPhotoName(){
-        return photoName;
-
-    }
-
-    protected int changeStoZ(FFmpegFrameGrabber fFmpegFrameGrabber){
+    protected static int changeStoZ(FFmpegFrameGrabber fFmpegFrameGrabber,double curTime){
         int curZhen = new Double(curTime*fFmpegFrameGrabber.getFrameRate()).intValue();
         return curZhen;
     }

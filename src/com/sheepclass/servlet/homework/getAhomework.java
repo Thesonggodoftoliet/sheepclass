@@ -16,7 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/getAhomework")
+@WebServlet("/homework/getAhomework")
 public class getAhomework extends HttpServlet {
 
     public getAhomework() {

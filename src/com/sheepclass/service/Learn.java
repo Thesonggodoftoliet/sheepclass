@@ -19,6 +19,12 @@ public class Learn {
     private MistakesDao mistakesDao = null;
     private KnowledgeDao knowledgeDao = null;
 
+    public List<Homework> getHomeworkByKnow(int knowledgeid){
+        if (homeworkDao == null)
+            homeworkDao = new HomeworkDaoImpl();
+        return homeworkDao.getHomeworkByknow(knowledgeid);
+    }
+
     public Course getCourseById(int courseid){
         if (courseDao == null)
             courseDao = new CourseDaoImle();
