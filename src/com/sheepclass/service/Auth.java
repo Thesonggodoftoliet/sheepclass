@@ -21,7 +21,7 @@ public class Auth {
     public Auth(Users user){
         if (user.getUserid() != 0)
             sqluser = userDao.getUserById(user.getUserid());
-        else if (user.getEmail().isEmpty())
+        else if (user.getEmail()==null)
             sqluser = userDao.getUserByphone(user.getPhone());
         else
             sqluser = userDao.getUserByEmail(user.getEmail());
@@ -48,17 +48,20 @@ public class Auth {
     public int logintime(int userid){
         List<Learninginfo> learninginfos = learninginfoDao.getLearningtime(userid,calendar.getTimeInMillis());
         Collections.sort(learninginfos);
-        Learninginfo learninginfo = learninginfos.get(0);
-        Date date = new Date(learninginfo.getLogintime());
-        int tag;
-        if (date.getMonth() == calendar.getTime().getMonth() && date.getDate() == calendar.getTime().getDate()){//当天多次登录
-            learninginfo.setLogintime(calendar.getTimeInMillis());
-            tag = learninginfoDao.updateInfo(learninginfo);
-        }else {
-            learninginfo.setLogintime(calendar.getTimeInMillis());
-            learninginfo.setLogouttime(0);
-            tag = learninginfoDao.addInfo(learninginfo);
-        }
-        return tag;
+        if(!learninginfos.isEmpty()){
+            Learninginfo learninginfo = learninginfos.get(0);
+            Date date = new Date(learninginfo.getLogintime());
+            int tag;
+            if (date.getMonth() == calendar.getTime().getMonth() && date.getDate() == calendar.getTime().getDate()){//当天多次登录
+                learninginfo.setLogintime(calendar.getTimeInMillis());
+                tag = learninginfoDao.updateInfo(learninginfo);
+            }else {
+                learninginfo.setLogintime(calendar.getTimeInMillis());
+                learninginfo.setLogouttime(0);
+                tag = learninginfoDao.addInfo(learninginfo);
+            }
+            return tag;
+        }else
+            return 1;
     }
 }

@@ -85,15 +85,6 @@
     </div>
 </header>
 
-<section class="page-title center">
-    <div class="container">
-        <h2>Course</h2>
-        <ul>
-            <li><a href="coursepage.jsp">Course</a></li>
-        </ul>
-    </div>
-</section>
-
 <div  style="padding-top:60px;">
 
     <div class="skill_all">

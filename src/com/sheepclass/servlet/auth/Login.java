@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
         Users user = new Users();
         try {
             String account = jsonObject.getString("account");
-            if (account.indexOf('@')!= -1)//不是邮箱
+            if (account.indexOf('@') == -1)//不是邮箱
                 user.setPhone(account);
             else
                 user.setEmail(account);
@@ -38,6 +38,7 @@ public class Login extends HttpServlet {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        System.out.println("user:"+user.getEmail()+"----"+user.getPhone());
         Auth auth = new Auth(user);
         int userid = auth.checkPassword(user);
         String token;

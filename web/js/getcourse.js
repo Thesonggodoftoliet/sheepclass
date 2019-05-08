@@ -33,7 +33,7 @@ function getCookie(cname)
 $(function auto_ajax_subject(){
     $.ajax({
         type:"post",
-        url:"${pageContext.request.contextPath}/course/getCourse",
+        url:"/course/getCourse",
         data:JSON.stringify(GetJsonData("")),
         cache:false,
         dataType:"json",
@@ -45,13 +45,14 @@ $(function auto_ajax_subject(){
                 setCookie("token",json.token); //更新TOKEN
                 var course = json.course;
                 var tem = "<section class='event style-2'><div class='container'><div class='row'>";
-                for(var i=0,l=json.length;i<l;i++){
+                for(var i=0,l=course.length;i<l;i++){
+                    alert(course[i].courseid);
                     tem+="<div class='col-md-4 col-sm-6 col-xsw-12 item wow fadeIn' data-wow-duration='2s' data-wow-delay='0."+(i+5)+"s' data-wow-offset='0' style='visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;'>";
                     tem+="<div class='img-holder'><figure>";
                     //这里是要跳转的 还没写吼
                     tem+="<a href='${pageContext.request.contextPath}/startClass?courseid="+course[i].courseid+"'>";
                     //5.5日下午
-                    tem+=" <img src='${pageContext.request.contextPath}"+course[i].img+"'>";
+                    tem+=" <img src='${pageContext.request.contextPath}/web/images/course/"+course[i].img+"'>";
                     tem+="</a>"+"</figure>";
                     tem+="<div class='content bg-color-1'><div class='inner-box'><div class='btn-box'><div class='count'>25</div><div class='month'>July</div></div>";
                     tem+="<h4><a href='#'>"+course[i].coursename+"</a></h4>";
@@ -89,17 +90,18 @@ $(".subject li").click(function ajax_subject(){
             if(json.tag===0){
                 alert("身份验证过期 请重新登录");
             }else{
-                alert("auto_ajax_subject");
+                alert("ajax_subject"+json.token);
                 setCookie("token",json.token); //更新TOKEN
                 var course = json.course;
+                alert(course.toString());
                 var tem = "<section class='event style-2'><div class='container'><div class='row'>";
-                for(var i=0,l=json.length;i<l;i++){
+                for(var i=0,l=course.length;i<l;i++){
                     tem+="<div class='col-md-4 col-sm-6 col-xsw-12 item wow fadeIn' data-wow-duration='2s' data-wow-delay='0."+(i+5)+"s' data-wow-offset='0' style='visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;'>";
                     tem+="<div class='img-holder'><figure>";
                     //这里是要跳转的 还没写吼
                     tem+="<a href='${pageContext.request.contextPath}/startClass?courseid="+course[i].courseid+"'>";
                     //5.5日下午
-                    tem+=" <img src='${pageContext.request.contextPath}"+course[i].img+"'>";
+                    tem+=" <img src='${pageContext.request.contextPath}/web/images/course/"+course[i].img+"'>";
                     tem+="</a>"+"</figure>";
                     tem+="<div class='content bg-color-1'><div class='inner-box'><div class='btn-box'><div class='count'>25</div><div class='month'>July</div></div>";
                     tem+="<h4><a href='#'>"+course[i].coursename+"</a></h4>";
