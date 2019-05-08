@@ -43,7 +43,7 @@ public class getChapter extends HttpServlet {
         if (tag == 0){
             try{
                 msg.put("tag",0);
-                msg.put("token",token);
+                msg.put("token"," ");
                 msg.put("chapter"," ");
                 msg.put("breakpoint"," ");
                 msg.put("isFinish"," ");

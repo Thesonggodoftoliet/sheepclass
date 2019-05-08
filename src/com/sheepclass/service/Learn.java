@@ -17,6 +17,31 @@ public class Learn {
     private ScheduleDao scheduleDao = null;
     private HomeworkDao homeworkDao = null;
     private MistakesDao mistakesDao = null;
+    private KnowledgeDao knowledgeDao = null;
+
+    public List<Homework> getHomeworkByKnow(int knowledgeid){
+        if (homeworkDao == null)
+            homeworkDao = new HomeworkDaoImpl();
+        return homeworkDao.getHomeworkByknow(knowledgeid);
+    }
+
+    public Course getCourseById(int courseid){
+        if (courseDao == null)
+            courseDao = new CourseDaoImle();
+        return courseDao.getcourseByid(courseid);
+    }
+
+    public List<Knowledge> getKnoledgesById(String sets){
+        if (knowledgeDao == null)
+            knowledgeDao = new KnowledgeDaoImpl();
+        List<Knowledge> knowledges = new ArrayList<>();
+        List<Integer> knowledgeid = PraseUtils.sToi(sets);
+        for (int i =0;i<knowledgeid.size();i++){
+            Knowledge knowledge = knowledgeDao.getKnowledgeByid(knowledgeid.get(i));
+            knowledges.add(knowledge);
+        }
+        return knowledges;
+    }
 
     class Temp implements Comparable{
         private int homeworkid;
@@ -152,6 +177,12 @@ public class Learn {
         return homeworkList;
     }
 
+    public List<Mistakes> getMistakes(int userid){
+        if (mistakesDao == null)
+            mistakesDao = new MistakesDaoImpl();
+        return mistakesDao.getMistakesByuserid(userid);
+    }
+
     public List<Homework> getMistakesByuserid(int userid){
         /*（待做）传回的时候应当加上课程名等*/
         if (mistakesDao == null)
@@ -164,5 +195,28 @@ public class Learn {
             homeworkList.add(homeworkDao.getHomeworkById(mistakes.get(i).getHomeworkid()));
         }
         return homeworkList;
+    }
+
+    public List<String> getNameofMistakesByuserid(int userid){
+        if (mistakesDao == null)
+            mistakesDao = new MistakesDaoImpl();
+        if (courseDao == null)
+            courseDao = new CourseDaoImle();
+        List<Mistakes> mistakes = mistakesDao.getMistakesByuserid(userid);
+        List<Course> courses = new ArrayList<>();
+        List<String> coursename = new ArrayList<>();
+        for (int i = 0;i<mistakes.size();i++){
+            courses.add(courseDao.getcourseByid(mistakes.get(i).getCourseid()));
+        }
+        for (int j = 0 ;j<courses.size();j++){
+            coursename.add(courses.get(j).getCoursename());
+        }
+        return coursename;
+    }
+
+    public Homework getHomework(int homewokid){
+        if (homeworkDao == null)
+            homeworkDao = new HomeworkDaoImpl();
+        return homeworkDao.getHomeworkById(homewokid);
     }
 }

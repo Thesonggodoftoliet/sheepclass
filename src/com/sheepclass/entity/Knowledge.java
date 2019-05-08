@@ -9,7 +9,7 @@ import java.util.Date;
  * 
  * @date 2019-04-09
  */ 
-public class Knowledge {
+public class Knowledge implements Comparable{
 	private int knowledgeid;
 	private String content;
 	private int level;
@@ -36,5 +36,11 @@ public class Knowledge {
 
 	public void setLevel(int level) {
 		this.level = level;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Knowledge p = (Knowledge)o;
+		return p.knowledgeid-this.knowledgeid;
 	}
 }
