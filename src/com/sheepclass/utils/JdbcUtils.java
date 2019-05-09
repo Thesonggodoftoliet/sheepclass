@@ -79,7 +79,7 @@ public final class JdbcUtils {
 			while (rs.next()) { // 当查询结果还有下一条继续执行
 				Object obj = clazz.newInstance();
 				for (int i = 1; i <= metaData.getColumnCount(); i++) {
-					System.out.println( rs.getObject(i)+"------");
+					System.out.print( rs.getObject(i)+"------");
 					System.out.println( metaData.getColumnName(i));
 					
 					BeanUtils.copyProperty(obj, metaData.getColumnName(i), rs.getObject(i));

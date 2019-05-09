@@ -21,7 +21,7 @@ public class CourseDaoImle implements CourseDao {
 
     @Override
     public List<Course> getCoursesBysub(String subject) {
-        String sql = "select * from course where subject = "+subject;
+        String sql = "select * from course where subject = '"+subject+"'";
         return JdbcUtils.getList(Course.class,sql);
     }
 

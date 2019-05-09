@@ -41,6 +41,7 @@ public class getCourse extends HttpServlet {
         }
         int tag = JwtUtils.verifyToken(token);
         int userid = JwtUtils.decodeToken(token);
+        System.out.println("tag=="+tag);
         if (tag == 1){
             try{
                 subject = object.getString("subject");
@@ -51,7 +52,21 @@ public class getCourse extends HttpServlet {
             }
             if (subject.isEmpty()){
                 courseList = learn.getAllcourse();
-                jsonArray = new JSONArray(courseList);
+                jsonArray = new JSONArray();
+                for (int i=0;i<courseList.size();i++){
+                    try{
+                        JSONObject course =new JSONObject();
+                        course.put("subject",courseList.get(i).getSubject());
+                        course.put("info",courseList.get(i).getInfo());
+                        course.put("img",courseList.get(i).getImg());
+                        System.out.println("courseid====="+courseList.get(i).getCourseid());
+                        course.put("courseid",courseList.get(i).getCourseid());
+                        course.put("coursename",courseList.get(i).getCoursename());
+                        jsonArray.put(course);
+                    }catch (JSONException e){
+                        e.printStackTrace();
+                    }
+                }
                 token = JwtUtils.createToken(userid);
             }else {
                 courseList = learn.getCoursesBysub(subject);
@@ -59,6 +74,7 @@ public class getCourse extends HttpServlet {
                 for (int i=0;i<courseList.size();i++){
                     try{
                         JSONObject course =new JSONObject();
+                        System.out.println("courseid====="+courseList.get(i).getCourseid());
                         course.put("courseid",courseList.get(i).getCourseid());
                         course.put("coursename",courseList.get(i).getCoursename());
                         course.put("subject",courseList.get(i).getSubject());
@@ -74,6 +90,7 @@ public class getCourse extends HttpServlet {
             try{
                 msg.put("tag",1);
                 msg.put("course",jsonArray);
+                System.out.println("course"+msg.get("course"));
                 msg.put("token",token);
             }catch (JSONException e){
                 e.printStackTrace();

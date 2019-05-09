@@ -3,15 +3,31 @@ function GetJsonData(){
     var regist_time = (new Date()).getTime();
     console.log(regist_time); //ms
 
+    var sex;
+    var identity;
+
+    if($("#sex").val()==="女"){
+        sex=1;
+    }else{
+        sex=2;
+    }
+
+    if($("#identity").val()==="学生"){
+        identity=2;
+    }else{
+        identity=3;
+    }
+    alert("sex"+sex+"identity"+identity);
+
     var json = {
         "username":$("#username").val(),
         "userpwd":$("#userpwd").val(),
         "email":$("#email").val(),
         "phone":$("#phone").val(),
-        "sex":$("#sex").val(),
-        "identity":$("#identity").val(),
+        "sex":sex,
+        "identity":identity,
         "birthday":$("#birthday").val(),
-        "register_time":regist_time,
+        "regist_time":regist_time,
         "login_time":regist_time
     };
     return json;
@@ -28,6 +44,7 @@ function setCookie(cname,cvalue)
 }
 
 function ajax_reg_servlet() {
+   // alert(JSON.stringify(GetJsonData()));
     $.ajax({
         type:"post",
         url:"/auth/Register", //跳转
