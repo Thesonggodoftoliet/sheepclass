@@ -84,7 +84,7 @@ public class Users {
 
 	public void setIdentity(int identity) {
 		this.identity = identity;
-	}
+	}//1 管理员 2孩子 3家长
 
 	public int getParentid() {
 		return parentid;
