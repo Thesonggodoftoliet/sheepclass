@@ -15,8 +15,8 @@ public class Users {
 	private String userpwd;
 	private String email;
 	private String phone;
-	private int sex;
-	private int identity;
+	private int sex; //1 girls 2 boys
+	private int identity;//1 管理员 2 学生 3 家长
 	private int parentid;
 	private long birthday;
 	private long regist_time;
