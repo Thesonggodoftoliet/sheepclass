@@ -13,7 +13,7 @@ public class Schedule{
 	private float serialnum;
 	private int courseid;
 	private int userid;
-	private long breaktime;
+	private float breaktime;
 	private int finish;
 
 	public float getSerialnum() {
@@ -40,11 +40,11 @@ public class Schedule{
 		this.userid = userid;
 	}
 
-	public long getBreaktime() {
+	public float getBreaktime() {
 		return breaktime;
 	}
 
-	public void setBreaktime(long breaktime) {
+	public void setBreaktime(float breaktime) {
 		this.breaktime = breaktime;
 	}
 
