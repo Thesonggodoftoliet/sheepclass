@@ -25,7 +25,7 @@ public class getChapter extends HttpServlet {
         super();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("getChapter");
         JSONObject object = ReciveUtils.getObject(request);
         JSONObject msg = new JSONObject();
@@ -51,13 +51,14 @@ public class getChapter extends HttpServlet {
                 e.printStackTrace();
             }
         }else {
-            int userid = JwtUtils.decodeToken(token);
+            int userid = 0;
+            userid= JwtUtils.decodeToken(token);
             token = JwtUtils.createToken(userid);
             try {
                 courseid = object.getInt("courseid");
                 serialnum = (float) object.getDouble("serialnum");
             }catch (JSONException e){
-                e.printStackTrace();;
+                e.printStackTrace();
             }
             //接受失败
             if (courseid == 0 || serialnum == 0){
@@ -71,11 +72,10 @@ public class getChapter extends HttpServlet {
                     e.printStackTrace();
                 }
             }else {
-                Schedule schedule;
                 Learn learn = new Learn();
-                schedule = learn.getSchedule(userid,courseid);
-                Chapter chapter;
-                chapter = learn.getChapter(serialnum,courseid);
+                Schedule schedule = learn.getSchedule(userid,courseid);
+                Learn learn1 = new Learn();
+                Chapter chapter= learn1.getChapter(serialnum,courseid);
                 try{
                     JSONObject chap = new JSONObject();
                     chap.put("chaptername",chapter.getChaptername());

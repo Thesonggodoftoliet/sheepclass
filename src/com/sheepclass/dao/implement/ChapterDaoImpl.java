@@ -9,7 +9,7 @@ import java.util.List;
 public class ChapterDaoImpl implements ChapterDao {
     @Override
     public List<Chapter> getChapterByCourse(int courseid) {
-        String sql = "select * from chapter where couseid = "+courseid;
+        String sql = "select * from chapter where courseid = "+courseid;
         return JdbcUtils.getList(Chapter.class,sql);
     }
 
