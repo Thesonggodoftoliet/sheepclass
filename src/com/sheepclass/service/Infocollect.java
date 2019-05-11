@@ -3,13 +3,12 @@ package com.sheepclass.service;
 import com.sheepclass.dao.HomeworkDao;
 import com.sheepclass.dao.MistakesDao;
 import com.sheepclass.dao.ScheduleDao;
+import com.sheepclass.dao.UserDao;
 import com.sheepclass.dao.implement.HomeworkDaoImpl;
 import com.sheepclass.dao.implement.MistakesDaoImpl;
 import com.sheepclass.dao.implement.ScheduleDaoimpl;
-import com.sheepclass.entity.Homework;
-import com.sheepclass.entity.Knowledge;
-import com.sheepclass.entity.Mistakes;
-import com.sheepclass.entity.Schedule;
+import com.sheepclass.dao.implement.UserDaoIm;
+import com.sheepclass.entity.*;
 import com.sheepclass.utils.SearchUtils;
 
 import java.util.List;
@@ -18,10 +17,11 @@ public class Infocollect {
     MistakesDao mistakesDao = null;
     ScheduleDao scheduleDao = null;
     HomeworkDao homeworkDao = null;
+    UserDao userDao = null;
     public int setSchedule(Schedule schedule){//断点
         if (scheduleDao == null)
             scheduleDao = new ScheduleDaoimpl();
-        if (scheduleDao.getScheduleByuserid(schedule.getUserid()) == null)
+        if (scheduleDao.getScheduleBycourseid(schedule.getUserid(),schedule.getCourseid()) == null)//根据用户和课程查找
             return scheduleDao.addSchedule(schedule);
         else
             return scheduleDao.updateScheduleBycourseid(schedule);
@@ -68,5 +68,11 @@ public class Infocollect {
             return -1;//删除错题
         }else
             return mistakesDao.updateMistakes(mistakes);
+    }
+
+    public int updateUsers(Users users){
+        if (userDao == null)
+            userDao =new UserDaoIm();
+        return userDao.setUser(users);
     }
 }

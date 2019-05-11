@@ -64,4 +64,9 @@ public class Auth {
         }else
             return 1;
     }
+
+    public int verifyIdentity(int userid){
+        UserDao userDao = new UserDaoIm();
+        return userDao.getUserById(userid).getIdentity();
+    }
 }

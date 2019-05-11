@@ -39,18 +39,28 @@ public class Register extends HttpServlet {
             e.printStackTrace();
         }
         Auth auth = new Auth();
-        if (auth.addNewuser(user) !=0) {
-            try {
-                user = auth.getUserinfo();
-                msg.put("token", JwtUtils.createToken(user.getUserid()));
-                msg.put("tag",1);
-            }catch (JSONException e){
-                e.printStackTrace();
+        Auth auth1 = new Auth(user);
+        if (auth1.getUserinfo() == null) {//如果没有注册过
+            if (auth.addNewuser(user) != 0) {
+                try {
+                    user = auth.getUserinfo();
+                    msg.put("token", JwtUtils.createToken(user.getUserid()));
+                    msg.put("tag", 1);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    msg.put("token", "");
+                    msg.put("tag", 0);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }else {
             try{
-                msg.put("token","");
-                msg.put("tag",0);
+                msg.put("token"," ");
+                msg.put("tag",2);//有重复邮箱或手机号码
             }catch (JSONException e){
                 e.printStackTrace();
             }

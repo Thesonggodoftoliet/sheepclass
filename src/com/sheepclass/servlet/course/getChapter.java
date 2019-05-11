@@ -46,7 +46,6 @@ public class getChapter extends HttpServlet {
                 msg.put("token"," ");
                 msg.put("chapter"," ");
                 msg.put("breakpoint"," ");
-                msg.put("isFinish"," ");
                 msg.put("courseid"," ");
             }catch (JSONException e){
                 e.printStackTrace();
@@ -67,7 +66,6 @@ public class getChapter extends HttpServlet {
                     msg.put("token", token);
                     msg.put("chapter", " ");
                     msg.put("breakpoint", " ");
-                    msg.put("isFinish"," ");
                     msg.put("courseid"," ");
                 }catch (JSONException e){
                     e.printStackTrace();
@@ -86,7 +84,6 @@ public class getChapter extends HttpServlet {
                     msg.put("token",token);
                     msg.put("chapter",chap);
                     msg.put("breakpoint",schedule.getBreaktime());
-                    msg.put("isFinish",schedule.getFinish());
                     msg.put("courseid",courseid);
                 }catch (JSONException e){
                     e.printStackTrace();

@@ -30,7 +30,7 @@ public class ReciveUtils {
         return Obj;
     }
 
-    public static JSONArray getArray(HttpServletRequest request) throws IOException, JSONException {
+    public static JSONArray getArray(HttpServletRequest request, String key) throws IOException, JSONException {
         InputStream js = request.getInputStream();
         InputStreamReader jsr = new InputStreamReader(js);
         BufferedReader br = new BufferedReader(jsr);
@@ -43,7 +43,7 @@ public class ReciveUtils {
         jsonObject = new JSONObject(json);
 
 
-        JSONArray jsonArray = jsonObject.getJSONArray("images");
+        JSONArray jsonArray = jsonObject.getJSONArray(key);
 
         return jsonArray;
     }
