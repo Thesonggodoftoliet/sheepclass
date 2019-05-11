@@ -3,6 +3,7 @@ package com.sheepclass.servlet.course;
 import com.sheepclass.dao.ChapterDao;
 import com.sheepclass.dao.implement.ChapterDaoImpl;
 import com.sheepclass.entity.Chapter;
+import com.sheepclass.entity.Schedule;
 import com.sheepclass.service.Learn;
 import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
@@ -43,6 +44,8 @@ public class getChapters extends HttpServlet {
                 msg.put("tag", 0);
                 msg.put("token"," ");
                 msg.put("chapters"," ");
+                msg.put("isFinish"," ");
+                msg.put("serialnum"," ");
                 msg.put("courseid"," ");
             }catch (JSONException e){
                 e.printStackTrace();
@@ -58,6 +61,7 @@ public class getChapters extends HttpServlet {
             }
             Learn learn = new Learn();
             List<Chapter> chapters = learn.getChapterByCourse(courseid);
+            Schedule schedule = learn.getSchedule(userid,courseid);
             JSONArray chapterlist = new JSONArray();
             try{
                 for(int i = 0;i<chapters.size();i++){
@@ -66,7 +70,15 @@ public class getChapters extends HttpServlet {
                     chapter.put("chaptername",chapters.get(i).getChaptername());
                     chapterlist.put(chapter);
                 }
-                msg.put("tag",1);
+                if (schedule == null){//用户没有加入课程
+                    msg.put("isFinish"," ");
+                    msg.put("serialnum"," ");
+                    msg.put("tag",2);
+                }else {
+                    msg.put("isFinish", schedule.getFinish());
+                    msg.put("serialnum", schedule.getSerialnum());
+                    msg.put("tag", 1);
+                }
                 msg.put("token",token);
                 msg.put("chapters",chapterlist);
                 msg.put("courseid",courseid);
