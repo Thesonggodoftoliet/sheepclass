@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Auth {
     private UserDao userDao= new UserDaoIm();
-    private Users sqluser;
+    private Users sqluser = null;
     private LearninginfoDao learninginfoDao = new LearninginfoDaoimple();
     private static Calendar calendar = Calendar.getInstance();
 
@@ -25,6 +25,7 @@ public class Auth {
             sqluser = userDao.getUserByphone(user.getPhone());
         else
             sqluser = userDao.getUserByEmail(user.getEmail());
+        System.out.println(sqluser.toString());
     }
     public int checkPassword(Users user){
         if (sqluser.getUserpwd().equals(user.getUserpwd())) {

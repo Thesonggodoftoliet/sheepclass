@@ -15,7 +15,7 @@ public class MistakesDaoImpl implements MistakesDao {
 
     @Override
     public Mistakes getMistakesById(Mistakes mistakes) {
-        String sql = "select * from mistakes where userid = ?,courseid=?,homeworkid=?";
+        String sql = "select * from mistake_view_? where courseid=? and homeworkid=?";
         return (Mistakes) JdbcUtils.getObject(Mistakes.class,sql,mistakes.getUserid(),mistakes.getCourseid(),mistakes.getHomeworkid());
     }
 

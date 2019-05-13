@@ -296,16 +296,10 @@
 
               <div class="column col-md-9 col-sm-12 col-xs-12">
                   <div class="text-left clearfix">
-                      <h2>加入我们!</h2>
-                      <p>让我们一起在羊村课堂快乐成长～</p>
+                      <h2><a href="register.jsp">加入我们!</a></h2>
+                      <p><span><span><span></span></span></span>让我们一起在羊村课堂快乐成长～fighting~~~~~~</p>
                   </div>
 
-              </div>
-
-              <div class="column col-md-3 col-sm-12 col-xs-12">
-                  <div class="text-right padd-top-20">
-                      <a href="register.jsp" class="read-more">点击注册</a>
-                  </div>
               </div>
           </div>
       </div>

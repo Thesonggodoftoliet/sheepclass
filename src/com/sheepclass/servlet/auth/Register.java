@@ -2,6 +2,7 @@ package com.sheepclass.servlet.auth;
 
 import com.sheepclass.entity.Users;
 import com.sheepclass.service.Auth;
+import com.sheepclass.service.Infocollect;
 import com.sheepclass.utils.JwtUtils;
 import com.sheepclass.utils.ReciveUtils;
 import org.json.JSONException;
@@ -46,6 +47,8 @@ public class Register extends HttpServlet {
                     user = auth.getUserinfo();
                     msg.put("token", JwtUtils.createToken(user.getUserid()));
                     msg.put("tag", 1);
+                    Infocollect infocollect = new Infocollect();
+                    infocollect.createView(user.getUserid());//创建错题视图
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

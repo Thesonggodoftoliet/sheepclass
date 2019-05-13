@@ -27,13 +27,13 @@ public class Infocollect {
             return scheduleDao.updateScheduleBycourseid(schedule);
     }
 
-    public int addMistakes(Mistakes mistakes){
+    public int addMistakes(Mistakes mistakes){//根据已有题目创建错题
         if (mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();
         return mistakesDao.addMistakes(mistakes);
     }
 
-    public int addMistakes(int courseid,String content,int userid){
+    public int addMistakes(int courseid,String content,int userid){//根据图片识别知识点，创建错题
         if(mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();
         Knowledge knowledge = SearchUtils.getKnowledge(content);
@@ -73,6 +73,27 @@ public class Infocollect {
     public int updateUsers(Users users){
         if (userDao == null)
             userDao =new UserDaoIm();
-        return userDao.setUser(users);
+        Users sqluser = userDao.getUserById(users.getUserid());
+        if (users.getIdentity()!=0&&users.getIdentity() != sqluser.getIdentity())
+            sqluser.setIdentity(users.getIdentity());
+        if (users.getTot_time()!=0&&users.getTot_time() != sqluser.getTot_time())
+            sqluser.setTot_time(users.getTot_time());
+        if (!users.getEmail().isEmpty()&&!users.getEmail().equals(sqluser.getEmail()))
+            sqluser.setEmail(users.getEmail());
+        if (!users.getPhone().isEmpty()&&!users.getPhone().equals(sqluser.getPhone()))
+            sqluser.setPhone(users.getPhone());
+        if (!users.getNickname().isEmpty()&&!users.getNickname().equals(sqluser.getNickname()))
+            sqluser.setNickname(users.getNickname());
+        if (users.getBirthday()!=0&&users.getBirthday()!=sqluser.getBirthday())
+            sqluser.setBirthday(users.getBirthday());
+        if (users.getSex()!=0&&users.getSex()!= sqluser.getSex())
+            sqluser.setSex(users.getSex());
+        return userDao.setUser(sqluser);
+    }
+
+    public int createView(int userid){
+        if (mistakesDao == null)
+            mistakesDao = new MistakesDaoImpl();
+        return mistakesDao.createViewByuserid(userid);
     }
 }
