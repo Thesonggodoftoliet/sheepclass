@@ -10,6 +10,7 @@ import com.sheepclass.dao.implement.MistakesDaoImpl;
 import com.sheepclass.dao.implement.UserDaoIm;
 import com.sheepclass.entity.Course;
 import com.sheepclass.entity.Mistakes;
+import com.sheepclass.entity.Users;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,7 +20,7 @@ import java.util.List;
 public class InfoGet {
     //学情管理，包含预警
     //七天一个周期
-    int getWeeklogintimes(int userid){
+    public int getWeeklogintimes(int userid){
         Calendar calendar = Calendar.getInstance();
         calendar.getFirstDayOfWeek();
         LearninginfoDao learninginfoDao = new LearninginfoDaoimple();
@@ -27,12 +28,12 @@ public class InfoGet {
         return learninginfoDao.getTimesoflearning(userid,calendar.getTimeInMillis());
     }
 
-    long getWeekTottime(int userid){//获取一周的学习时长
+    public long getWeekTottime(int userid){//获取一周的学习时长
         UserDao userDao = new UserDaoIm();
         return userDao.getUserById(userid).getTot_time();
     }
 
-    List<Course> getMosterrorCourse(int userid){//获取错题较多的三个课程
+    public List<Course> getMosterrorCourse(int userid){//获取错题较多的三个课程
         class temp implements Comparable{
             private int courseid;
             private int num;
@@ -79,4 +80,5 @@ public class InfoGet {
         }
         return courses;
     }
+
 }
