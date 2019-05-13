@@ -50,13 +50,13 @@ $(function auto_ajax_subject(){
                     tem+="<div class='col-md-4 col-sm-6 col-xsw-12 item wow fadeIn' data-wow-duration='2s' data-wow-delay='0."+(i+5)+"s' data-wow-offset='0' style='visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;'>";
                     tem+="<div class='img-holder'><figure>";
                     //这里是要跳转的 还没写吼
-                    tem+="<a href='${pageContext.request.contextPath}/startClass?courseid="+course[i].courseid+"'>";
+                    // language=HTML
+                    tem+="<a href='/coursedetail.jsp?courseid="+course[i].courseid+"&courseinfo="+course[i].info+"&courseimg="+course[i].img+"&coursename="+course[i].coursename+"'>";
                     //5.5日下午
-                    tem+=" <img src='${pageContext.request.contextPath}/web/images/course/"+course[i].img+"'>";
+                    tem+=" <img src='/images/course/"+course[i].img+"'>";
                     tem+="</a>"+"</figure>";
-                    tem+="<div class='content bg-color-1'><div class='inner-box'><div class='btn-box'><div class='count'>25</div><div class='month'>July</div></div>";
-                    tem+="<h4><a href='#'>"+course[i].coursename+"</a></h4>";
-                    tem+="<p><span class='fa fa-clock-o'></span>"+course[i].subject+"</p>";
+                    tem+="<div class='content bg-color-1'><div class='inner-box'><div class='btn-box'><div class='month'>"+course[i].subject+"</div></div>";
+                    tem+="<h4>"+course[i].coursename+"</h4>";
                     tem+="<p><span class='fa fa-map-marker'></span>"+course[i].info+"</p>";
                     tem+="</div></div> </div></div>";
 
