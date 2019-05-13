@@ -38,8 +38,8 @@
                         <span class="icon fa fa-phone"></span>欢 迎 你
                     </div>
                     <div class="register">
-                        <a href="#">Register</a>
-                        <a href="#">Login </a>
+                        <a href="register.jsp">Register</a>
+                        <a href="login.jsp">Login </a>
                     </div>
                     <div id="top-search" class="top-search">
                         <span class="flaticon-search search"></span>
