@@ -17,11 +17,6 @@
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <%--<script type="text/javascript">--%>
-        <%--var info = "<%=request.getParameter("courseinfo")%>";--%>
-        <%--alert(info);--%>
-    <%--</script>--%>
-    <%--<h1>info</h1>--%>
 </head>
 <body class="about-page">
 <header class="header clearfix">
@@ -116,8 +111,8 @@
                             <li>你将会拥有：一个完整的学习闭环——学习+练习+订正+复习</li>
                         </ul>
                         <br/><br/>
-                        <div class="link">
-                            <a href="#" class="read-more">！马上加入课程 ！</a>
+                        <div class="link" id="enter">
+
                         </div>
                     </div>
                 </div>
@@ -129,6 +124,7 @@
                     <figure class="img-box">
                         <a href="#"><img src="/images/course/<%=request.getParameter("courseimg")%>" alt=""></a>
                     </figure>
+                    <div id="courseid"><%=request.getParameter("courseid")%></div>
                 </div>
             </div>
         </div>
