@@ -8,7 +8,7 @@ public class UserDaoIm implements UserDao {
     @Override
     public Users getUserById(int userid) {
         String sql = "select * from users where userid = ?";
-        return (Users)JdbcUtils.getObjectById(Users.class,sql,userid);
+        return (Users)JdbcUtils.getObject(Users.class,sql,userid);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class UserDaoIm implements UserDao {
     @Override
     public int addUser(Users user) {
         String sql = "insert into users values(?,?,?,?,?,?,?,?,?,?,?)";
-        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),0,user.getBirthday(),user.getRegistTime(),0);
+        return JdbcUtils.executeSQL(sql,user.getNickname(),null,user.getUserpwd(),user.getEmail(),user.getPhone(),user.getSex(),user.getIdentity(),0,user.getBirthday(),user.getRegist_Time(),0);
     }
 
     @Override
