@@ -34,7 +34,7 @@ public class Register extends HttpServlet {
             user.setSex(jsonObject.getInt("sex"));
             user.setIdentity(jsonObject.getInt("identity"));
             user.setBirthday(jsonObject.getLong("birthday"));
-            user.setRegistTime(jsonObject.getLong("regist_time"));
+            user.setRegist_Time(jsonObject.getLong("regist_time"));
 //            user.setLoginTime(jsonObject.getLong("login_time"));
         }catch (JSONException e){
             e.printStackTrace();

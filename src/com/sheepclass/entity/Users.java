@@ -17,10 +17,10 @@ public class Users {
 	private String phone;
 	private int sex; //1 girls 2 boys
 	private int identity;//1 管理员 2 学生 3 家长
-	private int parentid;
 	private long birthday;
 	private long regist_time;
 	private long tot_time;
+	private int parentid;
 
 	public long getTot_time() {
 		return tot_time;
@@ -102,11 +102,11 @@ public class Users {
 		this.birthday = birthday;
 	}
 
-	public long getRegistTime() {
+	public long getRegist_Time() {
 		return regist_time;
 	}
 
-	public void setRegistTime(long registTime) {
+	public void setRegist_Time(long registTime) {
 		this.regist_time = registTime;
 	}
 
