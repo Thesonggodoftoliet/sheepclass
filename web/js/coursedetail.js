@@ -1,12 +1,12 @@
 function proxy(id){
-    var courseid=$("#courseid").val();
+    var courseid=$("#courseid").html();
     if(id===0){
         alert("您的身份验证已经过期，请重新登录");
     }else if(id===1){
-        var html = "<a href='courseboss.jsp?courseid="+courseid+"class='read-more'>！进入课程 ! </a>";
+        var html = "<a href='courseboss.jsp?courseid="+courseid+"' class='read-more'>！进入课程 ! </a>";
         $("#enter").html(html);
     }else{
-        var html = "<a href='courseboss.jsp?courseid="+courseid+"class='read-more'>！马上加入课程 ! </a>"
+        var html = "<a href='courseboss.jsp?courseid="+courseid+"' class='read-more'>！马上加入课程 ! </a>"
         $("#enter").html(html);
     }
 
@@ -16,7 +16,7 @@ function proxy(id){
 function GetJsonData() {
     var json = {
         "token":getCookie("token"),
-        "courseid":$("#courseid").val()
+        "courseid":$("#courseid").html()
     };
     return json;
 }

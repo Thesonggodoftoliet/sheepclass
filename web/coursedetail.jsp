@@ -214,7 +214,7 @@
 <!--<script src="js/default-map-script.js"></script>-->
 <script src="js/script.js"></script>
 
-
+<script src="js/coursedetail.js"></script>
 
 
 
