@@ -55,6 +55,7 @@ public class QuestionBypic extends HttpServlet {
                 path = obj.getString("path");
                 String photopath=getPhoto.grabberVideoFramer(time,path);
                 String content = pickWord.pickWordString(photopath);
+                System.out.println("content"+content);
                 Infocollect infocollect =new Infocollect();
                 infocollect.addMistakes(courseid,content,userid);
                 msg.put("token",token);
