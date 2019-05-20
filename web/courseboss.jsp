@@ -117,6 +117,12 @@
                 <div class="your-order">
                     <ul class="orders-table" id="courseson">
                     </ul>
+                    <li class="clearfix">
+                        <div class="col st-3">哈哈哈</div>
+                        <div class="col st-3">
+                            <div class="getvideo" value="1.1" >已解锁～ 快点学习我</div>
+                        </div>
+                    </li>
                 </div><!--End Your Order-->
             </div>
 

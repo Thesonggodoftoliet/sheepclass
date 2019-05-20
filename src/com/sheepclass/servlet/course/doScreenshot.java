@@ -21,7 +21,7 @@ import java.util.List;
 
 import static java.lang.Double.valueOf;
 
-@WebServlet(name = "doScreenshot")
+@WebServlet("/doScreenshot")
 public class doScreenshot extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("getScreenshot");
