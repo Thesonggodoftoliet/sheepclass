@@ -66,7 +66,11 @@ public class Auth {
     }
 
     public int verifyIdentity(int userid){
-        UserDao userDao = new UserDaoIm();
         return userDao.getUserById(userid).getIdentity();
+    }
+
+    public int getChild(int userid){
+        sqluser = userDao.getUserById(userid);
+        return userDao.getUserById(sqluser.getParentid()).getUserid();
     }
 }
