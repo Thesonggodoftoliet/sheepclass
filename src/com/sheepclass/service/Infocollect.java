@@ -96,4 +96,13 @@ public class Infocollect {
             mistakesDao = new MistakesDaoImpl();
         return mistakesDao.createViewByuserid(userid);
     }
+
+    public int caculateTime(Users users){
+        if (userDao == null)
+            userDao = new UserDaoIm();
+        Users sqluser = userDao.getUserById(users.getUserid());
+        long time = sqluser.getTot_time()+users.getTot_time();
+        sqluser.setTot_time(time);
+        return userDao.updateTotTime(users);
+    }
 }

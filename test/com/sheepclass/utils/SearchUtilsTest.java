@@ -11,13 +11,10 @@ public class SearchUtilsTest {
 
     @Test
     public void getKnowledge() {
-        String knowledge = "0不能做分母";
-        JiebaSegmenter segmenter = new JiebaSegmenter();
-        List<String> temp;
-        temp=segmenter.sentenceProcess(knowledge);
-        for (int i=0;i<temp.size();i++)
-            System.out.println(temp.get(i));
-
-        System.out.println(this.getClass().getResource("").getPath());
+        float a = (float) 3.07123;
+        System.out.println("a="+a);
+        String result = String.format("%.1f",a);
+        a=Float.parseFloat(result);
+        System.out.println("a="+a);
     }
 }
