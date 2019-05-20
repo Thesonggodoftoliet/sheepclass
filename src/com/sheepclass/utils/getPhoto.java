@@ -23,7 +23,8 @@ public class getPhoto {
 
     public static String grabberVideoFramer(double curTime,String videoFileName){
 
-        videoFileName = videoFileName.substring(0,videoFileName.indexOf(','));
+        System.out.println("videoFileName--------"+videoFileName);
+        videoFileName = videoFileName.substring(0,videoFileName.indexOf('.'));
         /*
             获取视频文件
          */

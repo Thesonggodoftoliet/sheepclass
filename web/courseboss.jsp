@@ -1,15 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
   User: chenan
-  Date: 2019/5/13
-  Time: 下午2:14
+  Date: 2019/5/14
+  Time: 上午11:08
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>课程中心</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,10 @@
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
 </head>
-<body class="about-page">
+<body class="checkout-pages">
+<div class="preloader"></div>
 <header class="header clearfix">
     <div class="main-header stricky bubble">
         <div class="container">
@@ -81,90 +83,60 @@
         </div>
     </div>
 </header>
+<section class="page-title center">
+    <div class="container">
+        <h2>课程学习</h2> <p id="courseid"><%=request.getParameter("courseid")%></p>
 
+    </div>
+</section>
 
-<section class="about">
+<div class="checkout-page">
     <div class="container">
 
-        <div class="row">
-            <div class="single-column col-md-6 col-sm-12">
-                <div class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                    <div class="post-content">
-                        <div class="section-title">
-                            <h2> 课程名字 </h2>
-                            <br/>
-                            <h2><span><%=request.getParameter("coursename")%></span></h2>
+        <div class="row clearfix">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <!--Billing Details-->
+                <div class="billing-details">
+                    <div class="coupon-code">
+                        <div class="form-group">
+                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one chapter" >章节学习</button></div>
                             <br/><br/>
-                        </div>
-                        <br/>
-                        <div class="section-title">
-                            <h2> 课程内容 </h2>
-                            <br/>
-                            <div class="text">
-                                <p><%=request.getParameter("courseinfo")%></p>
-                            </div>
-                        </div>
-
-                        <ul class="list">
-                            <li>你将会获得：全网的免费学习课程</li>
-                            <li>你将会发现：这里有志同道合的朋友</li>
-                            <li>你将会拥有：一个完整的学习闭环——学习+练习+订正+复习</li>
-                        </ul>
-                        <br/><br/>
-                        <div class="link" id="enter">
+                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one homework" >章节习题</button></div>
+                            <br/><br/>
+                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one group" >群聊group</button></div>
+                            <br/><br/>
 
                         </div>
                     </div>
-                </div>
 
+                </div><!--End Billing Details-->
+            </div>
 
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <!--Your Order-->
+                <div class="your-order">
+                    <ul class="orders-table" id="courseson">
+                    </ul>
+                    <li class="clearfix">
+                        <div class="col st-3">哈哈哈</div>
+                        <div class="col st-3">
+                            <div class="getvideo" value="1.1" >已解锁～ 快点学习我</div>
+                        </div>
+                    </li>
+                </div><!--End Your Order-->
             </div>
-            <div class="single-column col-md-6 col-sm-12">
-                <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                    <figure class="img-box">
-                        <a href="#"><img src="/images/course/<%=request.getParameter("courseimg")%>" alt=""></a>
-                    </figure>
-                    <div id="courseid"><%=request.getParameter("courseid")%></div>
-                </div>
-            </div>
+
         </div>
-    </div>
-</section>
 
-<section class="two-column style-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-12 tab-column">
-                <div class="section-title">
-                    <h2>常见问题</h2>
-                    <br/>
-                </div>
-                <div class="inner-box tab-pane fade in active " >
-                    <div class="content">
-                        <h3>1. 怎么学习？</h3>
-                        <p>。。。。。。。</p>
-                        <br/><br/>
-                        <h3>2. ddddd？</h3>
-                        <p>。。。............................................hjhjkhjkhjhjkhjkhjkhjkh。。。。</p>
-                        <br/><br/>
-                        <h3>3. ddddd？</h3>
-                        <p>。。。hjhjlhjlhjlhljhljhjlhljhljhjlhjhlhjlhjljh。。。。</p>
-                        <br/><br/>
-                        <h3>4. ddddd？</h3>
-                        <p>。。。。。。。</p>
-                        <br/><br/>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</section>
+</div>
 
 
 
 
 <!--Scroll to top-->
 <div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
+
 
 
 <!-- jQuery js -->
@@ -192,6 +164,7 @@
 <script src="assets/isotope.pkgd.min.js"></script>
 <script src="assets/jquery.countdown.min.js"></script>
 <script src="assets/masterslider/masterslider.js"></script>
+<script src="assets/bootstrap-touch-spin/jquery.bootstrap-touchspin.js"></script>
 <script src="assets/SmoothScroll.js"></script>
 
 <!-- revolution slider js -->
@@ -213,12 +186,7 @@
 
 <!--<script src="js/default-map-script.js"></script>-->
 <script src="js/script.js"></script>
-
-<script src="js/coursedetail.js"></script>
-
-
-
-
+<script src="js/courseson.js"></script>
 
 
 </body>

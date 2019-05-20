@@ -56,7 +56,8 @@ public class getChapter extends HttpServlet {
             token = JwtUtils.createToken(userid);
             try {
                 courseid = object.getInt("courseid");
-                serialnum = (float) object.getDouble("serialnum");
+                serialnum=(float) object.getDouble("serialnum");
+                System.out.println("SERIALNUM-------"+serialnum);
             }catch (JSONException e){
                 e.printStackTrace();
             }
