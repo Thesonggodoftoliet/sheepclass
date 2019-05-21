@@ -20,7 +20,11 @@ public class Warn extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Warn");
         Warning warning = new Warning();
-        warning.sendWarn();
+        try {
+            warning.sendWarn();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -17,9 +17,9 @@ public class KnowledgeDaoImpl implements KnowledgeDao {
     public List<Knowledge> getKnowledge(String content) {
         String sql = "select * from knowledge where content like '%"+content+"%' order by"
                 +"(case when content = '"+content+"' then 1 "
-                +"when content like '"+content+"%' then 2"
-                +"when content like '%"+content+"' then 3"
-                +"when content like '%"+content+"%' then 4"
+                +"when content like '"+content+"%' then 2 "
+                +"when content like '%"+content+"' then 3 "
+                +"when content like '%"+content+"%' then 4 "
                 +"else 0 end) limit 0,50;";
         return JdbcUtils.getList(Knowledge.class,sql);
     }
