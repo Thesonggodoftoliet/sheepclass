@@ -1,6 +1,7 @@
 package com.sheepclass.servlet.personal;
 
 import com.sheepclass.entity.Users;
+import com.sheepclass.service.Warning;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +19,12 @@ public class Warn extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Warn");
-        List<Users>
+        Warning warning = new Warning();
+        try {
+            warning.sendWarn();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

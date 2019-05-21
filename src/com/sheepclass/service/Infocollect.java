@@ -37,6 +37,8 @@ public class Infocollect {
         if(mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();
         Knowledge knowledge = SearchUtils.getKnowledge(content);
+        if (knowledge == null)
+            return -1;//没有找到符合的知识点
         Learn learn = new Learn();
         List<Homework> homeworks =learn.getHomeworkByKnow(knowledge.getKnowledgeid());
         int tag = 0;

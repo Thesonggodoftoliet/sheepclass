@@ -23,7 +23,8 @@ public class Warning {
     // 收件人邮箱（替换为自己知道的有效邮箱）
     private String receiveMailAccount = "535644752@qq.com";
 
-    public void SendEmail(int port, String address,String username) throws Exception {
+    public void SendEmail(String address,String username) throws Exception {
+        System.out.println("发送邮件");
         receiveMailAccount = address;
         System.out.println("发给"+receiveMailAccount);
         // 1. 创建参数配置, 用于连接邮件服务器的参数配置
@@ -51,7 +52,7 @@ public class Warning {
         session.setDebug(true);                                 // 设置为debug模式, 可以查看详细的发送 log
 
         // 3. 创建一封邮件
-        MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount,port,username);
+        MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount,username);
 
         // 4. 根据 Session 获取邮件传输对象
         Transport transport = session.getTransport();
@@ -71,6 +72,7 @@ public class Warning {
         //
         //    PS_03: 仔细看log, 认真看log, 看懂log, 错误原因都在log已说明。
         transport.connect(myEmailAccount, myEmailPassword);
+        System.out.println("my"+myEmailAccount+"send"+receiveMailAccount);
 
         // 6. 发送邮件, 发到所有的收件地址, message.getAllRecipients() 获取到的是在创建邮件对象时添加的所有收件人, 抄送人, 密送人
         transport.sendMessage(message, message.getAllRecipients());
@@ -88,12 +90,12 @@ public class Warning {
      * @return
      * @throws Exception
      */
-    public MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail,int port,String username) throws Exception {
+    public MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail,String username) throws Exception {
         // 1. 创建一封邮件
         MimeMessage message = new MimeMessage(session);
 
         // 2. From: 发件人（昵称有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改昵称）
-        message.setFrom(new InternetAddress(sendMail, "羊村课堂", "UTF-8"));
+        message.setFrom(new InternetAddress(sendMail, "liyufeng", "UTF-8"));
 
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail,username, "UTF-8"));
@@ -113,7 +115,18 @@ public class Warning {
         return message;
     }
 
-    public int sendWarn(){
-        return 0;
+    public void sendWarn() throws Exception {
+        InfoGet infoGet = new InfoGet();
+        List<Users> parents = infoGet.getParents();
+        for (int i = 0;i<parents.size();i++){
+            Users temp = parents.get(i);
+            System.out.println("times = "+infoGet.getWeeklogintimes(temp.getParentid()));
+            if (infoGet.getWeeklogintimes(temp.getParentid()) <1) {
+                if (temp.getEmail() == null){
+
+                }else
+                    SendEmail(temp.getEmail(), temp.getNickname());
+            }
+        }
     }
 }

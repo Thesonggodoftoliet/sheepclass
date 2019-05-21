@@ -16,27 +16,6 @@
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-
-    <script type="text/javascript">
-        function doScreenshot(curTime){
-            alert(videonum);
-            $.ajax({
-                type:"POST",
-                url:"/doScreenshot",
-                data:JSON.stringify(GetJsonData3(curTime,videonum)),
-                dataType:"json",
-                success:function(data){
-                },error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
-                }
-
-            });
-        }
-    </script>
-
-
 </head>
 
 <body>
@@ -53,21 +32,6 @@
 <div id="imgput"></div>
 
 
-<script>
-    // 获取 id="myVideo" 的 video 元素
-    var x = document.getElementById("myVideo");
-    // 向 video 元素添加 ontimeupdate 事件，然后再当前播放位置发生改变时执行函数
-    x.addEventListener("timeupdate", myFunction);
-    function myFunction() {
-        // 显示 id="demo" 的 p 元素中视频的当前播放位置
-        if(x.paused) {
-            document.getElementById("demo").innerHTML = x.currentTime;
-            doScreenshot(x.currentTime);
-        }else{
-            document.getElementById("demo").innerHTML = " doing";
-        }
-    }
-</script>
 
 
 
