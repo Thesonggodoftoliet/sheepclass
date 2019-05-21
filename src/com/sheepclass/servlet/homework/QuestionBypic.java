@@ -57,9 +57,9 @@ public class QuestionBypic extends HttpServlet {
                 String content = pickWord.pickWordString(photopath);
                 System.out.println("content"+content);
                 Infocollect infocollect =new Infocollect();
-                infocollect.addMistakes(courseid,content,userid);
+                int tag = infocollect.addMistakes(courseid,content,userid);
                 msg.put("token",token);
-                msg.put("tag",1);
+                msg.put("tag",tag);
 
             }catch (JSONException e){
                 e.printStackTrace();

@@ -95,6 +95,8 @@ public class SearchUtils {
         knowledges.clear();
         Collections.sort(temps);
 
+        if(temps.size() == 0)
+            return null;
         return temps.get(0).getKnowledge();
     }
 }
