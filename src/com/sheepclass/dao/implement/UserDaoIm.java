@@ -4,6 +4,8 @@ import com.sheepclass.dao.UserDao;
 import com.sheepclass.entity.Users;
 import com.sheepclass.utils.JdbcUtils;
 
+import java.util.List;
+
 public class UserDaoIm implements UserDao {
     @Override
     public Users getUserById(int userid) {
@@ -21,6 +23,12 @@ public class UserDaoIm implements UserDao {
     public Users getUserByEmail(String email) {
         String sql = "select * from users where email = ?";
         return (Users)JdbcUtils.getObjectById(Users.class,sql,email);
+    }
+
+    @Override
+    public List<Users> getUsersByIdentity(int identity) {
+        String sql = "select * from users where identity ="+identity;
+        return JdbcUtils.getList(Users.class,sql);
     }
 
     @Override

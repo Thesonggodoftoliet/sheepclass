@@ -13,7 +13,9 @@ import java.util.List;
 public class InfoGet {
     //学情管理，包含预警
     //七天一个周期
-    public int getWeeklogintimes(int userid){//一周打卡的次数
+
+
+    public int getWeeklogintimes(int userid){//本周打卡的次数
         Calendar calendar = Calendar.getInstance();
         calendar.getFirstDayOfWeek();
         LearninginfoDao learninginfoDao = new LearninginfoDaoimple();
@@ -127,13 +129,23 @@ public class InfoGet {
             m=last+1;
             temps.add(temp);
         }
-        List<Knowledge>knowledges = new ArrayList<>();
+        List<Knowledge> knowledges = new ArrayList<>();
         for (int i=0;i<5;i++){
             if (temps.size()==i)
                 break;
             knowledges.add(knowledgeDao.getKnowledgeByid(temps.get(i).getId()));
         }
         return knowledges;
+    }
+
+    List<Users> getParents(){
+        UserDao userDao = new UserDaoIm();
+        return userDao.getUsersByIdentity(3);
+    }
+
+    List<Users> getStudents(){
+        UserDao userDao = new UserDaoIm();
+        return userDao.getUsersByIdentity(2);
     }
 
 }
