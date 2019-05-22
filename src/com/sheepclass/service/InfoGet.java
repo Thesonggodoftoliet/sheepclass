@@ -78,7 +78,7 @@ public class InfoGet {
         return courses;
     }
 
-    public List<Knowledge> getMostwrongKnowledges(int userid) {
+    public List<Knowledge> getMostwrongKnowledges(int userid) {//错得最多的知识点
         class Temp implements Comparable{
             int id;
             int count;
