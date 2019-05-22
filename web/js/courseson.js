@@ -31,13 +31,8 @@ function getCookie(cname)
         return null;
 }
 
-//* 5。22改动
-//  应首先改成自动的，只用调用一次CHAPTER，
-//  然后，如果点击CHAPTER就嘻嘻嘻嘻嘻，如果点击HOMEWORK就嘻嘻嘻嘻嘻
-// *//
 
-$(".chapter").click(
-    function ajax_subject(){
+$(function ajax_subject(){
         $.ajax({
             type:"post",
             url:"/course/getChapters",
@@ -67,7 +62,7 @@ $(".chapter").click(
                         }
                     }
 
-                    $("#courseson").html(tem);
+                    $("#chapter").html(tem);
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -79,8 +74,7 @@ $(".chapter").click(
 });
 
 
-$(".homework").click(
-    function ajax_subject(){
+$(function ajax_subject(){
         $.ajax({
             type:"post",
             url:"/course/getChapters",
@@ -110,7 +104,7 @@ $(".homework").click(
                         }
                     }
 
-                    $("#courseson").html(tem);
+                    $("#homework").html(tem);
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {

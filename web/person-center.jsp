@@ -1,25 +1,26 @@
 <%--
   Created by IntelliJ IDEA.
+  亲情账号绑定页面～～～～～～
   User: chenan
-  Date: 2019/5/21
-  Time: 下午3:29
+  Date: 2019/5/23
+  Time: 上午12:20
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>首页</title>
     <meta charset="UTF-8">
+    <title>亲情账户</title>
+
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/dist/echarts.min.js"></script>
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
 </head>
-<body class="home-one">
+<body class="checkout-pages">
 <div class="preloader"></div>
 <header class="header clearfix">
     <div class="main-header stricky bubble">
@@ -67,11 +68,11 @@
                             <ul>
                                 <li><a href="index.jsp">首 页</a></li>
                                 <li><a href="coursepage.jsp">课 程 学 习</a></li>
-                                <li><a href="person.jsp">个 人 天 地</a>
+                                <li><a href="#">个 人 天 地</a>
                                     <ul class="submenu">
                                         <li><a href="wrong.jsp">错 题 园 地</a></li>
                                         <li><a href="reports.jsp">分 析 报 告</a></li>
-                                        <li><a href="person-center.jsp">账 户 中 心</a></li>
+                                        <li><a href="person-center.jsp">亲 情 账 户</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -83,148 +84,64 @@
         </div>
     </div>
 </header>
-
 <section class="page-title center">
     <div class="container">
-        <h2>学生 学习 报告</h2>
+        <h2>亲情账户</h2>
     </div>
 </section>
 
-<section class="about">
-    <div class="container">
-
-        <div class="row">
-            <div class="single-column col-md-6 col-sm-12">
-                <div class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                    <div class="post-content" id="userinfo">
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="single-column col-md-6 col-sm-12">
-                <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                    <figure class="img-box">
-                        <img src="images/resource/touxiang.jpg" alt="">
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="call-out">
-    <div class="container"></div>
-</section>
 
 <section class="team">
     <div class="container">
         <div class="section-title center pb-60">
-            <h2>学生  <span>报告</span></h2>
-            <div id="logincharts" style="width: 1200px;height:400px;"></div>
-            <div id="radarcharts" style="width: 1200px;height:900px;"></div>
+            <%--章节--%>
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <!--Billing Details-->
+                <div class="billing-details">
+                    <div class="coupon-code">
+                        <div class="form-group">
+                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one chapter" >本账户</button></div>
+                            <br/><br/>
+                        </div>
+
+                    </div>
+
+                </div><!--End Billing Details-->
+
+                <div class="your-order">
+
+                    <ul class="orders-table" id="chapter"></ul>
+                </div><!--End Your Order-->
+
+            </div>
+            <%--习题--%>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <!--Your Order-->
+                <div class="billing-details">
+                    <div class="coupon-code">
+                        <div class="form-group">
+                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one homework" >亲情账户</button></div>
+                            <br/><br/>
+                        </div>
+                    </div>
+
+                </div><!--End Billing Details-->
+                <ul class="orders-table" id="homework"></ul>
+            </div>
+
         </div>
 
     </div>
+    <br><br><br>
 </section>
 
-
-<script type="text/javascript">
-
-    // 基于准备好的dom，初始化echarts实例
-    var logincharts = echarts.init(document.getElementById('logincharts'));
-    var radarcharts = echarts.init(document.getElementById('radarcharts'));
-
-    function getVirtulData(year){
-        year = year || '2017';
-        var date = +echarts.number.parseDate(year + '-01-01');
-        var end = +echarts.number.parseDate((+year + 1) + '-01-01');
-        var dayTime = 3600 * 24 * 1440;
-        var data = [];
-        data.push([
-            echarts.format.formatTime('2019-05-22', "2019-05-22"),
-            Math.floor(Math.random() * 60)
-        ]);
-
-        return data;
-    }
-
-    var option1 = {
-        title: {
-            top: 40,
-            left: 'center',
-            text: '2019年用户登录与学习情况'
-        },
-        tooltip : {},
-
-        calendar: {
-            top: 130,
-            left: 30,
-            right: 30,
-            cellSize: ['auto', 13],
-            range: '2019',
-            itemStyle: {
-                normal: {borderWidth: 0.5}
-            },
-            yearLabel: {show: false}
-        },
-        series: {
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            data: getVirtulData(2019)
-        }
-    };
+<br><br><br><br>
 
 
-    // 使用刚指定的配置项和数据显示图表。
-    logincharts.setOption(option1);
+<!--Scroll to top-->
+<div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
+<br><br><br><br>
 
-
-    var option2 = {
-        title: {
-            text: '能力雷达图'
-        },
-        tooltip: {},
-        legend: {
-            data: ['学生知识掌握能力']
-        },
-        radar: {
-            // shape: 'circle',
-            name: {
-                textStyle: {
-                    color: '#fff',
-                    backgroundColor: '#999',
-                    borderRadius: 3,
-                    padding: [3, 5]
-                }
-            },
-            indicator: [
-                { name: '文化素养掌握', max: 6500},
-                { name: '计算运算能力', max: 6500},
-                { name: '空间想象能力', max: 6500},
-                { name: '逻辑思考能力', max: 6500},
-                { name: '基本尝试掌握', max: 6500}
-            ]
-        },
-        series: [{
-            name: '学生知识掌握能力',
-            type: 'radar',
-            data : [
-                {
-                    value : [4300,3500,2500,3800,3200],
-                    name : '学生知识掌握能力'
-                }
-            ]
-        }]
-    };
-
-    radarcharts.setOption(option2);
-
-
-
-
-</script>
 
 <!-- jQuery js -->
 <script src="assets/jquery/jquery-1.12.3.min.js"></script>
@@ -251,6 +168,7 @@
 <script src="assets/isotope.pkgd.min.js"></script>
 <script src="assets/jquery.countdown.min.js"></script>
 <script src="assets/masterslider/masterslider.js"></script>
+<script src="assets/bootstrap-touch-spin/jquery.bootstrap-touchspin.js"></script>
 <script src="assets/SmoothScroll.js"></script>
 
 <!-- revolution slider js -->
@@ -272,6 +190,7 @@
 
 <!--<script src="js/default-map-script.js"></script>-->
 <script src="js/script.js"></script>
-<script src="js/report.js"></script>
+
+
 </body>
 </html>

@@ -8,6 +8,25 @@ function GetJsonData() {
     return json;
 }
 
+function GetoJsonArray(homeworkid,courseid,reviewtimes,wrongtimes) {
+    var json=[{
+        "homeworkid": homeworkid,
+        "courseid": courseid,
+        "reviewtimes": reviewtimes,
+        "wrongtimes":wrongtimes
+    }];
+    return json;
+}
+
+//换成JSON
+function GetJsonData1(homeworkid,courseid) {
+    var json = {
+        "token":getCookie("token"),
+        "mistakes":GetoJsonArray(homeworkid,courseid,0,1)
+    };
+    return json;
+}
+
 //COOKIE存储TOKEN
 function setCookie(cname,cvalue)
 {
@@ -76,32 +95,27 @@ function getAnswer(homeworkid,correct){
     for(var i=0;i<ans.length;i++)
     {
 
-        if(ans.item(i).checked)
-        {
-            document.getElementById("aanswer").disabled=true;
-            document.getElementById("banswer").disabled=true;
-            document.getElementById("canswer").disabled=true;
-            document.getElementById("danswer").disabled=true;
+        if(ans.item(i).checked) {
+            document.getElementById("aanswer").disabled = true;
+            document.getElementById("banswer").disabled = true;
+            document.getElementById("canswer").disabled = true;
+            document.getElementById("danswer").disabled = true;
             strAns = ans.item(i).getAttribute("value");
-            if(strAns==correct)  alert( "你真棒～ 你怎么这么厉害呢！~" );
-            else
-            {
-                alert("答案是"+correct+"哦~ 下次再接再厉！！");
-
-                // $.ajax({
-                //     type:"GET",
-                //     url:"<%=request.getContextPath()%>/question",
-                //     cache: false,
-                //     data: {coursename:coursename,numString:numString,index:i},
-                //     success:function(){
-                //     }
-                // });
+            if (strAns == correct) alert("你真棒～ 你怎么这么厉害呢！~");
+            else {
+                alert("答案是" + correct + "哦~ 下次再接再厉！！");
+                alert(homeworkid+"  "+$("#courseid").html());
+                $.ajax({
+                    type: "post",
+                    url: "/homework/updateMistakes",
+                    cache: false,
+                    data: JSON.stringify(GetJsonData1(homeworkid,$("#courseid").html())),
+                    dataType: "json",
+                    success: function () {
+                    }
+                });
             }
             break;
-        }
-        else
-        {
-            continue;
         }
     }
 

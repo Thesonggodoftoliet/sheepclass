@@ -18,18 +18,106 @@
 
 </head>
 
-<body>
+<body class="home-one">
+<div class="preloader"></div>
+<header class="header clearfix">
+    <div class="main-header stricky bubble">
+        <div class="container">
+            <div class="logo pull-left">
+                <a href="index.html">
+                    <img src="images/logo/1.png" alt="Awesome Image">
+                </a>
+            </div>
 
-<div id="courseid"><%=request.getParameter("courseid")%></div>
-<div id="serialnum"><%=request.getParameter("serialnum")%></div>
+            <div class="nav-outer">
+                <div class="header-top">
+                    <div class="contact">
+                        <span class="icon fa fa-phone"></span>欢 迎 你
+                    </div>
+                    <div class="register">
+                        <a href="register.jsp">Register</a>
+                        <a href="login.jsp">Login </a>
+                    </div>
+                    <div id="top-search" class="top-search">
+                        <span class="flaticon-search search"></span>
+                        <ul class="search-box">
+                            <li>
+                                <form action="#">
+                                    <input type="text" placeholder="Search for something...">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="mainmenu-area">
+                    <div class="navbar" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
 
-<p>该实例中我们使用 addEventListener() 方法向 video 元素添加 "ontimeupdate" 事件。</p>
-<video id="myVideo" class="myVideo" controls>
+                        </div>
 
-</video>
-<p>当前播放位置: <span id="demo"></span></p>
-<div id="imgput"></div>
+                        <div class="navbar-collapse collapse text-center">
+                            <ul>
+                                <li><a href="index.jsp">首 页</a></li>
+                                <li><a href="coursepage.jsp">课 程 学 习</a></li>
+                                <li><a href="#">个 人 天 地</a>
+                                    <ul class="submenu">
+                                        <li><a href="wrong.jsp">错 题 园 地</a></li>
+                                        <li><a href="reports.jsp">分 析 报 告</a></li>
+                                        <li><a href="person-center.jsp">亲 情 账 号</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
 
+        </div>
+    </div>
+</header>
+
+<section class="page-title center">
+    <div class="container">
+        <h2>章节——视频</h2>
+        <div id="courseid"><%=request.getParameter("courseid")%></div>
+        <div id="serialnum"><%=request.getParameter("serialnum")%></div>
+        <ul>
+            <li><a href="courseboss.jsp?serialnum=<%=request.getParameter("serialnum")%>&courseid=<%=request.getParameter("courseid")%>">返回课程目录</a></li>
+
+        </ul>
+    </div>
+</section>
+
+<section class="team">
+    <div class="container">
+        <div class="section-title center pb-60">
+            <%--视频--%>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <!--Billing Details-->
+                <div class="billing-details">
+                    <video id="myVideo" class="myVideo" width="600" controls></video>
+                    <p>当前播放位置: <span id="demo"></span></p>
+                    <div id="imgput"></div>
+                </div>
+
+            </div>
+            <%--列表--%>
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                hhhhhhhh
+            </div>
+
+           </div>
+
+    </div>
+    <br><br><br>
+</section>
 
 
 
@@ -77,6 +165,7 @@
 <script src="assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js"></script>
 <script src="assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
 <script src="assets/scrollbar.js"></script>
+<script src="js/script.js"></script>
 <script src="js/coursevideo.js"></script>
 
 </body>
