@@ -1,15 +1,19 @@
 package com.sheepclass.service;
-import com.sheepclass.entity.Users;
 
-import javax.mail.Session;
-import javax.mail.Transport;
+import org.junit.Test;
+
+import javax.mail.*;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import java.util.Date;
-import java.util.List;
 import java.util.Properties;
 
-public class Warning {
+import static org.junit.Assert.*;
+
+public class WarningTest {
+
     // 发件人的 邮箱 和 密码（替换为自己的邮箱和密码）
     // PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）,
     //     对于开启了独立密码的邮箱, 这里的邮箱密码必需使用这个独立密码（授权码）。
@@ -21,11 +25,13 @@ public class Warning {
     private String myEmailSMTPHost = "smtp.qq.com";
 
     // 收件人邮箱（替换为自己知道的有效邮箱）
-    private String receiveMailAccount = "535644752@qq.com";
+    private String receiveMailAccount = "1558470844@qq.com";
 
-    public void SendEmail(String address,String username) throws Exception {
+    @Test
+    public void sendEmail() throws Exception {
+        String username = "cesuogeshen";
         System.out.println("发送邮件");
-        receiveMailAccount = address;
+        //receiveMailAccount = address;
         System.out.println("发给"+receiveMailAccount);
         // 1. 创建参数配置, 用于连接邮件服务器的参数配置
         Properties props = new Properties();                    // 参数配置
@@ -79,17 +85,8 @@ public class Warning {
 
         // 7. 关闭连接
         transport.close();
-    }
 
-    /**
-     * 创建一封只包含文本的简单邮件
-     *
-     * @param session 和服务器交互的会话
-     * @param sendMail 发件人邮箱
-     * @param receiveMail 收件人邮箱
-     * @return
-     * @throws Exception
-     */
+    }
     public MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail,String username) throws Exception {
         // 1. 创建一封邮件
         MimeMessage message = new MimeMessage(session);
@@ -115,18 +112,11 @@ public class Warning {
         return message;
     }
 
-    public void sendWarn() throws Exception {
-        InfoGet infoGet = new InfoGet();
-        List<Users> parents = infoGet.getParents();
-        for (int i = 0;i<parents.size();i++){
-            Users temp = parents.get(i);
-            System.out.println("times = "+infoGet.getWeeklogintimes(temp.getParentid()));
-            if (infoGet.getWeeklogintimes(temp.getParentid()) <1) {
-                if (temp.getEmail() == null){
+    @Test
+    public void createMimeMessage() {
+    }
 
-                }else
-                    SendEmail(temp.getEmail(), temp.getNickname());
-            }
-        }
+    @Test
+    public void sendWarn() {
     }
 }
