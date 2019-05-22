@@ -83,7 +83,7 @@ public class SearchUtils {
         Collections.sort(knowledges);
         List<temp> temps = new ArrayList<>();
         for (int j = 0;j<knowledges.size();j++){
-            temp t = new temp(knowledges.get(i).getKnowledgeid());
+            temp t = new temp(knowledges.get(j).getKnowledgeid());
             int last = knowledges.lastIndexOf(knowledges.get(j));//最后一次出现位置
             t.setCount(last-j+1);//知识点符合程度
             t.setKnowledge(knowledges.get(j));

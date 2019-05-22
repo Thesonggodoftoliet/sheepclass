@@ -31,6 +31,11 @@ function getCookie(cname)
         return null;
 }
 
+//* 5。22改动
+//  应首先改成自动的，只用调用一次CHAPTER，
+//  然后，如果点击CHAPTER就嘻嘻嘻嘻嘻，如果点击HOMEWORK就嘻嘻嘻嘻嘻
+// *//
+
 $(".chapter").click(
     function ajax_subject(){
         $.ajax({
@@ -93,14 +98,14 @@ $(".homework").click(
                     var tem="";
                     alert(size);
                     for(i=0;i<size;i++){
-                        if((data.serialnum-0.1-data.chapters[i].serialnum)>=0.1){
+                        if((data.serialnum-data.chapters[i].serialnum)>=0.1){
                             tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">已学习</div></li>";
 
-                        }else if((data.chapters[i].serialnum-0.1-data.serialnum)>=0.1){
+                        }else if((data.chapters[i].serialnum-data.serialnum)>=0.1){
                             tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">未解锁</div></li>";
 
                         }else{
-                            tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../coursevideo.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
+                            tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../homework.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
 
                         }
                     }
@@ -115,4 +120,7 @@ $(".homework").click(
             }
         });
     });
+
+
+
 

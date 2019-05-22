@@ -25,8 +25,7 @@
 
 <p>该实例中我们使用 addEventListener() 方法向 video 元素添加 "ontimeupdate" 事件。</p>
 <video id="myVideo" class="myVideo" controls>
-    <%--<source src="VIDEO/history_sanguo.mp4" type="video/mp4">--%>
-    <%--您的浏览器不支持 HTML5 video。--%>
+
 </video>
 <p>当前播放位置: <span id="demo"></span></p>
 <div id="imgput"></div>

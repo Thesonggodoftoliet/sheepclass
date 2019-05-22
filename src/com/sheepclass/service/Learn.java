@@ -174,6 +174,9 @@ public class Learn {
                 break;
         }
 
+        for(int i=0;i<homeworkList.size();i++){
+            System.out.println("homework"+i+"  "+homeworkList.get(i).getContent()+"  "+homeworkList.get(i).getA()+"  "+homeworkList.get(i).getB());
+        }
         return homeworkList;
     }
 
