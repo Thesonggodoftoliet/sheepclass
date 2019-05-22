@@ -1,0 +1,23 @@
+@startuml
+
+package "Servlet" {
+component s1[
+auth
+]
+component s2[
+course]
+component s3[
+homework]
+}
+
+package "Service" {
+component ser1[
+Auth]
+component ser2[
+Infocollect]
+component ser3[
+InfoGet]
+component ser4[sad
+]
+
+@enduml

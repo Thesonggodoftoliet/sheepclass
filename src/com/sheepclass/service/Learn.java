@@ -126,7 +126,7 @@ public class Learn {
     public List<Homework> generateHomework(String sets){
         if (homeworkDao == null)
             homeworkDao = new HomeworkDaoImpl();
-        List<Integer> knowledges = PraseUtils.sToi(sets);
+        List<Integer> knowledges = PraseUtils.sToi(sets);//将字符串转换为Integer
         List<Homework> homeworkList = new ArrayList<>();
         List<Temp> temps = new ArrayList<>();
         for (int i = 0;i<knowledges.size();i++){//循环遍历加入题目
@@ -143,9 +143,7 @@ public class Learn {
             temp.setNum(last-j+1);//知识点符合程度
             temp.setHomework(homeworkList.get(j));
             temps.add(temp);
-            if (j != last)
-                for (int m = j+1;m<=last-j;m++)
-                    homeworkList.remove(j+1);
+            j=last;
         }
         homeworkList.clear();
         Collections.sort(temps);
