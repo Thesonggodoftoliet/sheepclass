@@ -42,27 +42,58 @@ public class getUserInfo extends HttpServlet {
             }
         }else {
             int userid = 0;
+            int choice = 0;
             userid = JwtUtils.decodeToken(token);
+            try{
+                choice = object.getInt("choice");
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
             token = JwtUtils.createToken(userid);
             Users users = new Users();
             users.setUserid(userid);
             Auth auth = new Auth(users);
             users = auth.getUserinfo();
-            try{
-                msg.put("username",users.getNickname());
-                msg.put("birthday",users.getBirthday());
-                msg.put("totaltime",users.getTot_time());
-                msg.put("registtime",users.getRegist_Time());
-                System.out.println(users.getRegist_Time());
-                msg.put("sex",users.getSex());
-                msg.put("identity",users.getIdentity());
-                msg.put("email",users.getEmail());
-                msg.put("phone",users.getPhone());
-                msg.put("parentid",users.getParentid());
-                msg.put("token",token);
-                msg.put("tag",1);
-            }catch (JSONException e){
-                e.printStackTrace();
+            if (choice == 2){
+                users.setUserid(users.getParentid());
+                auth = new Auth(users);
+                users = auth.getUserinfo();
+                try {
+                    msg.put("username", users.getNickname());
+                    msg.put("birthday", users.getBirthday());
+                    msg.put("totaltime", users.getTot_time());
+                    msg.put("registtime", users.getRegist_Time());
+                    System.out.println(users.getRegist_Time());
+                    msg.put("sex", users.getSex());
+                    msg.put("identity", users.getIdentity());
+                    msg.put("email", users.getEmail());
+                    msg.put("phone", users.getPhone());
+                    msg.put("parentid", users.getParentid());
+                    msg.put("token", token);
+                    if (users == null)
+                        msg.put("tag", 2);
+                    else
+                        msg.put("tag",3);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }else {
+                try {
+                    msg.put("username", users.getNickname());
+                    msg.put("birthday", users.getBirthday());
+                    msg.put("totaltime", users.getTot_time());
+                    msg.put("registtime", users.getRegist_Time());
+                    System.out.println(users.getRegist_Time());
+                    msg.put("sex", users.getSex());
+                    msg.put("identity", users.getIdentity());
+                    msg.put("email", users.getEmail());
+                    msg.put("phone", users.getPhone());
+                    msg.put("parentid", users.getParentid());
+                    msg.put("token", token);
+                    msg.put("tag", 1);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }
         out.print(msg);

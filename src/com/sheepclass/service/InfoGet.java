@@ -78,7 +78,7 @@ public class InfoGet {
         return courses;
     }
 
-    public List<Knowledge> getMostwrongKnowledges(int userid) {
+    public List<Knowledge> getMostwrongKnowledges(int userid) {//错得最多的知识点
         class Temp implements Comparable{
             int id;
             int count;
@@ -146,6 +146,60 @@ public class InfoGet {
     List<Users> getStudents(){
         UserDao userDao = new UserDaoIm();
         return userDao.getUsersByIdentity(2);
+    }
+
+    public float rateofWrong(int courseid,int userid){//每门课的错题率
+        //根据学生的学习进度加上每门课的章节数（每章十道题）来统计
+        MistakesDao mistakesDao = new MistakesDaoImpl();
+        List<Mistakes> mistakes = mistakesDao.getMistakesBycourse(userid,courseid);
+        ScheduleDao scheduleDao = new ScheduleDaoimpl();
+        Schedule schedule = scheduleDao.getScheduleBycourseid(userid,courseid);
+        ChapterDao chapterDao = new ChapterDaoImpl();
+        List<Chapter> chapters = chapterDao.getChapterByCourse(courseid);
+        int num = 0;
+
+        if (schedule.getFinish() == 1) {
+            num = chapters.size();
+        }
+        else {
+            for (int i = 0; i < chapters.size(); i++) {
+                if (chapters.get(i).getSerialnum() < schedule.getSerialnum())
+                    num++;
+            }
+        }
+        float rate = mistakes.size()/(num*10);
+        return rate;
+    }
+
+    public List<Course> Coursesison(int userid){//正在上的课程
+        ScheduleDao scheduleDao = new ScheduleDaoimpl();
+        List<Schedule> schedules = scheduleDao.getScheduleByuserid(userid);
+        for (int i = 0;i<schedules.size();i++){
+            if (schedules.get(i).getFinish() == 1)
+                schedules.remove(i);
+        }
+        CourseDao courseDao = new CourseDaoImle();
+        List<Course> courses = new ArrayList<>();
+        for (int i=0;i<schedules.size();i++){
+            courses.add(courseDao.getcourseByid(schedules.get(i).getCourseid()));
+        }
+        return courses;
+    }
+
+    public List<Course> Coursewason(int userid){//上过的课程
+        ScheduleDao scheduleDao = new ScheduleDaoimpl();
+        List<Schedule> schedules = scheduleDao.getScheduleByuserid(userid);
+        for (int i = 0;i<schedules.size();i++){
+            if (schedules.get(i).getFinish() == 0)
+                schedules.remove(i);
+        }
+        CourseDao courseDao = new CourseDaoImle();
+        List<Course> courses = new ArrayList<>();
+        for (int i=0;i<schedules.size();i++){
+            courses.add(courseDao.getcourseByid(schedules.get(i).getCourseid()));
+        }
+        return courses;
+
     }
 
 }

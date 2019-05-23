@@ -30,7 +30,12 @@ public class Infocollect {
     public int addMistakes(Mistakes mistakes){//根据已有题目创建错题
         if (mistakesDao == null)
             mistakesDao = new MistakesDaoImpl();
-        return mistakesDao.addMistakes(mistakes);
+        if (mistakesDao.getMistakesById(mistakes) == null && mistakes.getWrongtimes() == 1)//如果数据库中没有这道题并且这道题错了
+            return mistakesDao.addMistakes(mistakes);
+        else if (mistakesDao.getMistakesById(mistakes)!=null)
+            return setMistakes(mistakes);
+        else
+            return -1;//数据库中没有这道错题并且做对了
     }
 
     public int addMistakes(int courseid,String content,int userid){//根据图片识别知识点，创建错题
@@ -65,7 +70,7 @@ public class Infocollect {
         if (mistakes.getWrongtimes() == 1)
             sqlmistakes.setWrongtimes(sqlmistakes.getWrongtimes()+1);
 
-        if (sqlmistakes.getReviewtimes() >=3) {
+        if (sqlmistakes.getReviewtimes()-sqlmistakes.getWrongtimes()>=3) {//当做对的次数减去做错的次数大于等于3
             mistakesDao.deleteMistakesByhomeworkid(mistakes.getUserid(),mistakes.getHomeworkid());
             return -1;//删除错题
         }else

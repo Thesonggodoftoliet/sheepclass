@@ -45,6 +45,8 @@ public class getStuInfo extends HttpServlet {
                 msg.put("tot_time",0);
                 msg.put("knowledges"," ");
                 msg.put("courses"," ");
+                msg.put("courseson"," ");
+                msg.put("coursesoff"," ");
             }catch (JSONException e){
                 e.printStackTrace();
             }
@@ -57,9 +59,33 @@ public class getStuInfo extends HttpServlet {
             InfoGet infoGet = new InfoGet();
             List<Course> courses = infoGet.getMosterrorCourse(userid);
             List<Knowledge> knowledges = infoGet.getMostwrongKnowledges(userid);
+            List<Course> courseon = infoGet.Coursesison(userid);
+            List<Course> courseoff = infoGet.Coursewason(userid);
             try{
                 JSONArray courselist = new JSONArray();
                 JSONArray klist = new JSONArray();
+                JSONArray clist1 = new JSONArray();
+                JSONArray clist2 = new JSONArray();
+                for (int i=0;i<courseon.size();i++){
+                    JSONObject jo = new JSONObject();
+                    jo.put("coursename",courseon.get(i).getCoursename());
+                    jo.put("img",courseon.get(i).getImg());
+                    jo.put("subject",courseon.get(i).getSubject());
+                    jo.put("courseid",courseon.get(i).getCourseid());
+                    jo.put("rate",infoGet.rateofWrong(courseon.get(i).getCourseid(),userid));
+                    clist1.put(jo);
+                }
+                for (int i=0;i<courseoff.size();i++){
+                    JSONObject jo = new JSONObject();
+                    jo.put("coursename",courseoff.get(i).getCoursename());
+                    jo.put("img",courseoff.get(i).getImg());
+                    jo.put("subject",courseoff.get(i).getSubject());
+                    jo.put("courseid",courseoff.get(i).getCourseid());
+                    jo.put("rate",infoGet.rateofWrong(courseoff.get(i).getCourseid(),userid));
+                    clist2.put(jo);
+                }
+
+
                 for (int i =0;i<courses.size();i++){
                     JSONObject jo = new JSONObject();
                     jo.put("coursename",courses.get(i).getCoursename());
@@ -81,6 +107,9 @@ public class getStuInfo extends HttpServlet {
                 msg.put("tot_time",infoGet.getWeekTottime(userid));
                 msg.put("knowledges",klist);
                 msg.put("courses",courselist);
+                msg.put("courseson",clist1);
+                msg.put("coursesoff",clist2);
+
             }catch (JSONException e){
                 e.printStackTrace();
             }

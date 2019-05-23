@@ -36,4 +36,9 @@ public class ChapterDaoImpl implements ChapterDao {
         String sql = "delete from chapter where serialnum = ? and courseid = ?";
         return JdbcUtils.executeSQL(sql);
     }
+
+    @Override
+    public int numofChapter(int courseid) {
+        return 0;
+    }
 }
