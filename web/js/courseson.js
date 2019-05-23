@@ -31,8 +31,8 @@ function getCookie(cname)
         return null;
 }
 
-$(".chapter").click(
-    function ajax_subject(){
+
+$(function ajax_subject(){
         $.ajax({
             type:"post",
             url:"/course/getChapters",
@@ -62,7 +62,7 @@ $(".chapter").click(
                         }
                     }
 
-                    $("#courseson").html(tem);
+                    $("#chapter").html(tem);
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -74,8 +74,7 @@ $(".chapter").click(
 });
 
 
-$(".homework").click(
-    function ajax_subject(){
+$(function ajax_subject(){
         $.ajax({
             type:"post",
             url:"/course/getChapters",
@@ -93,19 +92,19 @@ $(".homework").click(
                     var tem="";
                     alert(size);
                     for(i=0;i<size;i++){
-                        if((data.serialnum-0.1-data.chapters[i].serialnum)>=0.1){
+                        if((data.serialnum-data.chapters[i].serialnum)>=0.1){
                             tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">已学习</div></li>";
 
-                        }else if((data.chapters[i].serialnum-0.1-data.serialnum)>=0.1){
+                        }else if((data.chapters[i].serialnum-data.serialnum)>=0.1){
                             tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">未解锁</div></li>";
 
                         }else{
-                            tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../coursevideo.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
+                            tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../homework.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
 
                         }
                     }
 
-                    $("#courseson").html(tem);
+                    $("#homework").html(tem);
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -115,4 +114,7 @@ $(".homework").click(
             }
         });
     });
+
+
+
 
