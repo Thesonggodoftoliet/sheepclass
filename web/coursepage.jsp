@@ -112,6 +112,7 @@
     <div class="skill_video" id="coursediv">
     </div>
 
+    <br><br><br>
     <!--分页-->
     <div class="page">
         <ul class="pagination">
@@ -124,7 +125,7 @@
     </div>
 </div>
 
-
+<br><br>
 
 <!--Scroll to top-->
 <div class="scroll-to-top">

@@ -15,10 +15,10 @@ public class getPhoto {
      *
      */
     //视频文件路径
-    private static String videoPath = "/Users/chenan/sheepclassdemo/web/VIDEO";
+    private static String videoPath = "/Users/chenan/sheepclass/web/VIDEO";
 
     //视频帧图片存储路径
-    private static String videoFramesPath = "/Users/chenan/sheepclassdemo/web/SCREEN-SHOT/";
+    private static String videoFramesPath = "/Users/chenan/sheepclass/web/SCREEN-SHOT/";
 
 
     public static String grabberVideoFramer(double curTime,String videoFileName){

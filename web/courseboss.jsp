@@ -90,10 +90,11 @@
     </div>
 </section>
 
-<div class="checkout-page">
-    <div class="container">
 
-        <div class="row clearfix">
+<section class="team">
+    <div class="container">
+        <div class="section-title center pb-60">
+            <%--章节--%>
             <div class="col-md-5 col-sm-12 col-xs-12">
                 <!--Billing Details-->
                 <div class="billing-details">
@@ -101,42 +102,45 @@
                         <div class="form-group">
                             <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one chapter" >章节学习</button></div>
                             <br/><br/>
+                        </div>
+
+                    </div>
+
+                </div><!--End Billing Details-->
+
+                <div class="your-order">
+
+                    <ul class="orders-table" id="chapter"></ul>
+                </div><!--End Your Order-->
+
+            </div>
+                <%--习题--%>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <!--Your Order-->
+                <div class="billing-details">
+                    <div class="coupon-code">
+                        <div class="form-group">
                             <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one homework" >章节习题</button></div>
                             <br/><br/>
-                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one group" >群聊group</button></div>
-                            <br/><br/>
-
                         </div>
                     </div>
 
                 </div><!--End Billing Details-->
-            </div>
-
-            <div class="col-md-7 col-sm-12 col-xs-12">
-                <!--Your Order-->
-                <div class="your-order">
-                    <ul class="orders-table" id="courseson">
-                    </ul>
-                    <li class="clearfix">
-                        <div class="col st-3">哈哈哈</div>
-                        <div class="col st-3">
-                            <div class="getvideo" value="1.1" >已解锁～ 快点学习我</div>
-                        </div>
-                    </li>
-                </div><!--End Your Order-->
+                <ul class="orders-table" id="homework"></ul>
             </div>
 
         </div>
 
     </div>
-</div>
+    <br><br><br>
+</section>
 
-
+<br><br><br><br>
 
 
 <!--Scroll to top-->
 <div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
-
+<br><br><br><br>
 
 
 <!-- jQuery js -->
