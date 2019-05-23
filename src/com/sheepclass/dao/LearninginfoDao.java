@@ -9,6 +9,6 @@ public interface LearninginfoDao {
     int getTimesoflearning(int userid,long time);
     int addInfo(Learninginfo learninginfo);
     int updateInfo(Learninginfo learninginfo);
-    int deleteBytime(int userid,long time);
+    int deleteBytime(long time);
     int deleteByuserid(int userid);
 }

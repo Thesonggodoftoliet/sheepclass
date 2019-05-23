@@ -32,9 +32,9 @@ public class LearninginfoDaoimple implements LearninginfoDao {
     }
 
     @Override
-    public int deleteBytime(int userid,long time) {
-        String sql = "delete from learninginfo where userid = ? and time< = ?";
-        return JdbcUtils.executeSQL(sql,userid,time);
+    public int deleteBytime(long time) {
+        String sql = "delete from learninginfo where time< = ?";
+        return JdbcUtils.executeSQL(sql,time);
     }
 
     @Override

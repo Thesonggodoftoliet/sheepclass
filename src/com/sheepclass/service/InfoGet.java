@@ -23,6 +23,13 @@ public class InfoGet {
         return learninginfoDao.getTimesoflearning(userid,calendar.getTimeInMillis());
     }
 
+    public int deleteLearn(){//删除两周之前的数据
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE,-14);
+        LearninginfoDao learninginfoDao = new LearninginfoDaoimple();
+        return learninginfoDao.deleteBytime(calendar.getTimeInMillis());
+    }
+
     public long getWeekTottime(int userid){//获取一周的学习时长
         UserDao userDao = new UserDaoIm();
         return userDao.getUserById(userid).getTot_time();

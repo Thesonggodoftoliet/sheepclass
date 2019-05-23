@@ -17,7 +17,7 @@ public class InfoGetTest {
         calendar.setTime(date);
         System.out.println(calendar.getTimeInMillis());
         calendar.add(Calendar.DATE,-1);
-        System.out.println(calendar.getTimeInMillis());
+        System.out.println(calendar.getTime());
         calendar.add(Calendar.DATE,2);
         System.out.println(calendar.getFirstDayOfWeek()+" "+calendar.getTime().getDay());
         calendar.add(Calendar.DATE,-calendar.getTime().getDay());
