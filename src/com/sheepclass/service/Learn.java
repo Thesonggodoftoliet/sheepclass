@@ -184,6 +184,12 @@ public class Learn {
         return mistakesDao.getMistakesByuserid(userid);
     }
 
+    public List<Mistakes> getMistakes(int userid,int courseid){
+        if (mistakesDao == null)
+            mistakesDao = new MistakesDaoImpl();
+        return mistakesDao.getMistakesBycourse(userid,courseid);
+    }
+
     public List<Homework> getMistakesByuserid(int userid){
         /*（待做）传回的时候应当加上课程名等*/
         if (mistakesDao == null)
