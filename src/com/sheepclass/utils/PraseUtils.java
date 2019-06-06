@@ -29,7 +29,7 @@ public class PraseUtils {
                 Integer integer = Integer.parseInt(str);
                 System.out.println("id= " + integer);
                 list.add(integer);
-                str=str.substring(1);
+                str=str.substring(str.length());
             }
         }
         return list;
