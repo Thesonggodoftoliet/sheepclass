@@ -106,4 +106,51 @@ $(function(){
         }
     });
 });
+var ifAlertOutFlag = false;
+var hour,minute,second;
+hour = minute =second = 0;
+var millisecond = 0;//毫秒
+
+var int;
+function Reset() {//重置
+    window.clearInterval(int);
+    millisecond=hour=minute=second=0;
+}
+
+function start(startTime) {//开始
+    localStorage.ifTimeRefresh = "N";
+    ifAlertOutFlag = true;
+
+    millisecond = startTime;
+    int = setInterval(timer,100);
+}
+
+function timer() {//计时
+    millisecond = millisecond+100;
+    if (millisecond>=1000){
+        second = second +Math.ceil(millisecond/1000);
+        millisecond = 0;
+    }
+
+    if (second>=60){
+        minute = minute+Math.ceil(second/60);
+        second = 0;
+        if (minute!=0 && minute%5 ==0){
+            //上传可以加在这里
+            var studytime = (hour*60*60*1000) + (minute*60*1000) + (second*1000) + millisecond;
+            console.log("上传时间")
+        }
+    }
+
+    if (minute>=60){
+        hour = hour+Math.ceil(minute/60);
+        minute = 0;
+    } 
+
+    $(window).on('beforeunload',function () {
+        var studytime=(hour*60*60*1000) + (minute*60*1000) + (second*1000) + millisecond;
+        //在离开界面前调用
+    })
+}
+
 
