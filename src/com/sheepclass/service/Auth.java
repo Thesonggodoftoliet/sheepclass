@@ -48,11 +48,13 @@ public class Auth {
     public int logintime(int userid){
         List<Learninginfo> learninginfos = learninginfoDao.getLearningtime(userid,calendar.getTimeInMillis());
         Collections.sort(learninginfos);
+        int tag = 0;
         if(!learninginfos.isEmpty()){
+            System.out.println("not empty");
             Learninginfo learninginfo = learninginfos.get(0);
             Date date = new Date(learninginfo.getLogintime());
-            int tag;
-            if (date.getMonth() == calendar.getTime().getMonth() && date.getDate() == calendar.getTime().getDate()){//当天多次登录
+            if (date.getMonth() == calendar.getTime().getMonth() && date.getDate() == calendar.getTime().getDate()){
+                //当天多次登录
                 learninginfo.setLogintime(calendar.getTimeInMillis());
                 tag = learninginfoDao.updateInfo(learninginfo);
             }else {
@@ -60,9 +62,15 @@ public class Auth {
                 learninginfo.setLogouttime(0);
                 tag = learninginfoDao.addInfo(learninginfo);
             }
-            return tag;
-        }else
-            return 1;
+        }else{
+            System.out.println("is empty");
+            Learninginfo learninginfo = new Learninginfo();
+            learninginfo.setUserid(userid);
+            learninginfo.setLogintime(calendar.getTimeInMillis());
+            learninginfo.setLogouttime(0);
+            tag = learninginfoDao.addInfo(learninginfo);
+        }
+        return tag;
     }
 
     public int verifyIdentity(int userid){

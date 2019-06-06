@@ -9,13 +9,13 @@ import java.util.List;
 public class LearninginfoDaoimple implements LearninginfoDao {
     @Override
     public List<Learninginfo> getLearningtime(int userid,long time) {
-        String sql = "select * from learninginfo where userid = "+userid+" and logintime>= "+time;
+        String sql = "select * from learninginfo where userid = "+userid+" and logintime<= "+time;
         return JdbcUtils.getList(Learninginfo.class,sql);
     }
 
     @Override
     public int getTimesoflearning(int userid,long time) {
-        String sql = "select * from learninginfo where userid = "+userid+" and logintime>= "+time;
+        String sql = "select * from learninginfo where userid = "+userid+" and logintime<= "+time;
         return JdbcUtils.getListCount(sql);
     }
 
@@ -27,13 +27,13 @@ public class LearninginfoDaoimple implements LearninginfoDao {
 
     @Override
     public int updateInfo(Learninginfo learninginfo) {
-        String sql = "update learninginfo where key = ? set logouttime = ?";
-        return JdbcUtils.executeSQL(sql,learninginfo.getKey(),learninginfo.getLogouttime());
+        String sql = "update learninginfo set logouttime = ? where _key = ?";
+        return JdbcUtils.executeSQL(sql,learninginfo.getLogouttime(),learninginfo.getKey());
     }
 
     @Override
     public int deleteBytime(long time) {
-        String sql = "delete from learninginfo where time< = ?";
+        String sql = "delete from learninginfo where logintime <= ?";
         return JdbcUtils.executeSQL(sql,time);
     }
 

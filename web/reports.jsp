@@ -105,7 +105,7 @@
             <div class="single-column col-md-6 col-sm-12">
                 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
                     <figure class="img-box">
-                        <img src="images/resource/touxiang.jpg" alt="">
+                        <img src="images/resource/touxiang.jpg" alt="" style="width: 250px">
                     </figure>
                 </div>
             </div>

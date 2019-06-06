@@ -99,19 +99,26 @@
     <div class="container">
         <div class="section-title center pb-60">
             <%--视频--%>
-            <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="col-md-8 col-sm-7 col-xs-12">
                 <!--Billing Details-->
                 <div class="billing-details">
-                    <video id="myVideo" class="myVideo" width="600" controls></video>
-                    <p>当前播放位置: <span id="demo"></span></p>
-                    <div id="imgput"></div>
+                    <video id="myVideo" class="myVideo" width="660" controls></video>
                 </div>
 
             </div>
             <%--列表--%>
-            <div class="col-md-5 col-sm-12 col-xs-12">
-                hhhhhhhh
-            </div>
+                <div class="col-md-4 col-sm-5 col-xs-12">
+                    <aside class="sidebar">
+
+                        <!-- Popular Categories -->
+                        <div class="widget wow fadeInUp animated animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="sidebar-title"><h2>本次 <span>添加知识点情况</span></h2></div>
+                            <ul class="list catagories product-info" id="list">
+                            </ul>
+                        </div>
+
+                    </aside>
+                </div>
 
            </div>
 
@@ -119,7 +126,7 @@
     <br><br><br>
 </section>
 
-
+<br><br><br>
 
 
 <!-- jQuery js -->

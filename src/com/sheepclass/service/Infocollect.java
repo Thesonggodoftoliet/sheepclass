@@ -74,7 +74,7 @@ public class Infocollect {
             mistakesDao.deleteMistakesByhomeworkid(mistakes.getUserid(),mistakes.getHomeworkid());
             return -1;//删除错题
         }else
-            return mistakesDao.updateMistakes(mistakes);
+            return mistakesDao.updateMistakes(sqlmistakes);
     }
 
     public int updateUsers(Users users){

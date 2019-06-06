@@ -36,7 +36,7 @@ public class InfoGet {
     }
 
     public List<Course> getMosterrorCourse(int userid){//获取错题较多的三个课程
-        class temp implements Comparable{
+        class tempone implements Comparable{
             private int courseid;
             private int num;
 
@@ -58,18 +58,18 @@ public class InfoGet {
 
             @Override
             public int compareTo(Object o) {
-                temp p = (temp)o;
+                tempone p = (tempone)o;
                 return p.num - this.num;
             }
         }
         MistakesDao mistakesDao = new MistakesDaoImpl();
         List<Mistakes> mistakes = mistakesDao.getMistakesByuserid(userid);
-        List<temp> temps = new ArrayList<>();
+        List<tempone> temps = new ArrayList<>();
         for (int i = 0;i<mistakes.size();i++){
             for (int j = 0;j<temps.size();j++)
                 if (mistakes.get(i).getCourseid() == temps.get(j).getCourseid())
                     temps.get(j).setNum(temps.get(j).getNum()+1);
-            temp t = new temp();
+            tempone t = new tempone();
             t.setCourseid(mistakes.get(i).getCourseid());
             t.setNum(1);
             temps.add(t);
@@ -164,18 +164,18 @@ public class InfoGet {
         ChapterDao chapterDao = new ChapterDaoImpl();
         List<Chapter> chapters = chapterDao.getChapterByCourse(courseid);
         int num = 0;
-
+        System.out.println("size"+chapters.size());
         if (schedule.getFinish() == 1) {
             num = chapters.size();
-        }
-        else {
+        }else {
             for (int i = 0; i < chapters.size(); i++) {
+                System.out.println("chapters.get(i).getSerialnum()"+chapters.get(i).getSerialnum());
+                System.out.println("schedule.getSerialnum()"+schedule.getSerialnum());
                 if (chapters.get(i).getSerialnum() < schedule.getSerialnum())
                     num++;
             }
         }
-        float rate = mistakes.size()/(num*10);
-        return rate;
+        return (float) (mistakes.size()/(num*10));
     }
 
     public List<Course> Coursesison(int userid){//正在上的课程
