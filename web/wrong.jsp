@@ -1,19 +1,25 @@
 <%--
   Created by IntelliJ IDEA.
   User: chenan
-  Date: 2019/5/14
-  Time: 上午11:08
+  Date: 2019/5/25
+  Time: 下午7:46
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>课程中心</title>
+    <title>错题中心</title>
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -67,7 +73,7 @@
                             <ul>
                                 <li><a href="index.jsp">首 页</a></li>
                                 <li><a href="coursepage.jsp">课 程 学 习</a></li>
-                                <li><a href="person.jsp">个 人 天 地</a>
+                                <li><a href="#">个 人 天 地</a>
                                     <ul class="submenu">
                                         <li><a href="wrong.jsp">错 题 园 地</a></li>
                                         <li><a href="reports.jsp">分 析 报 告</a></li>
@@ -85,64 +91,51 @@
 </header>
 <section class="page-title center">
     <div class="container">
-        <h2>课程学习</h2> <p id="courseid"><%=request.getParameter("courseid")%></p>
-
+        <h2>错题中心</h2>
     </div>
 </section>
-
-
-<section class="team">
+<br><br><br><br>
+<section>
     <div class="container">
-        <div class="section-title center pb-60">
-            <%--章节--%>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <!--Billing Details-->
-                <div class="billing-details">
-                    <div class="coupon-code">
-                        <div class="form-group">
-                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one chapter" >章节学习</button></div>
-                            <br/><br/>
-                        </div>
+        <div class="main">
+            <ul id="bk-list" class="bk-list clearfix">
 
-                    </div>
 
-                </div><!--End Billing Details-->
-                <aside class="sidebar">
-                <div class="widget wow fadeInUp animated animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                    <ul class="list catagories product-info"  id="chapter">
-                    </ul>
-                </div>
-                </aside>
-
-            </div>
-                <%--习题--%>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <!--Your Order-->
-                <div class="billing-details">
-                    <div class="coupon-code">
-                        <div class="form-group">
-                            <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one homework" >章节习题</button></div>
-                            <br/><br/>
-                        </div>
-                    </div>
-
-                </div><!--End Billing Details-->
-                <!-- Popular Categories -->
-                <aside class="sidebar">
-                <div class="widget wow fadeInUp animated animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                    <ul class="list catagories product-info"  id="homework">
-                    </ul>
-                </div>
-                </aside>
-            </div>
-
+            </ul>
         </div>
+    </div><!-- /container -->
+</section>
+<br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br>
 
+<section class="cart-section">
+    <div class="container">
+        <div class="cart-outer">
+            <div class="table-outer">
+                <table class="cart-table">
+                    <thead class="cart-header">
+                    <th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th>
+                    <th>习题卷</th>
+                    <th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th>
+                    </thead>
+                    <tbody id="homework">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row clearfix">
+                <div class="column cart-total col-sm-12 col-xs-12">
+                    <div class="margin-top-30 test1"><a class="thm-btn thm-blue-bg btn-style-one"> 完成 <span class="fa fa-long-arrow-right"></span></a></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br><br><br><br><br>
 </section>
 
-<br><br><br>
+
+
+<div class="cd-transition-layer">
+    <div class="bg-layer"></div>
+</div> <!-- .cd-transition-layer -->
 
 
 <!--Scroll to top-->
@@ -194,11 +187,10 @@
 <script src="assets/Polyglot-Language-Switcher-master/js/jquery.polyglot.language.switcher.js"></script>
 <script src="assets/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
 <script src="assets/scrollbar.js"></script>
+<script src="js/books1.js"></script>
 
-<!--<script src="js/default-map-script.js"></script>-->
 <script src="js/script.js"></script>
-<script src="js/courseson.js"></script>
-
+<script src="js/wrong.js"></script>
 
 </body>
 </html>

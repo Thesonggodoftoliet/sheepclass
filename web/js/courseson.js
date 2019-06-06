@@ -39,7 +39,7 @@ $(function ajax_subject(){
             data:JSON.stringify(GetJsonData()),
             dataType:"json",
             success:function(data){
-                alert("success");
+                var serialnum=data.serialnum.toFixed(1);
                 if(data.tag===0){
                     alert("身份验证过期，请重新登录");
                 }
@@ -48,16 +48,17 @@ $(function ajax_subject(){
                     var size=data.chapters.length;
                     var i=0;
                     var tem="";
-                    alert(size);
                     for(i=0;i<size;i++){
-                        if((data.serialnum-data.chapters[i].serialnum)>=0.1){
-                            tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">已学习</div></li>";
+                        var cs=data.chapters[i].serialnum.toFixed(1); // sishewuru
+                        if((serialnum-cs)>0){
 
-                        }else if((data.chapters[i].serialnum-data.serialnum)>=0.1){
-                             tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">未解锁</div></li>";
+                            tem+="<li>"+data.chapters[i].chaptername+"<span>已学习</span></li>";
+
+                        }else if((cs-serialnum)>0){
+                             tem+="<li>"+data.chapters[i].chaptername+"<span>未解锁</span></li>";
 
                         }else{
-                             tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../coursevideo.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
+                             tem+="<li><p><a href='../coursevideo.jsp?serialnum="+cs+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</a><span>已解锁～ 快点学习我</span></a></li>";
 
                         }
                     }
@@ -81,7 +82,7 @@ $(function ajax_subject(){
             data:JSON.stringify(GetJsonData()),
             dataType:"json",
             success:function(data){
-                alert("success");
+                var serialnum=data.serialnum.toFixed(1);
                 if(data.tag===0){
                     alert("身份验证过期，请重新登录");
                 }
@@ -92,14 +93,16 @@ $(function ajax_subject(){
                     var tem="";
                     alert(size);
                     for(i=0;i<size;i++){
-                        if((data.serialnum-data.chapters[i].serialnum)>=0.1){
-                            tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">已学习</div></li>";
+                        var cs=data.chapters[i].serialnum.toFixed(1); // sishewuru
+                        if((serialnum-cs)>0){
 
-                        }else if((data.chapters[i].serialnum-data.serialnum)>=0.1){
-                            tem+="<li class=\"clearfix total\"><div class=\"col st-4\">"+data.chapters[i].chaptername+"</div><div class=\"col st-4\">未解锁</div></li>";
+                            tem+="<li>"+data.chapters[i].chaptername+"<span>已学习</span></li>";
+
+                        }else if((cs-serialnum)>0){
+                            tem+="<li>"+data.chapters[i].chaptername+"<span>未解锁</span></li>";
 
                         }else{
-                            tem+="<a class=\"clearfix\"><div class=\"col st-3\"><a href='../homework.jsp?serialnum="+data.chapters[i].serialnum+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</div><div class=\"col st-3\">已解锁～ 快点学习我</div>></div></a></li>";
+                            tem+="<li><p><a href='../homework.jsp?serialnum="+cs+"&courseid="+data.courseid+"' >"+data.chapters[i].chaptername+"</a><span>已解锁～ 快点学习我</span></a></li>";
 
                         }
                     }

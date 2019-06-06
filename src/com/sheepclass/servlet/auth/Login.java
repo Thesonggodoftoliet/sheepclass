@@ -45,6 +45,7 @@ public class Login extends HttpServlet {
         String token;
         if (userid != 0) {
             token = JwtUtils.createToken(userid);
+//            auth.logintime(userid);
             try {
                 msg.put("token", token);
                 msg.put("tag", 1);

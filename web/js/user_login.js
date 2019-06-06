@@ -78,7 +78,7 @@ function checkPhone(usernum) {
         document.getElementById("alert_usernum").innerHTML = "请输入正确的手机号或者邮箱";
         return false;
     }
-    var myreg1 = /^(((13[0-9])|(15[0-9])|(18[0-9]))+\d{8})$/;
+    var myreg1 = /^(((13[0-9])|(15[0-9])|(17[0-9]))+\d{8})$/;
     if(myreg1.test(usernum) === false){
         document.getElementById("alert_usernum").innerHTML = "请输入正确的手机号或者邮箱";
         return false;

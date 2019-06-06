@@ -47,7 +47,7 @@ public class getMistakes extends HttpServlet {
         }else {
             int courseid = 0;
             try{
-                courseid = jsonObject.getInt("coureseid");
+                courseid = jsonObject.getInt("courseid");
             }catch (JSONException e){
                 e.printStackTrace();
             }
@@ -58,7 +58,8 @@ public class getMistakes extends HttpServlet {
             List<Homework> mistakes = new ArrayList<>();
             List<String> coursename = new ArrayList<>();
             for (int i=0;i<mistakesList.size();i++){
-                Homework homework = learn.getHomework(mistakesList.get(i).getCourseid());
+                Homework homework = learn.getHomework(mistakesList.get(i).getHomeworkid());
+                //System.out.println(homework.getHomeworkid());
                 mistakes.add(homework);
                 coursename.add(learn.getCourseById(mistakesList.get(i).getCourseid()).getCoursename());
             }
@@ -77,6 +78,7 @@ public class getMistakes extends HttpServlet {
                     mistake.put("times",mistakesList.get(i).getWrongtimes());
                     jsonArray.put(mistake);
                 }
+                //System.out.println("print"+jsonArray);
                 msg.put("tag",1);
                 msg.put("token",token);
                 msg.put("mistakes",jsonArray);

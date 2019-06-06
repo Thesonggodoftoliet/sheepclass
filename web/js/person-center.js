@@ -1,9 +1,9 @@
 
 //换成JSON
-function GetJsonData1() {
+function GetJsonData1(choice) {
     var json = {
         "token":getCookie("token"),
-        "choice":1
+        "choice":choice
     };
     return json;
 }
@@ -37,7 +37,7 @@ $(function(){
     $.ajax({
         type:"post",
         url:"/personal/getUserInfo",
-        data:JSON.stringify(GetJsonData1()),
+        data:JSON.stringify(GetJsonData1(1)),
         dataType:"json",
         success:function(data){
             setCookie("token",data.token);
@@ -57,7 +57,48 @@ $(function(){
                     "<li>用户身份: 学生 </li>";
             }
             tem+="</ul>";
-            $("#userinfo").html(tem);
+            $("#person").html(tem);
+        },error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        }
+    });
+});
+
+
+
+//显示qinqing信息
+$(function(){
+    $.ajax({
+        type:"post",
+        url:"/personal/getUserInfo",
+        data:JSON.stringify(GetJsonData1(2)),
+        dataType:"json",
+        success:function(data){
+            setCookie("token",data.token);
+            if(data.tag===3){
+            var tem="<div className=\"section-title\">" + "<h2>个 人 <span>信 息</span>"+data.username+"</h2>" + "</div>";
+            tem+=" <ul className = \"list\" >" +
+                "<li>用户邮箱: "+data.email+" </li>";
+            tem+=" <ul className = \"list\" >" +
+                "<li>用户电话: "+data.phone+" </li>";
+            tem+=" <ul className = \"list\" >" +
+                "<li>用户性别: "+data.sex+" </li>";
+            if(data.identity==3){
+                tem+=" <ul className = \"list\" >" +
+                    "<li> 用户身份: 家长 </li>";
+            }else{
+                tem+=" <ul className = \"list\" >" +
+                    "<li>用户身份: 学生 </li>";
+            }
+            tem+="</ul>";
+            $("#mom").html(tem);
+            }else{
+                var tem="<h3>没有亲情账号</h3>";
+                $("#mom").html(tem);
+
+            }
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
             alert(XMLHttpRequest.status);
             alert(XMLHttpRequest.readyState);

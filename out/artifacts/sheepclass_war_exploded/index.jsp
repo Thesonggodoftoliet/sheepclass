@@ -65,7 +65,7 @@
                               <ul>
                                   <li><a href="index.jsp">首 页</a></li>
                                   <li><a href="coursepage.jsp">课 程 学 习</a></li>
-                                  <li><a href="person.jsp">个 人 天 地</a>
+                                  <li><a href="#">个 人 天 地</a>
                                       <ul class="submenu">
                                           <li><a href="wrong.jsp">错 题 园 地</a></li>
                                           <li><a href="reports.jsp">分 析 报 告</a></li>
@@ -100,59 +100,8 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index1.png" alt=""></div>
+                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index3.png" style="width:1200px;height:600px;" alt=""></div>
 
-                  <div class="tp-caption lfl sfb tp-resizeme start"
-                       data-x="left" data-hoffset="245"
-                       data-y="center" data-voffset="-190"
-                       data-speed="1500"
-                       data-start="1000"
-                       data-easing="easeOutExpo"
-                       data-splitin="none"
-                       data-splitout="none"
-                       data-elementdelay="0.01"
-                       data-endelementdelay="0.3"
-                       data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/1.png" alt=""></div>
-
-                  <div class="tp-caption lft sfb tp-resizeme start"
-                       data-x="center" data-hoffset="50"
-                       data-y="center" data-voffset="-110"
-                       data-speed="1500"
-                       data-start="1500"
-                       data-easing="easeOutExpo"
-                       data-splitin="none"
-                       data-splitout="none"
-                       data-elementdelay="0.01"
-                       data-endelementdelay="0.3"
-                       data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/2.png" alt=""></div>
-
-                  <div class="tp-caption lfr sfb tp-resizeme start"
-                       data-x="right" data-hoffset="150"
-                       data-y="center" data-voffset="-40"
-                       data-speed="1500"
-                       data-start="2000"
-                       data-easing="easeOutExpo"
-                       data-splitin="none"
-                       data-splitout="none"
-                       data-elementdelay="0.01"
-                       data-endelementdelay="0.3"
-                       data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/4.png" alt=""></div>
-
-                  <div class="tp-caption lfb sfb tp-resizeme start"
-                       data-x="center" data-hoffset="240"
-                       data-y="center" data-voffset="160"
-                       data-speed="1500"
-                       data-start="2500"
-                       data-easing="easeOutExpo"
-                       data-splitin="none"
-                       data-splitout="none"
-                       data-elementdelay="0.01"
-                       data-endelementdelay="0.3"
-                       data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/3.png" alt=""></div>
               </li>
               <li class="gradient-overlay overly" data-transition="slotzoom-horizontal" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/2.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
                   <img src="images/main-slider/2.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
@@ -169,7 +118,7 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index2.png" alt=""></div>
+                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index2.png" style="width:1200px;height:600px;"  alt=""></div>
 
                   <div class="tp-caption lft sfb tp-resizeme start"
                        data-x="right" data-hoffset="0"
@@ -183,8 +132,8 @@
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
                        data-endeasing="Power4.easeIn"><div class="outer-box">
-                      <p>Nashville </p>
-                      <h3>In our School you can <br> learn  how to explore new <br> Things</h3>
+                      <p>成为一个快乐博学的羊羊</p>
+                      <h3>在我们的羊村课堂 <br> 你可以学习你想学习到的 <br> 任何知识</h3>
                   </div></div>
 
               </li>
@@ -204,7 +153,7 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index1.png" alt=""></div>
+                       data-endeasing="Power4.easeIn"><img src="images/main-slider/index1.png" style="width:1200px;height:600px;" alt=""></div>
 
                   <div class="tp-caption lft sfb tp-resizeme start"
                        data-x="left" data-hoffset="600"
@@ -217,7 +166,7 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><h2>Our goal is provide a complete <br>  nurturing environments</h2></div>
+                       data-endeasing="Power4.easeIn"><h2>欢 迎 来 到 <br>羊 村 课 堂</h2></div>
 
                   <div class="tp-caption lfr sfr tp-resizeme start"
                        data-x="left" data-hoffset="600"
@@ -230,7 +179,7 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>doloremque laudantium, totam rem aperiam.</p></div>
+                       data-endeasing="Power4.easeIn"><p>这是我们的特色历史课程<br>妙趣横生的讲述历史故事～～</p></div>
 
                   <div class="tp-caption lfb sfb tp-resizeme start"
                        data-x="left" data-hoffset="600"
@@ -243,7 +192,7 @@
                        data-elementdelay="0.01"
                        data-endelementdelay="0.3"
                        data-endspeed="1200"
-                       data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">Get Involved</a></div>
+                       data-endeasing="Power4.easeIn"><a href="coursepage.jsp" class="theme-btn btn-style-one">进入课程中心</a></div>
 
               </li>
 
@@ -318,7 +267,7 @@
                           <div class="img-holder">
                               <figure><a href="#"><img src="images/team/1.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《三国故事》</a></h2>
+                                  <h2><a href="#">《戏说五代十国》</a></h2>
                                   <p>国学</p>
                               </div>
 
@@ -327,7 +276,7 @@
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《三国故事》</a></h2>
+                                      <h2><a href="#">《戏说五代十国》</a></h2>
                                       <p>国学</p>
                                   </div>
 
@@ -341,7 +290,7 @@
                           <div class="img-holder">
                               <figure><a href="#"><img src="images/team/2.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《初等数学奥林匹克》</a></h2>
+                                  <h2><a href="#">《一起学习数学奥林匹克》</a></h2>
                                   <p>数学</p>
 
                               </div>
@@ -349,7 +298,7 @@
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《初等数学奥林匹克》</a></h2>
+                                      <h2><a href="#">《一起学习数学奥林匹克》</a></h2>
                                       <p>数学</p>
 
                                   </div>
@@ -357,50 +306,28 @@
                               </div>
                           </div>
                       </div>
-
-
                   </div>
-                  <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.7s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
+                  <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
                       <div class="item">
                           <div class="img-holder">
                               <figure><a href="#"><img src="images/team/3.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《黑洞的秘密》</a></h2>
-                                  <p>科学</p>
+                                  <h2><a href="#">《三国演义》</a></h2>
+                                  <p>中国历史</p>
+
                               </div>
                           </div>
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《黑洞的秘密》</a></h2>
-                                      <p>科学</p>
+                                      <h2><a href="#">《三国演义》</a></h2>
+                                      <p>中国历史</p>
+
                                   </div>
 
                               </div>
                           </div>
                       </div>
-
-                  </div>
-                  <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                      <div class="item">
-                          <div class="img-holder">
-                              <figure><a href="#"><img src="images/team/4.jpg" alt="Awesome Image"></a></figure>
-                              <div class="content">
-                                  <h2><a href="#">《微生物里的微世界》</a></h2>
-                                  <p>生物</p>
-                              </div>
-                          </div>
-                          <div class="overlay">
-                              <div class="inner">
-                                  <div class="content">
-                                      <h2><a href="#">《微生物里的微世界》</a></h2>
-                                      <p>生物</p>
-                                  </div>
-
-                              </div>
-                          </div>
-                      </div>
-
                   </div>
               </div>
           </div>

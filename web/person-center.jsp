@@ -102,6 +102,7 @@
                         <div class="form-group">
                             <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one chapter" >本账户</button></div>
                             <br/><br/>
+                            <div id="person"></div>
                         </div>
 
                     </div>
@@ -122,6 +123,7 @@
                         <div class="form-group">
                             <div class="field-group btn-field"><button type="submit" class="theme-btn btn-style-one homework" >亲情账户</button></div>
                             <br/><br/>
+                            <div id="mom"></div>
                         </div>
                     </div>
 
@@ -190,6 +192,7 @@
 
 <!--<script src="js/default-map-script.js"></script>-->
 <script src="js/script.js"></script>
+<script src="js/person-center.js"></script>
 
 
 </body>

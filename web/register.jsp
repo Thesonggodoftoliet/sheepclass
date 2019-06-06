@@ -178,26 +178,6 @@
 
 
 
-    <section class="footer">
-
-        <div class="footer-bottom">
-            <div class="footer-bottom-bg">
-                <div class="container">
-                    <div class="pull-left">
-                        <figure><a href="#"><img src="images/logo/2.png" alt=""></a></figure>
-                    </div>
-                    <div class="pull-right">
-                        <div class="copy-right">
-                            Copyright &copy; 2017.Company name All rights reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
     <!--Scroll to top-->
     <div class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></div>
 

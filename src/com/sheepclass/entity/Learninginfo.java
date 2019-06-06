@@ -1,17 +1,17 @@
 package com.sheepclass.entity;
 
 public class Learninginfo implements Comparable{
-    private int key;
+    private int _key;
     private int userid;
     private long logintime;
     private long logouttime;
 
     public int getKey() {
-        return key;
+        return _key;
     }
 
     public void setKey(int key) {
-        this.key = key;
+        this._key = key;
     }
 
     public int getUserid() {
