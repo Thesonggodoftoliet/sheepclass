@@ -65,14 +65,20 @@ public class InfoGet {
         MistakesDao mistakesDao = new MistakesDaoImpl();
         List<Mistakes> mistakes = mistakesDao.getMistakesByuserid(userid);
         List<tempone> temps = new ArrayList<>();
+        int tag = 0;//标记 是否重复
         for (int i = 0;i<mistakes.size();i++){
             for (int j = 0;j<temps.size();j++)
-                if (mistakes.get(i).getCourseid() == temps.get(j).getCourseid())
-                    temps.get(j).setNum(temps.get(j).getNum()+1);
-            tempone t = new tempone();
-            t.setCourseid(mistakes.get(i).getCourseid());
-            t.setNum(1);
-            temps.add(t);
+                if (mistakes.get(i).getCourseid() == temps.get(j).getCourseid()) {
+                    temps.get(j).setNum(temps.get(j).getNum() + 1);
+                    tag=1;
+                }
+                if(tag!=1){
+                    tag = 0;
+                    tempone t = new tempone();
+                    t.setCourseid(mistakes.get(i).getCourseid());
+                    t.setNum(1);
+                    temps.add(t);
+                }
         }
         Collections.sort(temps);
         List<Course> courses = new ArrayList<>();
@@ -157,14 +163,24 @@ public class InfoGet {
 
     public float rateofWrong(int courseid,int userid){//每门课的错题率
         //根据学生的学习进度加上每门课的章节数（每章十道题）来统计
+
+        //这门课的所有的错题
         MistakesDao mistakesDao = new MistakesDaoImpl();
         List<Mistakes> mistakes = mistakesDao.getMistakesBycourse(userid,courseid);
+
+        //这门课的学习情况
         ScheduleDao scheduleDao = new ScheduleDaoimpl();
         Schedule schedule = scheduleDao.getScheduleBycourseid(userid,courseid);
+
+        //这门课的章节
         ChapterDao chapterDao = new ChapterDaoImpl();
         List<Chapter> chapters = chapterDao.getChapterByCourse(courseid);
+
+
         int num = 0;
         System.out.println("size"+chapters.size());
+
+
         if (schedule.getFinish() == 1) {
             num = chapters.size();
         }else {
@@ -175,7 +191,10 @@ public class InfoGet {
                     num++;
             }
         }
-        return (float) (mistakes.size()/(num*10));
+
+        /*如果这个人 目前学习的是第一章，那么他的NUM就会等于0*/
+        if(num==0) return 0;
+        else return (float) (mistakes.size()/(num*10));
     }
 
     public List<Course> Coursesison(int userid){//正在上的课程

@@ -11,6 +11,8 @@
 <head>
 	<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
     <title></title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

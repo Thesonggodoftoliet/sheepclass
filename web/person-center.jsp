@@ -15,6 +15,8 @@
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">

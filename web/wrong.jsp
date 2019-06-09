@@ -95,36 +95,30 @@
     </div>
 </section>
 <br><br><br><br>
-<section>
-    <div class="container">
+
+<div class="container">
         <div class="main">
             <ul id="bk-list" class="bk-list clearfix">
 
 
             </ul>
         </div>
-    </div><!-- /container -->
-</section>
-<br><br><br><br><br><br><br><br><br><br><br>r><br><br><br><br><br><br><br><br>
+</div><!-- /container -->
 
 <section class="cart-section">
     <div class="container">
         <div class="cart-outer">
-            <div class="table-outer">
-                <table class="cart-table">
-                    <thead class="cart-header">
-                    <th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th>
-                    <th>习题卷</th>
-                    <th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th>
+            <div class="table-outer" id="finish_one">
+                <table class="cart-table" >
+                    <thead class="cart-header" id="table_one">
                     </thead>
                     <tbody id="homework">
-
                     </tbody>
                 </table>
             </div>
             <div class="row clearfix">
                 <div class="column cart-total col-sm-12 col-xs-12">
-                    <div class="margin-top-30 test1"><a class="thm-btn thm-blue-bg btn-style-one"> 完成 <span class="fa fa-long-arrow-right"></span></a></div>
+                    <div class="margin-top-30 test1"></div>
                 </div>
             </div>
         </div>

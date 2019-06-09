@@ -46,7 +46,7 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+    //alert("调用cookie成功");
 }
 
 //cookie读取TOKEN
@@ -70,7 +70,13 @@ $(function(){
         dataType:"json",
         success:function(data){
             if(data.tag===0){
-                alert("身份验证过期，请重新登录");
+                layer.open({
+                    content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                    ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                    ,yes:function(){
+                        window.location.href="login.jsp";
+                    }
+                });
             }
             else{
                 setCookie("token",data.token);
@@ -90,9 +96,7 @@ $(function(){
                 $("#homework").html(tem);
             }
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+
         }
     });
 });
@@ -134,7 +138,7 @@ function getAnswer(homeworkid,correct){
 }
 //弹出一个提示层
 $('.test1').click(function(){
-    alert(parseFloat($("#serialnum").html())+0.1);
+    //alert(parseFloat($("#serialnum").html())+0.1);
     $.ajax({
         type:"post",
         url:"/course/updateBreakTime",
@@ -142,9 +146,7 @@ $('.test1').click(function(){
         dataType:"json",
         success:function(data){
         },error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+
         }
     });
 
@@ -152,5 +154,15 @@ $('.test1').click(function(){
         title:  ['作业结果', 'color:#8373ce;']
         ,content: '<h3 style="color:#f8b54d;">恭喜你完成作业, 你的所有错题都加入到了错题中心中哦～</h3>'
         ,anim:1
+        ,shadeClose: true
+        ,btn:['前往错题中心','继续学习']
+        ,yes:function(index,layero){
+            window.location.href="wrong.jsp";
+            //alert("hhh");
+        }
+        ,btn2:function(index,layero){
+
+        }
+
     });
 });

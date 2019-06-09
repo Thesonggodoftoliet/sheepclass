@@ -18,6 +18,9 @@
     <link href="${pageContext.request.contextPath}/css/coursepage.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src= "${pageContext.request.contextPath}/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
+
 
 </head>
 <body class="home-one">

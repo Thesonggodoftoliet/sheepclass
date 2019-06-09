@@ -45,7 +45,7 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+    //alert("调用cookie成功");
 }
 
 //cookie读取TOKEN
@@ -80,9 +80,11 @@ $(function(){
                     }
                 });
             }else{
-               var courses=data.courses;
+               var courses=data.courseson; //应该是正在学习的课程
+               var tem="";
                for(var i=0;i<courses.length;i++){
-                    var tem="<li><div class=\"bk-book book-1 bk-bookdefault\"> " +
+                   //alert(courses[i].courseid);
+                    tem +="<li><div class=\"bk-book book-1 bk-bookdefault\"> " +
                    "<div class=\"bk-front\"> " +
                    "<div class=\"bk-cover\" style=\"background-image: url(images/course/small/"+courses[i].img+");\"> " +
                    "<h2> " +
@@ -91,24 +93,26 @@ $(function(){
                    "</div> " +
                    "<div class=\"bk-cover-back\"></div> " +
                    "</div> " +
-                   "<div class=\"bk-page\"> " +
+                   "<div class=\"bk-page\"></div>" +
                    "<div class=\"bk-right\"></div> " +
                    "<div class=\"bk-top\"></div> " +
                    "<div class=\"bk-bottom\"></div> " +
                    "</div> " +
-                   "<div class=\"bk-info\"> " +
+                   "<div class=\"bk-info\">" +
                    "<button class=\"bk-bookview\" onclick='getMistakes("+courses[i].courseid+");'>开始做题</button> " +
                    "<h3>" +
-                   "<span>"+courses[i].coursename+"的错题本</span> " +
+                   "<span onclick='getMistakes("+courses[i].courseid+");'>"+courses[i].coursename+"的错题本,点击此处开始做题</span> " +
                    "</h3>" +
-                   "</div> </li>";
+                   "</div></li>";
 
                }
-            $("#bk-list").html(tem);
+                $("#bk-list").html(tem);
+
+
         }},error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            // alert(XMLHttpRequest.status);
+            // alert(XMLHttpRequest.readyState);
+            // alert(textStatus);
         }
     });
 });
@@ -123,7 +127,13 @@ function getMistakes(courseid){
         dataType:"json",
         success:function(data){
             if(data.tag===0){
-                alert("身份验证过期，请重新登录");
+                layer.open({
+                    content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                    ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                    ,yes:function(){
+                        window.location.href="login.jsp";
+                    }
+                });
             }
             else{
                 setCookie("token",data.token);
@@ -141,11 +151,17 @@ function getMistakes(courseid){
                 }
                 tem+="</tr>";
                 $("#homework").html(tem);
+
+                var tme2="<th>&nbsp;</th><th>&nbsp;</th><th>习题卷</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th> ";
+                $("#table_one").html(tme2);
+
+                var tem3="<a class=\"thm-btn thm-blue-bg btn-style-one\"> 完成 <span class=\"fa fa-long-arrow-right\"></span></a>";
+                $(".test1").html(tem3);
             }
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            // alert(XMLHttpRequest.status);
+            // alert(XMLHttpRequest.readyState);
+            // alert(textStatus);
         }
     });
 }

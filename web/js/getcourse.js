@@ -14,7 +14,7 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+    //alert("调用cookie成功");
 }
 
 //cookie读取TOKEN
@@ -39,14 +39,20 @@ $(function auto_ajax_subject(){
         dataType:"json",
         success:function(json){
             if(json.tag===0){
-                alert("身份验证过期 请重新登录");
+                layer.open({
+                    content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                    ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                    ,yes:function(){
+                        window.location.href="login.jsp";
+                    }
+                });
             }else{
-                alert("auto_ajax_subject");
+                //alert("auto_ajax_subject");
                 setCookie("token",json.token); //更新TOKEN
                 var course = json.course;
                 var tem = "<section class='event style-2'><div class='container'><div class='row'>";
                 for(var i=0,l=course.length;i<l;i++){
-                    alert(course[i].courseid);
+                    //alert(course[i].courseid);
                     tem+="<div class='col-md-4 col-sm-6 col-xsw-12 item wow fadeIn' data-wow-duration='2s' data-wow-delay='0."+(i+5)+"s' data-wow-offset='0' style='visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;'>";
                     tem+="<div class='img-holder'><figure>";
 
@@ -74,7 +80,7 @@ $(".subject li").click(
 
     //取当前选中 li 的value值
     var subject = $(this).attr("value");
-    alert(subject);
+    //alert(subject);
     $.ajax({
         type:"post",
         url:"/course/getCourse",
@@ -83,9 +89,15 @@ $(".subject li").click(
         dataType:"json",
         success:function(json){
             if(json.tag===0){
-                alert("身份验证过期 请重新登录");
+                layer.open({
+                    content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                    ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                    ,yes:function(){
+                        window.location.href="login.jsp";
+                    }
+                });
             }else{
-                alert("auto_subject");
+                //alert("auto_subject");
                 setCookie("token",json.token); //更新TOKEN
                 var course = json.course;
                 var tem = "<section class='event style-2'><div class='container'><div class='row'>";

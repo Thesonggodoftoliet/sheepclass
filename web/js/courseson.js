@@ -16,7 +16,7 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+  //  alert("调用cookie成功");
 }
 
 //cookie读取TOKEN
@@ -41,7 +41,13 @@ $(function ajax_subject(){
             success:function(data){
                 var serialnum=data.serialnum.toFixed(1);
                 if(data.tag===0){
-                    alert("身份验证过期，请重新登录");
+                    layer.open({
+                        content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                        ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                        ,yes:function(){
+                            window.location.href="login.jsp";
+                        }
+                    });
                 }
                 else{
                     setCookie("token",data.token);
@@ -67,9 +73,7 @@ $(function ajax_subject(){
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.status);
-                alert(XMLHttpRequest.readyState);
-                alert(textStatus);
+
             }
         });
 });
@@ -84,14 +88,20 @@ $(function ajax_subject(){
             success:function(data){
                 var serialnum=data.serialnum.toFixed(1);
                 if(data.tag===0){
-                    alert("身份验证过期，请重新登录");
+                    layer.open({
+                        content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+                        ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                        ,yes:function(){
+                            window.location.href="login.jsp";
+                        }
+                    });
                 }
                 else{
                     setCookie("token",data.token);
                     var size=data.chapters.length;
                     var i=0;
                     var tem="";
-                    alert(size);
+                   // alert(size);
                     for(i=0;i<size;i++){
                         var cs=data.chapters[i].serialnum.toFixed(1); // sishewuru
                         if((serialnum-cs)>0){
@@ -111,9 +121,7 @@ $(function ajax_subject(){
                 }
 
             },error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.status);
-                alert(XMLHttpRequest.readyState);
-                alert(textStatus);
+
             }
         });
     });

@@ -60,6 +60,10 @@ public class getStuInfo extends HttpServlet {
             List<Course> courses = infoGet.getMosterrorCourse(userid);
             List<Knowledge> knowledges = infoGet.getMostwrongKnowledges(userid);
             List<Course> courseon = infoGet.Coursesison(userid);
+            System.out.println("courseon---size"+courseon.size());
+            for(int i=0;i<courseon.size();i++){
+                System.out.print("courseon--"+courseon.get(i).getCourseid()+"   ");
+            }
             List<Course> courseoff = infoGet.Coursewason(userid);
             try{
                 JSONArray courselist = new JSONArray();

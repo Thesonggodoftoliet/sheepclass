@@ -1,7 +1,13 @@
 function proxy(id){
     var courseid=$("#courseid").html();
     if(id===0){
-        alert("您的身份验证已经过期，请重新登录");
+        layer.open({
+            content:'<h3 style="color:#f8b54d;">身份验证过期，请重新登录</h3>'
+            ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+            ,yes:function(){
+                window.location.href="login.jsp";
+            }
+        });
     }else if(id===1){
         var html = "<a href='courseboss.jsp?courseid="+courseid+"' class='read-more'>！进入课程 ! </a>";
         $("#enter").html(html);
@@ -28,7 +34,7 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+   // alert("调用cookie成功");
 }
 
 //cookie读取TOKEN
@@ -55,9 +61,7 @@ $(function(){
             setCookie("token",data.token);
             proxy(data.tag);
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+
         }
     });
 });

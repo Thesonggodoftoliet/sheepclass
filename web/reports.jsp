@@ -12,6 +12,8 @@
     <meta charset="UTF-8">
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
 
     <script src="js/dist/echarts.min.js"></script>
 
@@ -121,8 +123,38 @@
 <section class="team">
     <div class="container">
         <div class="section-title center pb-60">
-            <h2>学生  <span>报告</span></h2>
-            <div id="logincharts" style="width: 1200px;height:400px;"></div>
+            <h2>学生  <span>报告</span></h2><br><br>
+
+            <div class="section-title center pb-60">
+                <%--错的最多的三本书--%>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <aside class="sidebar">
+
+                        <!-- Popular Categories -->
+                        <div class="widget wow fadeInUp animated animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="sidebar-title"><h2><span>掌握最不牢固的课程</span></h2></div>
+                            <ul class="list catagories product-info" id="book">
+                            </ul>
+                        </div>
+
+                    </aside>
+                </div>
+                <%--错的最多的三个知识点--%>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <aside class="sidebar">
+
+                        <!-- Popular Categories -->
+                        <div class="widget wow fadeInUp animated animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="sidebar-title"><h2><span>掌握最不牢固的知识点</span></h2></div>
+                            <ul class="list catagories product-info" id="know">
+                            </ul>
+                        </div>
+
+                    </aside>
+                </div>
+
+            </div>
+            <div id="logincharts" style="width: 1200px;height:400px;"></div><br><br><br><br><br><br><br><br><br><br><br><br>
             <div id="radarcharts" style="width: 1200px;height:900px;"></div>
         </div>
 
@@ -144,9 +176,21 @@
         var data = [];
         data.push([
             echarts.format.formatTime('2019-05-22', "2019-05-22"),
+
             Math.floor(Math.random() * 60)
         ]);
-
+        data.push([
+            echarts.format.formatTime('2019-05-26', "2019-05-27"),
+            Math.floor(Math.random() * 60)
+        ]);
+        data.push([
+            echarts.format.formatTime('2019-06-08', "2019-06-08"),
+            Math.floor(Math.random() * 60)
+        ]);
+        data.push([
+            echarts.format.formatTime('2019-06-06', "2019-06-06"),
+            Math.floor(Math.random() * 60)
+        ]);
         return data;
     }
 

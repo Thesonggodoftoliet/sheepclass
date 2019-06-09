@@ -14,11 +14,11 @@ function setCookie(cname,cvalue)
     expdate.setTime(expdate.getTime() + 30 * 60 * 1000);   //时间单位毫秒
     var expires = "expires="+expdate.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
-    alert("调用cookie成功");
+    //alert("调用cookie成功");
 }
 
 function ajax_login_servlet() {
-    alert($('#account').val());
+    //alert($('#account').val());
     $.ajax({
         type:"post",
         url:"/auth/Login", //跳转
@@ -28,13 +28,16 @@ function ajax_login_servlet() {
         async:false,
         success:function(msg){
             if(msg.tag===0){
-                alert("不晓得啥原因 反正你登不上了");
+                layer.open({
+                    title:  ['提示', 'color:#8373ce;']
+                    ,content: '<h3 style="color:#f8b54d;">检查一下账号密码哦～</h3>'
+                });
             }else{
                 window.location.href="index.jsp";
                 setCookie("token",msg.token);
             }
         }, error: function (XMLHttpRequest, textStatus) {
-            alert("失败");
+           // alert("失败");
         }
     });
 

@@ -12,6 +12,8 @@
     <meta charset="UTF-8">
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -102,7 +104,7 @@
             <div class="col-md-8 col-sm-7 col-xs-12">
                 <!--Billing Details-->
                 <div class="billing-details">
-                    <video id="myVideo" class="myVideo" width="660" controls></video>
+                    <video id="myVideo" class="myVideo" width="750" controls></video>
                 </div>
 
             </div>
@@ -123,10 +125,10 @@
            </div>
 
     </div>
-    <br><br><br>
+    <br><br><br><br><br><br>
 </section>
 
-<br><br><br>
+<br><br><br><br><br><br>
 
 
 <!-- jQuery js -->
