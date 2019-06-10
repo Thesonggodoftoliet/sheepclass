@@ -104,7 +104,8 @@
             <div class="col-md-8 col-sm-7 col-xs-12">
                 <!--Billing Details-->
                 <div class="billing-details">
-                    <video id="myVideo" class="myVideo" width="750" controls></video>
+                    <video id="myVideo" class="myVideo" width="750" controls>
+                    </video>
                 </div>
 
             </div>

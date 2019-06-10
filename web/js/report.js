@@ -57,14 +57,16 @@ $(function(){
                 });
             }else{
                 setCookie("token",data.token);
-
+                var sex="";
+                if(data.sex===1) sex="女";
+                else sex="男";
                 var tem="<div className=\"section-title\">" + "<h2>个 人 <span>信 息</span>"+data.username+"</h2>" + "</div>";
                 tem+=" <ul className = \"list\" >" +
                     "<li>用户邮箱: "+data.email+" </li>";
                 tem+=" <ul className = \"list\" >" +
                     "<li>用户电话: "+data.phone+" </li>";
                 tem+=" <ul className = \"list\" >" +
-                    "<li>用户性别: "+data.sex+" </li>";
+                    "<li>用户性别: "+sex+" </li>";
                 if(data.identity==3){
                     tem+=" <ul className = \"list\" >" +
                         "<li> 用户身份: 家长 </li>";

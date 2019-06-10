@@ -9,6 +9,18 @@ function GetJsonData3(curTime,videoFileName){
 
 }
 
+function GetJsonData5(breaktime){
+    var json = {
+        "token":getCookie("token"),
+        "isFinish":0,
+        "breaktime":breaktime,
+        "serialnum":$("#serialnum").html(),
+        "courseid":$("#courseid").html()
+    };
+    return json;
+
+}
+
 function GetJsonData2() {
     var json = {
         "token":getCookie("token"),
@@ -27,9 +39,24 @@ function doScreenshot(curTime){
         dataType:"json",
         success:function(data){
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            // alert(XMLHttpRequest.status);
+            // alert(XMLHttpRequest.readyState);
+            // alert(textStatus);
+        }
+
+    });
+}
+
+
+function updatebreaktime(breaktime){
+    //alert(videonum);
+    $.ajax({
+        type:"POST",
+        url:"/course/updateBreakTime",
+        data:JSON.stringify(GetJsonData5(breaktime)),
+        dataType:"json",
+        success:function(data){
+        },error: function (XMLHttpRequest, textStatus, errorThrown) {
         }
 
     });
@@ -52,6 +79,7 @@ function myFunction() {
         var tem="<li><i class=\"icon-clock\"></i>"+hours+" "+minutes+" "+seconds+" 添加知识点成功</li>";
         $("#list").append(tem);
         doScreenshot(x.currentTime);
+        updatebreaktime(x.currentTime);
     }
 }
 
@@ -104,12 +132,17 @@ $(function(){
                 //alert(videonum);
                 var tem="<source src=\""+"VIDEO/"+data.chapter.video+"\" type=\"video/mp4\">" +
                     "您的浏览器不支持 HTML5 video。";
+
                 $("#myVideo").html(tem);
+                //
+                // x.currentTime=data.breakpoint;
+                // x.fastSeek(data.breakpoint);
+                // x.play();
              }
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            // alert(XMLHttpRequest.status);
+            // alert(XMLHttpRequest.readyState);
+            // alert(textStatus);
         }
     });
 });

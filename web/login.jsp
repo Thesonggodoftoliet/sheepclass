@@ -71,7 +71,7 @@
                             <ul>
                                 <li><a href="index.jsp">首 页</a></li>
                                 <li><a href="coursepage.jsp">课 程 学 习</a></li>
-                                <li><a href="person.jsp">个 人 天 地</a>
+                                <li><a href="#">个 人 天 地</a>
                                     <ul class="submenu">
                                         <li><a href="wrong.jsp">错 题 园 地</a></li>
                                         <li><a href="reports.jsp">分 析 报 告</a></li>
@@ -125,7 +125,7 @@
                                 <!--Form Group-->
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">   密 码<sup>*</sup> </div>
-                                    <input type="text" name="field-name" value="" placeholder=""  id="userpwd">
+                                    <input type="password" name="field-name" value="" placeholder=""  id="userpwd">
                                     <div id="alert_password"></div>
                                 </div>
                                 <button type="submit" class="theme-btn btn-style-one" style="margin-left: 200px" onclick="login_submit()">   确  定 <span class="fa fa-long-arrow-right"></span></button>

@@ -67,7 +67,7 @@
                             <ul>
                                 <li><a href="index.jsp">首 页</a></li>
                                 <li><a href="coursepage.jsp">课 程 学 习</a></li>
-                                <li><a href="person.jsp">个 人 天 地</a>
+                                <li><a href="#">个 人 天 地</a>
                                     <ul class="submenu">
                                         <li><a href="wrong.jsp">错 题 园 地</a></li>
                                         <li><a href="reports.jsp">分 析 报 告</a></li>

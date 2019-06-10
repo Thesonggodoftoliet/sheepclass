@@ -124,7 +124,7 @@
                                 <!--Form Group-->
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">   密 码 <sup>*</sup> </div>
-                                    <input type="text" name="field-name" value="" placeholder=""  id="userpwd">
+                                    <input type="password" name="field-name" value="" placeholder=""  id="userpwd">
                                     <div id="alert_password"></div>
                                 </div>
 

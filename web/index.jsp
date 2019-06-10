@@ -14,6 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="js/jquery-3.3.1.js"></script>
       <script src="js/layer/mobile/layer.js"></script>
+      <script type="text/javascript">
+            function waring() {
+                layer.open({
+                    content:'<h3 style="color:#f8b54d;">请先登录，再进一步操作</h3>'
+                    ,btn:['<p style="color:#f8b54d;">前往登录</p>']
+                    ,yes:function(){
+                        window.location.href="login.jsp";
+                    }
+                });
+            }
+      </script>
 
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -267,9 +278,9 @@
                   <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
                       <div class="item">
                           <div class="img-holder">
-                              <figure><a href="#"><img src="images/team/1.jpg" alt="Awesome Image"></a></figure>
+                              <figure><a href="#" onclick="waring()"><img src="images/team/1.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《戏说五代十国》</a></h2>
+                                  <h2><a href="#" onclick="waring()">《戏说五代十国》</a></h2>
                                   <p>国学</p>
                               </div>
 
@@ -278,7 +289,7 @@
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《戏说五代十国》</a></h2>
+                                      <h2><a href="#" onclick="waring()">《戏说五代十国》</a></h2>
                                       <p>国学</p>
                                   </div>
 
@@ -290,9 +301,9 @@
                   <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
                       <div class="item">
                           <div class="img-holder">
-                              <figure><a href="#"><img src="images/team/2.jpg" alt="Awesome Image"></a></figure>
+                              <figure><a href="#" onclick="waring()"><img src="images/team/2.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《一起学习数学奥林匹克》</a></h2>
+                                  <h2><a href="#" onclick="waring()">《一起学习数学奥林匹克》</a></h2>
                                   <p>数学</p>
 
                               </div>
@@ -300,7 +311,7 @@
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《一起学习数学奥林匹克》</a></h2>
+                                      <h2><a href="#" onclick="waring()">《一起学习数学奥林匹克》</a></h2>
                                       <p>数学</p>
 
                                   </div>
@@ -312,9 +323,9 @@
                   <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s" data-wow-offset="0" style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
                       <div class="item">
                           <div class="img-holder">
-                              <figure><a href="#"><img src="images/team/3.jpg" alt="Awesome Image"></a></figure>
+                              <figure><a href="#" onclick="waring()"><img src="images/team/3.jpg" alt="Awesome Image"></a></figure>
                               <div class="content">
-                                  <h2><a href="#">《三国演义》</a></h2>
+                                  <h2><a href="#" onclick="waring()">《三国演义》</a></h2>
                                   <p>中国历史</p>
 
                               </div>
@@ -322,7 +333,7 @@
                           <div class="overlay">
                               <div class="inner">
                                   <div class="content">
-                                      <h2><a href="#">《三国演义》</a></h2>
+                                      <h2><a href="#" onclick="waring()">《三国演义》</a></h2>
                                       <p>中国历史</p>
 
                                   </div>
