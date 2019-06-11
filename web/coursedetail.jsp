@@ -25,7 +25,7 @@
     <div class="main-header stricky bubble">
         <div class="container">
             <div class="logo pull-left">
-                <a href="index.html">
+                <a href="index.jsp">
                     <img src="images/logo/1.png" alt="Awesome Image">
                 </a>
             </div>

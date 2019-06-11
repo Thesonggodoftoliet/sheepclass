@@ -130,14 +130,18 @@ $(function(){
                 setCookie("token",data.token);
                 videonum=data.chapter.video;
                 //alert(videonum);
-                var tem="<source src=\""+"VIDEO/"+data.chapter.video+"\" type=\"video/mp4\">" +
+                // var tem="<source src=\""+"VIDEO/"+data.chapter.video+"\" type=\"video/mp4\">" +
                     "您的浏览器不支持 HTML5 video。";
 
-                $("#myVideo").html(tem);
+                // $("#myVideo").html(tem);
                 //
                 // x.currentTime=data.breakpoint;
                 // x.fastSeek(data.breakpoint);
                 // x.play();
+
+                // $("#myVideo").attr("currentTime","10");
+                $("#myVideo").attr("src","/VIDEO/"+data.chapter.video+"#t="+data.breakpoint);
+
              }
         },error: function (XMLHttpRequest, textStatus, errorThrown) {
             // alert(XMLHttpRequest.status);
